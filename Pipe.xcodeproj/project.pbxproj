@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E23A922F013180059166E /* VideoTableViewController.swift */; };
+		AB4E23AC22F018910059166E /* bulletTrain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */; };
+		AB4E23AD22F018930059166E /* monkey.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */; };
+		AB4E23AE22F018960059166E /* newYorkFlip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF222F00F3D00A37C4A /* newYorkFlip.mp4 */; };
+		AB4E23AF22F018990059166E /* shark.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF122F00F3C00A37C4A /* shark.mp4 */; };
+		AB4E23B522F018FF0059166E /* bulletTrain.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4E23B022F018FE0059166E /* bulletTrain.png */; };
+		AB4E23B622F018FF0059166E /* monkey.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4E23B122F018FE0059166E /* monkey.png */; };
+		AB4E23B722F018FF0059166E /* foxVillage.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4E23B222F018FE0059166E /* foxVillage.png */; };
+		AB4E23B822F018FF0059166E /* newYorkFlip.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4E23B322F018FF0059166E /* newYorkFlip.png */; };
+		AB4E23B922F018FF0059166E /* shark.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4E23B422F018FF0059166E /* shark.png */; };
 		AB7208E522F0030F00F2913D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7208E422F0030F00F2913D /* AppDelegate.swift */; };
 		AB7208E722F0030F00F2913D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7208E622F0030F00F2913D /* ViewController.swift */; };
 		AB7208EA22F0030F00F2913D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7208E822F0030F00F2913D /* Main.storyboard */; };
@@ -42,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB4E23A922F013180059166E /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
+		AB4E23B022F018FE0059166E /* bulletTrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletTrain.png; sourceTree = "<group>"; };
+		AB4E23B122F018FE0059166E /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
+		AB4E23B222F018FE0059166E /* foxVillage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foxVillage.png; sourceTree = "<group>"; };
+		AB4E23B322F018FF0059166E /* newYorkFlip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newYorkFlip.png; sourceTree = "<group>"; };
+		AB4E23B422F018FF0059166E /* shark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shark.png; sourceTree = "<group>"; };
 		AB7208E122F0030F00F2913D /* Pipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7208E422F0030F00F2913D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB7208E622F0030F00F2913D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +110,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB4E23AB22F013250059166E /* ImportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AB72091A22F00B1A00F2913D /* VideoLooperView.swift */,
+				AB72091B22F00B1A00F2913D /* VideoPlayerView.swift */,
+				AB8D9CED22F00EE200A37C4A /* Layouts.swift */,
+				AB8D9CEC22F00EE200A37C4A /* VideoTableViewCell.swift */,
+				AB8D9CEA22F00ECF00A37C4A /* VideoClip.swift */,
+				AB8D9CE822F00EC100A37C4A /* Video.swift */,
+			);
+			path = ImportedFiles;
+			sourceTree = "<group>";
+		};
 		AB7208D822F0030F00F2913D = {
 			isa = PBXGroup;
 			children = (
@@ -120,17 +149,18 @@
 				AB7208E422F0030F00F2913D /* AppDelegate.swift */,
 				AB7208E622F0030F00F2913D /* ViewController.swift */,
 				AB7208E822F0030F00F2913D /* Main.storyboard */,
+				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
 				AB72091922F00B1A00F2913D /* VideoFeedViewController.swift */,
-				AB72091A22F00B1A00F2913D /* VideoLooperView.swift */,
-				AB72091B22F00B1A00F2913D /* VideoPlayerView.swift */,
-				AB8D9CED22F00EE200A37C4A /* Layouts.swift */,
-				AB8D9CEC22F00EE200A37C4A /* VideoTableViewCell.swift */,
-				AB8D9CEA22F00ECF00A37C4A /* VideoClip.swift */,
-				AB8D9CE822F00EC100A37C4A /* Video.swift */,
+				AB4E23AB22F013250059166E /* ImportedFiles */,
 				AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */,
 				AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */,
 				AB8D9CF222F00F3D00A37C4A /* newYorkFlip.mp4 */,
 				AB8D9CF122F00F3C00A37C4A /* shark.mp4 */,
+				AB4E23B022F018FE0059166E /* bulletTrain.png */,
+				AB4E23B222F018FE0059166E /* foxVillage.png */,
+				AB4E23B122F018FE0059166E /* monkey.png */,
+				AB4E23B322F018FF0059166E /* newYorkFlip.png */,
+				AB4E23B422F018FF0059166E /* shark.png */,
 				AB7208EE22F0030F00F2913D /* Assets.xcassets */,
 				AB7208F022F0030F00F2913D /* LaunchScreen.storyboard */,
 				AB7208F322F0030F00F2913D /* Info.plist */,
@@ -264,8 +294,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4E23B522F018FF0059166E /* bulletTrain.png in Resources */,
+				AB4E23B922F018FF0059166E /* shark.png in Resources */,
+				AB4E23AC22F018910059166E /* bulletTrain.mp4 in Resources */,
+				AB4E23B722F018FF0059166E /* foxVillage.png in Resources */,
 				AB7208F222F0030F00F2913D /* LaunchScreen.storyboard in Resources */,
+				AB4E23AE22F018960059166E /* newYorkFlip.mp4 in Resources */,
+				AB4E23AD22F018930059166E /* monkey.mp4 in Resources */,
 				AB7208EF22F0030F00F2913D /* Assets.xcassets in Resources */,
+				AB4E23B622F018FF0059166E /* monkey.png in Resources */,
+				AB4E23AF22F018990059166E /* shark.mp4 in Resources */,
+				AB4E23B822F018FF0059166E /* newYorkFlip.png in Resources */,
 				AB7208EA22F0030F00F2913D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */,
 				AB7208E722F0030F00F2913D /* ViewController.swift in Sources */,
 				AB8D9CEB22F00ECF00A37C4A /* VideoClip.swift in Sources */,
 				AB72091D22F00B1B00F2913D /* VideoLooperView.swift in Sources */,
