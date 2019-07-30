@@ -16,7 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        
+        let feed = VideoFeedViewController()
+        feed.videos = Video.allVideos()
+        feed.title = "Travel Vlogs"
+        
+        let nav = UINavigationController(rootViewController: feed)
+        nav.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.red,
+                                                 NSAttributedStringKey.font: UIFont(name: "Roboto-Bold", size: 21)!]
+        
+        
+        window?.rootViewController = nav
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

@@ -15,6 +15,12 @@
 		AB7208F222F0030F00F2913D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7208F022F0030F00F2913D /* LaunchScreen.storyboard */; };
 		AB7208FD22F0030F00F2913D /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7208FC22F0030F00F2913D /* PipeTests.swift */; };
 		AB72090822F0030F00F2913D /* PipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72090722F0030F00F2913D /* PipeUITests.swift */; };
+		AB72091622F00AED00F2913D /* Models in Resources */ = {isa = PBXBuildFile; fileRef = AB72091522F00AED00F2913D /* Models */; };
+		AB72091822F00B0200F2913D /* Views in Resources */ = {isa = PBXBuildFile; fileRef = AB72091722F00B0200F2913D /* Views */; };
+		AB72091C22F00B1B00F2913D /* VideoFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72091922F00B1A00F2913D /* VideoFeedViewController.swift */; };
+		AB72091D22F00B1B00F2913D /* VideoLooperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72091A22F00B1A00F2913D /* VideoLooperView.swift */; };
+		AB72091E22F00B1B00F2913D /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72091B22F00B1A00F2913D /* VideoPlayerView.swift */; };
+		AB72092022F00B3E00F2913D /* Local Videos in Resources */ = {isa = PBXBuildFile; fileRef = AB72091F22F00B3E00F2913D /* Local Videos */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		AB72090322F0030F00F2913D /* PipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB72090722F0030F00F2913D /* PipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeUITests.swift; sourceTree = "<group>"; };
 		AB72090922F0030F00F2913D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB72091522F00AED00F2913D /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		AB72091722F00B0200F2913D /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
+		AB72091922F00B1A00F2913D /* VideoFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoFeedViewController.swift; sourceTree = "<group>"; };
+		AB72091A22F00B1A00F2913D /* VideoLooperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoLooperView.swift; sourceTree = "<group>"; };
+		AB72091B22F00B1A00F2913D /* VideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		AB72091F22F00B3E00F2913D /* Local Videos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Local Videos"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,12 @@
 				AB7208E422F0030F00F2913D /* AppDelegate.swift */,
 				AB7208E622F0030F00F2913D /* ViewController.swift */,
 				AB7208E822F0030F00F2913D /* Main.storyboard */,
+				AB72091922F00B1A00F2913D /* VideoFeedViewController.swift */,
+				AB72091A22F00B1A00F2913D /* VideoLooperView.swift */,
+				AB72091B22F00B1A00F2913D /* VideoPlayerView.swift */,
+				AB72091722F00B0200F2913D /* Views */,
+				AB72091522F00AED00F2913D /* Models */,
+				AB72091F22F00B3E00F2913D /* Local Videos */,
 				AB7208EE22F0030F00F2913D /* Assets.xcassets */,
 				AB7208F022F0030F00F2913D /* LaunchScreen.storyboard */,
 				AB7208F322F0030F00F2913D /* Info.plist */,
@@ -237,7 +255,10 @@
 			files = (
 				AB7208F222F0030F00F2913D /* LaunchScreen.storyboard in Resources */,
 				AB7208EF22F0030F00F2913D /* Assets.xcassets in Resources */,
+				AB72091622F00AED00F2913D /* Models in Resources */,
+				AB72092022F00B3E00F2913D /* Local Videos in Resources */,
 				AB7208EA22F0030F00F2913D /* Main.storyboard in Resources */,
+				AB72091822F00B0200F2913D /* Views in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,8 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB7208E722F0030F00F2913D /* ViewController.swift in Sources */,
+				AB72091D22F00B1B00F2913D /* VideoLooperView.swift in Sources */,
 				AB7208ED22F0030F00F2913D /* Pipe.xcdatamodeld in Sources */,
+				AB72091C22F00B1B00F2913D /* VideoFeedViewController.swift in Sources */,
 				AB7208E522F0030F00F2913D /* AppDelegate.swift in Sources */,
+				AB72091E22F00B1B00F2913D /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
