@@ -43,7 +43,7 @@ class VideoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "videocell", for: indexPath) as! VideoTableViewCell
         cell.video = videos[indexPath.row]
-        
+        cell.addSubviews()
         // Configure the cell...
 
         return cell
@@ -52,6 +52,7 @@ class VideoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let video = videos[indexPath.row]
         return VideoTableViewCell.height(for: video)
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

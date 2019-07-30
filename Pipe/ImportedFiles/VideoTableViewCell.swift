@@ -65,15 +65,15 @@ class VideoTableViewCell: UITableViewCell {
   }
   
   // MARK - Obligatory Inits
+    /*
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-    
+    print("hello this works")
     addSubviews()
   }
-  
+*/
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     
-    backgroundColor = .blue
   }
 }

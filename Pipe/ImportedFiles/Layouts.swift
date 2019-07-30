@@ -30,33 +30,6 @@
 
 import UIKit
 
-extension VideoFeedViewController {
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    loadViews()
-  }
-  
-  func loadViews() {
-    view.backgroundColor = .white
-    
-    tableView.register(VideoTableViewCell.classForCoder(), forCellReuseIdentifier: VideoCellReuseIdentifier)
-    tableView.delegate = self
-    tableView.dataSource = self
-    
-    view.addSubview(tableView)
-    view.addSubview(videoPreviewLooper)
-  }
-  override func viewWillLayoutSubviews() {
-    super.viewWillLayoutSubviews()
-    
-    tableView.frame = view.bounds
-    
-    videoPreviewLooper.frame = CGRect(x: view.bounds.width - 150 - 16, y: view.bounds.height - 100 - 16, width: 150, height: 100)
-    videoPreviewLooper.backgroundColor = .black
-  }
-}
-
 extension VideoTableViewCell {
   func addSubviews() {
     previewImageView.contentMode = .scaleAspectFill

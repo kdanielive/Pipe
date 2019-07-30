@@ -25,7 +25,6 @@
 		AB7208F222F0030F00F2913D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7208F022F0030F00F2913D /* LaunchScreen.storyboard */; };
 		AB7208FD22F0030F00F2913D /* PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7208FC22F0030F00F2913D /* PipeTests.swift */; };
 		AB72090822F0030F00F2913D /* PipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72090722F0030F00F2913D /* PipeUITests.swift */; };
-		AB72091C22F00B1B00F2913D /* VideoFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72091922F00B1A00F2913D /* VideoFeedViewController.swift */; };
 		AB72091D22F00B1B00F2913D /* VideoLooperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72091A22F00B1A00F2913D /* VideoLooperView.swift */; };
 		AB72091E22F00B1B00F2913D /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB72091B22F00B1A00F2913D /* VideoPlayerView.swift */; };
 		AB8D9CE922F00EC100A37C4A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8D9CE822F00EC100A37C4A /* Video.swift */; };
@@ -72,7 +71,6 @@
 		AB72090322F0030F00F2913D /* PipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB72090722F0030F00F2913D /* PipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeUITests.swift; sourceTree = "<group>"; };
 		AB72090922F0030F00F2913D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB72091922F00B1A00F2913D /* VideoFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoFeedViewController.swift; sourceTree = "<group>"; };
 		AB72091A22F00B1A00F2913D /* VideoLooperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoLooperView.swift; sourceTree = "<group>"; };
 		AB72091B22F00B1A00F2913D /* VideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		AB8D9CE822F00EC100A37C4A /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				AB7208E622F0030F00F2913D /* ViewController.swift */,
 				AB7208E822F0030F00F2913D /* Main.storyboard */,
 				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
-				AB72091922F00B1A00F2913D /* VideoFeedViewController.swift */,
 				AB4E23AB22F013250059166E /* ImportedFiles */,
 				AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */,
 				AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */,
@@ -335,7 +332,6 @@
 				AB8D9CEB22F00ECF00A37C4A /* VideoClip.swift in Sources */,
 				AB72091D22F00B1B00F2913D /* VideoLooperView.swift in Sources */,
 				AB7208ED22F0030F00F2913D /* Pipe.xcdatamodeld in Sources */,
-				AB72091C22F00B1B00F2913D /* VideoFeedViewController.swift in Sources */,
 				AB7208E522F0030F00F2913D /* AppDelegate.swift in Sources */,
 				AB8D9CE922F00EC100A37C4A /* Video.swift in Sources */,
 				AB8D9CEF22F00EE200A37C4A /* Layouts.swift in Sources */,
