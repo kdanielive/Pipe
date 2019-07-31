@@ -56,22 +56,8 @@ class VideoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //1
         
-        let video = videos[indexPath.row]
-        
-        //2
-        let videoURL = video.url
-        let player = AVPlayer(url: videoURL)
-        
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = player
-        
-        /*
-        present(playerViewController, animated: true) {
-            player.play()
-        }
-         */
+    
     }
 
     /*

@@ -18,7 +18,7 @@ class VideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // Video Player at the top part of the view
         let videoURL = videos[0].url
         let player = AVPlayer(url: videoURL)
         let playerViewController = AVPlayerViewController()
@@ -29,12 +29,7 @@ class VideoViewController: UIViewController {
         playerViewController.view.frame = videoContainerView.bounds
         videoContainerView.addSubview(playerViewController.view)
         playerViewController.player!.play()
-        //playerViewController.didMove(toParentViewController: self)
-        /*
-        self.present(playerViewController, animated: true) {
-            playerViewController.player!.play()
-        }
-        */
+       
         // Do any additional setup after loading the view.
     }
 
