@@ -62,11 +62,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g04-3I-r0M">
-                                <rect key="frame" x="0.0" y="64" width="375" height="283"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="327"/>
                                 <connections>
                                     <segue destination="wmy-JP-Eif" kind="embed" id="Sdc-b8-OLm"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6Z-cW-0y8">
+                                <rect key="frame" x="16" y="355" width="126" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testTouch:" destination="4ow-x9-xFM" eventType="touchUpInside" id="4io-pd-bxJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -274,7 +282,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYe-N8-WFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="wmy-JP-Eif" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qxX-y0-eYE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="283"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -289,7 +297,6 @@
         <image name="user" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xrg-kv-tba"/>
         <segue reference="9Ns-F7-H6W"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,18 +15,31 @@ class VideoViewController: UIViewController {
     var videos = Video.allVideos()
     let controlOverlay = UIView()
     @IBOutlet var videoContainerView: UIView!
-    var touchCount = 0
+    var screenTouchCount = 0
+    let playerViewController = CustomAVPlayerViewController()
+    var player = AVPlayer()
     
+    var buttonTouchCount = 0
+
     // Custom controls
     //var playPauseButton: PlayPauseButton!
 
+    @IBAction func testTouch(_ sender: Any) {
+        if(buttonTouchCount == 0) {
+            player.rate = 2.0
+            buttonTouchCount = 1 - buttonTouchCount
+        } else {
+            player.rate = 1.0
+            buttonTouchCount = 1 - buttonTouchCount
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Video Player at the top part of the view
         let videoURL = videos[0].url
-        let playerViewController = CustomAVPlayerViewController()
-        let player = AVPlayer(url: videoURL)
+        player = AVPlayer(url: videoURL)
         
         /*
         // Custom controls part
@@ -56,7 +69,6 @@ class VideoViewController: UIViewController {
         controlOverlay.isUserInteractionEnabled = false
         controlOverlay.isHidden = true
         
-        
         NotificationCenter.default.addObserver(self, selector: #selector(popOverlay), name: NSNotification.Name(rawValue: "overlay"), object: nil)
     }
 
@@ -84,7 +96,7 @@ class VideoViewController: UIViewController {
     */
     
     class CustomAVPlayerViewController: AVPlayerViewController {
-        var touchCount = 0
+        var screenTouchCount = 0
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "overlay"), object: nil)
         }
@@ -92,12 +104,12 @@ class VideoViewController: UIViewController {
     
     @objc func popOverlay() {
         print("event triggered")
-        if(touchCount == 0) {
+        if(screenTouchCount == 0) {
             controlOverlay.isHidden = false
-            touchCount = 1 - touchCount
+            screenTouchCount = 1 - screenTouchCount
         } else {
             controlOverlay.isHidden = true
-            touchCount = 1 - touchCount
+            screenTouchCount = 1 - screenTouchCount
         }
     }
 
