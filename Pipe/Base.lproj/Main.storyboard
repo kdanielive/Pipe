@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g04-3I-r0M">
-                                <rect key="frame" x="0.0" y="64" width="375" height="234"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="327"/>
                                 <connections>
                                     <segue destination="wmy-JP-Eif" kind="embed" id="Sdc-b8-OLm"/>
                                 </connections>
@@ -101,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="486" y="233"/>
         </scene>
-        <!--Sign In View Controller-->
+        <!--Title-->
         <scene sceneID="Cc2-we-r1C">
             <objects>
                 <viewController id="ITn-xt-jhr" customClass="SignInViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,18 +109,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-B1-Gwa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-B1-Gwa">
                                 <rect key="frame" x="127" y="81" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLt-YD-tNa" customClass="GIDSignInButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLt-YD-tNa" customClass="GIDSignInButton">
                                 <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9t-uQ-Hwc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9t-uQ-Hwc">
                                 <rect key="frame" x="138" y="456" width="98" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OD0-rZ-abc"/>
+                                </constraints>
                                 <state key="normal" title="Sign out"/>
                                 <connections>
                                     <action selector="didTapSignOut:" destination="ITn-xt-jhr" eventType="touchUpInside" id="QY9-Dy-1LT"/>
@@ -128,9 +128,28 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dLt-YD-tNa" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" constant="67" id="56C-sg-P1r"/>
+                            <constraint firstItem="Jt3-OI-s1Y" firstAttribute="bottom" secondItem="G9t-uQ-Hwc" secondAttribute="bottom" constant="181" id="9dA-zw-S0q"/>
+                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="centerX" secondItem="dLt-YD-tNa" secondAttribute="centerX" id="DeF-Gs-Z2D"/>
+                            <constraint firstItem="G9t-uQ-Hwc" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" constant="138" id="PDk-pA-dyE"/>
+                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" constant="127" id="T2j-CO-9II"/>
+                            <constraint firstItem="dLt-YD-tNa" firstAttribute="centerY" secondItem="rDC-dr-jin" secondAttribute="centerY" id="VX8-0j-koH"/>
+                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="centerX" secondItem="rDC-dr-jin" secondAttribute="centerX" id="YLu-jb-BT1"/>
+                            <constraint firstItem="dLt-YD-tNa" firstAttribute="centerX" secondItem="G9t-uQ-Hwc" secondAttribute="centerX" id="YaU-n1-Udo"/>
+                            <constraint firstItem="dLt-YD-tNa" firstAttribute="top" secondItem="ABd-B1-Gwa" secondAttribute="bottom" constant="68" id="p5m-BB-zZc"/>
+                            <constraint firstItem="G9t-uQ-Hwc" firstAttribute="top" secondItem="dLt-YD-tNa" secondAttribute="bottom" constant="59" id="pzA-Ph-g3z"/>
+                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="top" secondItem="Jt3-OI-s1Y" secondAttribute="top" constant="17" id="z1a-fC-5e3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jt3-OI-s1Y"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WRl-HJ-hDB"/>
+                    <navigationItem key="navigationItem" title="Title" id="vIe-Qg-kwd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="GzO-G9-ldo">
+                            <connections>
+                                <segue destination="A0z-40-5vy" kind="show" id="9Ns-F7-H6W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQU-a0-NLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,13 +274,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYe-N8-WFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="wmy-JP-Eif" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qxX-y0-eYE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="234"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2134" y="-499"/>
+            <point key="canvasLocation" x="2134" y="-480"/>
         </scene>
     </scenes>
     <resources>
@@ -269,4 +288,7 @@
         <image name="profileIcon2" width="50" height="50"/>
         <image name="user" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Ns-F7-H6W"/>
+    </inferredMetricsTieBreakers>
 </document>
