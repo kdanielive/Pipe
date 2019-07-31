@@ -23,7 +23,7 @@ class VideoViewController: UIViewController {
         
         // Video Player at the top part of the view
         let videoURL = videos[0].url
-        let playerViewController = AVPlayerViewController()
+        let playerViewController = CustomAVPlayerViewController()
         let player = AVPlayer(url: videoURL)
         
         /*
@@ -35,23 +35,24 @@ class VideoViewController: UIViewController {
         playPauseButton.setup(in: self)
         */
         
-        /* My effort for custom UI */
-        /*
-        let playButton = UIImage(named: "play")
-        let playButtonView = UIImageView(image: playButton)
-        videoContainerView.addSubview(playButtonView)
-        playButtonView.frame = CGRect(x: videoContainerView.frame.width * 0.5 , y: videoContainerView.frame.height * 0.5, width: videoContainerView.frame.width * 0.5, height: videoContainerView.frame.height * 0.5)
-        */
-        
         // Back to implementing video player at the top of the view
         playerViewController.player = player
         addChildViewController(playerViewController)
         playerViewController.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         playerViewController.view.frame = videoContainerView.bounds
+        playerViewController.videoGravity = "resize"
         videoContainerView.addSubview(playerViewController.view)
         playerViewController.player!.play()
         
         // Do any additional setup after loading the view.
+        /* My effort for custom UI */
+        let controlOverlay = UIView()
+        videoContainerView.addSubview(controlOverlay)
+        controlOverlay.bounds = CGRect(x: videoContainerView.frame.origin.x, y: videoContainerView.frame.origin.y, width: videoContainerView.frame.width * 2, height: videoContainerView.frame.height * 2)
+        controlOverlay.alpha = 0.1
+        controlOverlay.backgroundColor = UIColor.white
+        controlOverlay.superview?.bringSubview(toFront: controlOverlay)
+        controlOverlay.isUserInteractionEnabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,4 +78,10 @@ class VideoViewController: UIViewController {
     }
     */
 
+}
+
+class CustomAVPlayerViewController: AVPlayerViewController {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesBegan")
+    }
 }

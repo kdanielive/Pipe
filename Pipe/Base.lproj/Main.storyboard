@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g04-3I-r0M">
-                                <rect key="frame" x="0.0" y="20" width="375" height="327"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="283"/>
                                 <connections>
                                     <segue destination="wmy-JP-Eif" kind="embed" id="Sdc-b8-OLm"/>
                                 </connections>
@@ -274,7 +274,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYe-N8-WFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="wmy-JP-Eif" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qxX-y0-eYE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="327"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="283"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -289,6 +289,7 @@
         <image name="user" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Xrg-kv-tba"/>
         <segue reference="9Ns-F7-H6W"/>
     </inferredMetricsTieBreakers>
 </document>
