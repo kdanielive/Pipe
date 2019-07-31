@@ -31,22 +31,30 @@ class VideoTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return videos.count
+        if(section == 0) {  return videos.count }
+        else{   return 1;   }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "videocell", for: indexPath) as! VideoTableViewCell
-        cell.video = videos[indexPath.row]
-        cell.addSubviews()
-        // Configure the cell...
+        if(indexPath.section == 0)
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "videocell", for: indexPath) as! VideoTableViewCell
+            cell.video = videos[indexPath.row]
+            cell.addSubviews()
+            
+            return cell
+        } else  {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "collectionCell") as! CollectionHolderTableViewCell
+            
+            return cell
+        }
 
-        return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
