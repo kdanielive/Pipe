@@ -13,28 +13,29 @@ import AVKit
 class VideoViewController: UIViewController {
 
     var videos = Video.allVideos()
-    let controlOverlay = UIView()
+    
     @IBOutlet var videoContainerView: UIView!
-    var screenTouchCount = 0
     let playerViewController = CustomAVPlayerViewController()
     var player = AVPlayer()
-    let x2Button = UIButton()
-
     
-    var buttonTouchCount = 0
+    var screenTouchCount = 0
+    
+    let controlOverlay = UIView()
+    let playButton = UIButton()
+    let playImage = UIImage(named: "play")
+    let pauseImage = UIImage(named: "pause")
 
     // Custom controls
     //var playPauseButton: PlayPauseButton!
     
-    @objc func timesTwoRate(sender: UIButton!) {
-        if(buttonTouchCount == 0) {
-            player.rate = 2.0
-            buttonTouchCount = 1 - buttonTouchCount
+    @objc func playVideo() {
+        if(player.rate != 0) {
+            player.rate = 0
+            playButton.setImage(playImage, for: .normal)
         } else {
-            player.rate = 1.0
-            buttonTouchCount = 1 - buttonTouchCount
+            player.rate = 1
+            playButton.setImage(pauseImage, for: .normal)
         }
-        print("working")
     }
     
     override func viewDidLoad() {
@@ -63,7 +64,10 @@ class VideoViewController: UIViewController {
         playerViewController.player!.play()
         
         // Do any additional setup after loading the view.
+        
         /* My effort for custom UI */
+        playerViewController.showsPlaybackControls = false
+        
         videoContainerView.addSubview(controlOverlay)
         controlOverlay.frame = CGRect(x: 0, y: 0, width: videoContainerView.frame.width, height: videoContainerView.frame.height)
         controlOverlay.alpha = 0.1
@@ -72,16 +76,11 @@ class VideoViewController: UIViewController {
         controlOverlay.isUserInteractionEnabled = false
         controlOverlay.isHidden = true
         
-        x2Button.backgroundColor = UIColor.clear
-        x2Button.setTitleColor(UIColor.red, for: .normal)
-        x2Button.setTitle("x2", for: .normal)
-        x2Button.tintColor = UIColor.red
-        x2Button.alpha = 1
-        x2Button.addTarget(self, action: #selector(timesTwoRate), for: .touchUpInside)
-        //self.view.addSubview(x2Button)
-        controlOverlay.addSubview(x2Button)
-        x2Button.frame = CGRect(x: 0, y: 0, width: controlOverlay.frame.width / 3, height: 30)
-        
+        videoContainerView.addSubview(playButton)
+        playButton.setImage(pauseImage, for: .normal)
+        playButton.frame = CGRect(x: videoContainerView.frame.width / 2 - 30, y: videoContainerView.frame.height / 2 - 30, width: 60, height: 60)
+        playButton.isHidden = true
+        playButton.addTarget(self, action: #selector(playVideo), for: .touchUpInside)
         
         NotificationCenter.default.addObserver(self, selector: #selector(popOverlay), name: NSNotification.Name(rawValue: "overlay"), object: nil)
     }
@@ -120,15 +119,13 @@ class VideoViewController: UIViewController {
         print("event triggered")
         if(screenTouchCount == 0) {
             controlOverlay.isHidden = false
-            x2Button.isHidden = false
-            controlOverlay.isUserInteractionEnabled = true
-            x2Button.isUserInteractionEnabled = true
+            playButton.isHidden = false
+            
             screenTouchCount = 1 - screenTouchCount
         } else {
             controlOverlay.isHidden = true
-            x2Button.isHidden = true
-            controlOverlay.isUserInteractionEnabled = false
-            x2Button.isUserInteractionEnabled = false
+            playButton.isHidden = true
+            
             screenTouchCount = 1 - screenTouchCount
         }
     }
