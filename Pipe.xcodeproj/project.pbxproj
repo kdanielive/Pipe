@@ -10,6 +10,7 @@
 		15140B842445BE81F0378206 /* Pods_Pipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4265DC94909E5BEE1CC09B38 /* Pods_Pipe.framework */; };
 		30CCC9569A0F7970F8EB4AF6 /* Pods_PipeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E59152F5FCF198571F4F92F /* Pods_PipeUITests.framework */; };
 		76CD1015C1377D207A942470 /* Pods_PipeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A16CF6BE9EDAB83DEA5CFA /* Pods_PipeTests.framework */; };
+		AB0D577C22F1252400984A1B /* CustomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0D577B22F1252400984A1B /* CustomControls.swift */; };
 		AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E23A922F013180059166E /* VideoTableViewController.swift */; };
 		AB4E23AC22F018910059166E /* bulletTrain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */; };
 		AB4E23AD22F018930059166E /* monkey.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */; };
@@ -61,6 +62,7 @@
 		778258A91D901A545A9E999F /* Pods-PipeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipeTests.release.xcconfig"; path = "Target Support Files/Pods-PipeTests/Pods-PipeTests.release.xcconfig"; sourceTree = "<group>"; };
 		838E971FE672AD7B691DB802 /* Pods-Pipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pipe.release.xcconfig"; path = "Target Support Files/Pods-Pipe/Pods-Pipe.release.xcconfig"; sourceTree = "<group>"; };
 		AAA5E5677A3890B4B643BE25 /* Pods-PipeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipeUITests.debug.xcconfig"; path = "Target Support Files/Pods-PipeUITests/Pods-PipeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB0D577B22F1252400984A1B /* CustomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControls.swift; sourceTree = "<group>"; };
 		AB4E23A922F013180059166E /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		AB4E23B022F018FE0059166E /* bulletTrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletTrain.png; sourceTree = "<group>"; };
 		AB4E23B122F018FE0059166E /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				AB7208E822F0030F00F2913D /* Main.storyboard */,
 				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
 				AB4E23BC22F0394C0059166E /* VideoViewController.swift */,
+				AB0D577B22F1252400984A1B /* CustomControls.swift */,
 				AB4E23AB22F013250059166E /* ImportedFiles */,
 				AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */,
 				AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */,
@@ -482,6 +485,7 @@
 				AB8D9CE922F00EC100A37C4A /* Video.swift in Sources */,
 				AB8D9CEF22F00EE200A37C4A /* Layouts.swift in Sources */,
 				AB72091E22F00B1B00F2913D /* VideoPlayerView.swift in Sources */,
+				AB0D577C22F1252400984A1B /* CustomControls.swift in Sources */,
 				AB8D9CEE22F00EE200A37C4A /* VideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
