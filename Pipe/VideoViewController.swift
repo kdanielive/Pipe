@@ -16,7 +16,7 @@ class VideoViewController: UIViewController {
     @IBOutlet var videoContainerView: UIView!
     
     // Custom controls
-    var playPauseButton: PlayPauseButton!
+    //var playPauseButton: PlayPauseButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,14 @@ class VideoViewController: UIViewController {
         playPauseButton.setup(in: self)
         */
         
+        /* My effort for custom UI */
+        /*
+        let playButton = UIImage(named: "play")
+        let playButtonView = UIImageView(image: playButton)
+        videoContainerView.addSubview(playButtonView)
+        playButtonView.frame = CGRect(x: videoContainerView.frame.width * 0.5 , y: videoContainerView.frame.height * 0.5, width: videoContainerView.frame.width * 0.5, height: videoContainerView.frame.height * 0.5)
+        */
+        
         // Back to implementing video player at the top of the view
         playerViewController.player = player
         addChildViewController(playerViewController)
@@ -51,12 +59,13 @@ class VideoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /*
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
         playPauseButton.updateUI()
     }
-    
+    */
 
     /*
     // MARK: - Navigation
