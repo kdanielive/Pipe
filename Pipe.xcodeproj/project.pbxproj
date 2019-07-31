@@ -21,6 +21,7 @@
 		AB4E23B822F018FF0059166E /* newYorkFlip.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4E23B322F018FF0059166E /* newYorkFlip.png */; };
 		AB4E23B922F018FF0059166E /* shark.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4E23B422F018FF0059166E /* shark.png */; };
 		AB4E23BB22F029DC0059166E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E23BA22F029DC0059166E /* SignInViewController.swift */; };
+		AB4E23BD22F0394C0059166E /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E23BC22F0394C0059166E /* VideoViewController.swift */; };
 		AB7208E522F0030F00F2913D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7208E422F0030F00F2913D /* AppDelegate.swift */; };
 		AB7208EA22F0030F00F2913D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7208E822F0030F00F2913D /* Main.storyboard */; };
 		AB7208ED22F0030F00F2913D /* Pipe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB7208EB22F0030F00F2913D /* Pipe.xcdatamodeld */; };
@@ -67,6 +68,7 @@
 		AB4E23B322F018FF0059166E /* newYorkFlip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newYorkFlip.png; sourceTree = "<group>"; };
 		AB4E23B422F018FF0059166E /* shark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shark.png; sourceTree = "<group>"; };
 		AB4E23BA22F029DC0059166E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		AB4E23BC22F0394C0059166E /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		AB7208E122F0030F00F2913D /* Pipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7208E422F0030F00F2913D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB7208E922F0030F00F2913D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				AB4E23BA22F029DC0059166E /* SignInViewController.swift */,
 				AB7208E822F0030F00F2913D /* Main.storyboard */,
 				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
+				AB4E23BC22F0394C0059166E /* VideoViewController.swift */,
 				AB4E23AB22F013250059166E /* ImportedFiles */,
 				AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */,
 				AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */,
@@ -475,6 +478,7 @@
 				AB72091D22F00B1B00F2913D /* VideoLooperView.swift in Sources */,
 				AB7208ED22F0030F00F2913D /* Pipe.xcdatamodeld in Sources */,
 				AB7208E522F0030F00F2913D /* AppDelegate.swift in Sources */,
+				AB4E23BD22F0394C0059166E /* VideoViewController.swift in Sources */,
 				AB8D9CE922F00EC100A37C4A /* Video.swift in Sources */,
 				AB8D9CEF22F00EE200A37C4A /* Layouts.swift in Sources */,
 				AB72091E22F00B1B00F2913D /* VideoPlayerView.swift in Sources */,

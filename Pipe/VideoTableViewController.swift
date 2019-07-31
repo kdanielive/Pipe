@@ -57,6 +57,7 @@ class VideoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //1
+        
         let video = videos[indexPath.row]
         
         //2
@@ -66,9 +67,11 @@ class VideoTableViewController: UITableViewController {
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
         
+        /*
         present(playerViewController, animated: true) {
             player.play()
         }
+         */
     }
 
     /*
