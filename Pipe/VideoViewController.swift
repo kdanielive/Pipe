@@ -13,7 +13,9 @@ import AVKit
 class VideoViewController: UIViewController {
 
     var videos = Video.allVideos()
+    let controlOverlay = UIView()
     @IBOutlet var videoContainerView: UIView!
+    var touchCount = 0
     
     // Custom controls
     //var playPauseButton: PlayPauseButton!
@@ -46,13 +48,16 @@ class VideoViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         /* My effort for custom UI */
-        let controlOverlay = UIView()
         videoContainerView.addSubview(controlOverlay)
         controlOverlay.bounds = CGRect(x: videoContainerView.frame.origin.x, y: videoContainerView.frame.origin.y, width: videoContainerView.frame.width * 2, height: videoContainerView.frame.height * 2)
         controlOverlay.alpha = 0.1
-        controlOverlay.backgroundColor = UIColor.white
+        controlOverlay.backgroundColor = UIColor.blue
         controlOverlay.superview?.bringSubview(toFront: controlOverlay)
         controlOverlay.isUserInteractionEnabled = false
+        controlOverlay.isHidden = true
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(popOverlay), name: NSNotification.Name(rawValue: "overlay"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,11 +82,23 @@ class VideoViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
-
-class CustomAVPlayerViewController: AVPlayerViewController {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesBegan")
+    
+    class CustomAVPlayerViewController: AVPlayerViewController {
+        var touchCount = 0
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "overlay"), object: nil)
+        }
     }
+    
+    @objc func popOverlay() {
+        print("event triggered")
+        if(touchCount == 0) {
+            controlOverlay.isHidden = false
+            touchCount = 1 - touchCount
+        } else {
+            controlOverlay.isHidden = true
+            touchCount = 1 - touchCount
+        }
+    }
+
 }
