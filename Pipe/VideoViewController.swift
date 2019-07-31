@@ -24,6 +24,10 @@ class VideoViewController: UIViewController {
     let playButton = UIButton()
     let playImage = UIImage(named: "play")
     let pauseImage = UIImage(named: "pause")
+    /*
+    let fullscreenButton = UIButton()
+    let fullscreenImage = UIImage(named:"fullscreen")
+ */
 
     // Custom controls
     //var playPauseButton: PlayPauseButton!
@@ -36,6 +40,12 @@ class VideoViewController: UIViewController {
             player.rate = 1
             playButton.setImage(pauseImage, for: .normal)
         }
+    }
+    
+    @objc func goFullScreen() {
+        playerViewController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        
+        print("yeah")
     }
     
     override func viewDidLoad() {
@@ -66,7 +76,7 @@ class VideoViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         /* My effort for custom UI */
-        playerViewController.showsPlaybackControls = false
+        playerViewController.showsPlaybackControls = true
         
         videoContainerView.addSubview(controlOverlay)
         controlOverlay.frame = CGRect(x: 0, y: 0, width: videoContainerView.frame.width, height: videoContainerView.frame.height)
@@ -81,6 +91,14 @@ class VideoViewController: UIViewController {
         playButton.frame = CGRect(x: videoContainerView.frame.width / 2 - 30, y: videoContainerView.frame.height / 2 - 30, width: 60, height: 60)
         playButton.isHidden = true
         playButton.addTarget(self, action: #selector(playVideo), for: .touchUpInside)
+        
+        /*
+        videoContainerView.addSubview(fullscreenButton)
+        fullscreenButton.frame = CGRect(x:0, y:0, width:30, height:30)
+        fullscreenButton.isHidden = true
+        fullscreenButton.addTarget(self, action: #selector(goFullScreen), for: .touchUpInside)
+        fullscreenButton.setImage(fullscreenImage, for: .normal)
+        */
         
         NotificationCenter.default.addObserver(self, selector: #selector(popOverlay), name: NSNotification.Name(rawValue: "overlay"), object: nil)
     }
@@ -116,15 +134,16 @@ class VideoViewController: UIViewController {
     }
     
     @objc func popOverlay() {
-        print("event triggered")
         if(screenTouchCount == 0) {
             controlOverlay.isHidden = false
             playButton.isHidden = false
+            //fullscreenButton.isHidden = false
             
             screenTouchCount = 1 - screenTouchCount
         } else {
             controlOverlay.isHidden = true
             playButton.isHidden = true
+            //fullscreenButton.isHidden = true
             
             screenTouchCount = 1 - screenTouchCount
         }
