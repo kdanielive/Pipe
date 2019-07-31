@@ -58,8 +58,12 @@ class VideoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let video = videos[indexPath.row]
-        return VideoTableViewCell.height(for: video)
+        if(indexPath.section == 0) {
+            let video = videos[indexPath.row]
+            return VideoTableViewCell.height(for: video)
+        } else {
+            return 90
+        }
         
     }
     
