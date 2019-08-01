@@ -101,13 +101,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g04-3I-r0M">
-                                <rect key="frame" x="0.0" y="20" width="375" height="210"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="210"/>
                                 <connections>
                                     <segue destination="wmy-JP-Eif" kind="embed" id="Sdc-b8-OLm"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6t-dF-Dsr">
-                                <rect key="frame" x="345" y="200" width="30" height="30"/>
+                                <rect key="frame" x="345" y="244" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="4BC-qw-F6d"/>
                                     <constraint firstAttribute="height" constant="30" id="NZy-sk-is2"/>
@@ -119,7 +119,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FtL-O8-Rqr">
-                                <rect key="frame" x="-2" y="200" width="291" height="31"/>
+                                <rect key="frame" x="-2" y="244" width="291" height="31"/>
                                 <color key="tintColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="thumbTintColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
@@ -127,7 +127,7 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kR-OO-v69">
-                                <rect key="frame" x="167" y="105" width="35" height="35"/>
+                                <rect key="frame" x="167" y="149" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ajf-Xu-FLi"/>
                                     <constraint firstAttribute="width" constant="35" id="r05-CX-jl9"/>
@@ -138,13 +138,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8L-8t-qZA">
-                                <rect key="frame" x="295" y="200" width="42" height="30"/>
+                                <rect key="frame" x="295" y="244" width="42" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voI-HX-CjF">
-                                <rect key="frame" x="0.0" y="20" width="20" height="30"/>
+                                <rect key="frame" x="0.0" y="64" width="20" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="Dm1-le-eyR"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="SSx-2u-Okm"/>
@@ -152,42 +152,42 @@
                                 </constraints>
                                 <state key="normal" image="backarrow"/>
                                 <connections>
-                                    <segue destination="A0z-40-5vy" kind="show" id="BDQ-zG-dYQ"/>
+                                    <segue destination="Osj-E9-ZFC" kind="show" id="N8o-0o-PVb"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-fI-rNJ">
-                                <rect key="frame" x="0.0" y="230" width="375" height="114"/>
+                                <rect key="frame" x="0.0" y="274" width="375" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Things You Should Never Do in Debates" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foN-My-rRe">
-                                        <rect key="frame" x="25" y="22" width="325" height="42"/>
+                                        <rect key="frame" x="25" y="22" width="325" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ratingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QIS-1p-q7A">
-                                        <rect key="frame" x="25" y="80" width="16" height="15"/>
+                                        <rect key="frame" x="25" y="38" width="16" height="14"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mbG-zJ-HEX">
-                                        <rect key="frame" x="97" y="80" width="16" height="16"/>
+                                        <rect key="frame" x="97" y="38" width="16" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="U6o-4J-esa"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2L-QB-cwb">
-                                        <rect key="frame" x="116" y="80" width="42" height="21"/>
+                                        <rect key="frame" x="116" y="38" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOI-sO-NaR">
-                                        <rect key="frame" x="341" y="32" width="9" height="22"/>
+                                        <rect key="frame" x="341" y="11" width="9" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="9" id="xXy-ru-o35"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="moreIcon"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq3-Bi-MY9">
-                                        <rect key="frame" x="47" y="78" width="42" height="21"/>
+                                        <rect key="frame" x="47" y="37" width="42" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -429,7 +429,6 @@
         <!--Navigation Controller-->
         <scene sceneID="yFK-ux-Zed">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ivO-cg-IAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Osj-E9-ZFC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="recents" id="veN-92-gwE"/>
                     <toolbarItems/>
@@ -443,6 +442,7 @@
                         <segue destination="A0z-40-5vy" kind="relationship" relationship="rootViewController" id="AAV-AN-gFR"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivO-cg-IAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-249" y="-460"/>
         </scene>
@@ -531,6 +531,7 @@
         <image name="user" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BDQ-zG-dYQ"/>
+        <segue reference="N8o-0o-PVb"/>
+        <segue reference="AAV-AN-gFR"/>
     </inferredMetricsTieBreakers>
 </document>
