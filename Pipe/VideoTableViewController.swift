@@ -54,7 +54,14 @@ class VideoTableViewController: UITableViewController {
             
             return cell
         }
-
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if(section == 0) {
+            return "Featured Videos"
+        } else {
+            return "Featured Titles"
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

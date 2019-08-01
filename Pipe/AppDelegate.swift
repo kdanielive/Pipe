@@ -21,6 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().clientID = "783452828387-lm6rden5ib57f6urkq8iq1hvcvdpmoaj.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
+        //GIDSignIn.sharedInstance().signInSilently()
+        
+        if GIDSignIn.sharedInstance().hasAuthInKeychain() {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let tabBarVC: UITabBarController = sb.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+            window!.rootViewController = tabBarVC
+            /* Code to show your tab bar controller */
+        } else {
+            /* code to show your login VC */
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC: UIViewController = sb.instantiateViewController(withIdentifier: "LoginPage")
+            window!.rootViewController = loginVC
+            
+        }
+        
         return true
     }
     
@@ -40,6 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let familyName = user.profile.familyName
             let email = user.profile.email
             // ...
+            
+            NotificationCenter.default.post(
+                name: Notification.Name("SuccessfulSignInNotification"), object: nil, userInfo: nil)
+
         }
     }
     

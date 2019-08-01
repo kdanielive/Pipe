@@ -13,6 +13,7 @@
 		AB0D577C22F1252400984A1B /* CustomControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0D577B22F1252400984A1B /* CustomControls.swift */; };
 		AB0D577F22F17DA000984A1B /* CollectionHolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0D577E22F17DA000984A1B /* CollectionHolderTableViewCell.swift */; };
 		AB0D578222F17E1700984A1B /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0D578122F17E1700984A1B /* HorizontalCollectionViewCell.swift */; };
+		AB0D578622F267E600984A1B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0D578522F267E600984A1B /* ProfileViewController.swift */; };
 		AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E23A922F013180059166E /* VideoTableViewController.swift */; };
 		AB4E23AC22F018910059166E /* bulletTrain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */; };
 		AB4E23AD22F018930059166E /* monkey.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */; };
@@ -67,6 +68,7 @@
 		AB0D577B22F1252400984A1B /* CustomControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControls.swift; sourceTree = "<group>"; };
 		AB0D577E22F17DA000984A1B /* CollectionHolderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHolderTableViewCell.swift; sourceTree = "<group>"; };
 		AB0D578122F17E1700984A1B /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
+		AB0D578522F267E600984A1B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AB4E23A922F013180059166E /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		AB4E23B022F018FE0059166E /* bulletTrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletTrain.png; sourceTree = "<group>"; };
 		AB4E23B122F018FE0059166E /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				AB0D577D22F17D7A00984A1B /* DataFiles */,
 				AB0D578022F17DB500984A1B /* HorizontalTableView */,
 				AB4E23BA22F029DC0059166E /* SignInViewController.swift */,
+				AB0D578522F267E600984A1B /* ProfileViewController.swift */,
 				AB7208E822F0030F00F2913D /* Main.storyboard */,
 				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
 				AB4E23BC22F0394C0059166E /* VideoViewController.swift */,
@@ -509,6 +512,7 @@
 				AB8D9CE922F00EC100A37C4A /* Video.swift in Sources */,
 				AB8D9CEF22F00EE200A37C4A /* Layouts.swift in Sources */,
 				AB72091E22F00B1B00F2913D /* VideoPlayerView.swift in Sources */,
+				AB0D578622F267E600984A1B /* ProfileViewController.swift in Sources */,
 				AB0D577C22F1252400984A1B /* CustomControls.swift in Sources */,
 				AB8D9CEE22F00EE200A37C4A /* VideoTableViewCell.swift in Sources */,
 			);

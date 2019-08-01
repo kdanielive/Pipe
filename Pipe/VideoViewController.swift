@@ -27,7 +27,12 @@ class VideoViewController: UIViewController {
     /*
     let fullscreenButton = UIButton()
     let fullscreenImage = UIImage(named:"fullscreen")
- */
+    */
+    
+    @IBAction func speedUp15(_ sender: Any) {
+        player.rate = 1.5
+    }
+    
 
     // Custom controls
     //var playPauseButton: PlayPauseButton!
