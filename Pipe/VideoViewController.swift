@@ -99,6 +99,7 @@ class VideoViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(true, animated: true)
         self.tabBarController?.tabBar.isHidden = true
+        self.viewDidLayoutSubviews()
         
         // Video Player at the top part of the view
         let videoURL = videos[0].url
