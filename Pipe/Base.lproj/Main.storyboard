@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -155,10 +156,60 @@
                                     <segue destination="A0z-40-5vy" kind="show" id="BDQ-zG-dYQ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-fI-rNJ">
+                                <rect key="frame" x="0.0" y="230" width="375" height="114"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Things You Should Never Do in Debates" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foN-My-rRe">
+                                        <rect key="frame" x="25" y="22" width="325" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ratingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QIS-1p-q7A">
+                                        <rect key="frame" x="25" y="75" width="16" height="15"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mbG-zJ-HEX">
+                                        <rect key="frame" x="91" y="74" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="LZw-gR-8su"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq3-Bi-MY9">
+                                        <rect key="frame" x="41" y="72" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2L-QB-cwb">
+                                        <rect key="frame" x="110" y="72" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nq3-Bi-MY9" firstAttribute="leading" secondItem="QIS-1p-q7A" secondAttribute="trailing" id="2MR-1M-2hq"/>
+                                    <constraint firstItem="foN-My-rRe" firstAttribute="leading" secondItem="4Px-fI-rNJ" secondAttribute="leading" constant="25" id="4EX-NK-eId"/>
+                                    <constraint firstItem="foN-My-rRe" firstAttribute="top" secondItem="4Px-fI-rNJ" secondAttribute="top" constant="22" id="72M-3S-NDm"/>
+                                    <constraint firstItem="QIS-1p-q7A" firstAttribute="centerY" secondItem="nq3-Bi-MY9" secondAttribute="centerY" id="761-U2-345"/>
+                                    <constraint firstItem="d2L-QB-cwb" firstAttribute="leading" secondItem="mbG-zJ-HEX" secondAttribute="trailing" constant="3" id="Bz9-bA-mVj"/>
+                                    <constraint firstItem="nq3-Bi-MY9" firstAttribute="firstBaseline" secondItem="d2L-QB-cwb" secondAttribute="firstBaseline" id="I8z-gl-8Ce"/>
+                                    <constraint firstItem="mbG-zJ-HEX" firstAttribute="centerY" secondItem="d2L-QB-cwb" secondAttribute="centerY" id="KiL-0k-mEr"/>
+                                    <constraint firstItem="foN-My-rRe" firstAttribute="centerX" secondItem="4Px-fI-rNJ" secondAttribute="centerX" id="Two-iI-FIf"/>
+                                    <constraint firstItem="nq3-Bi-MY9" firstAttribute="baseline" secondItem="d2L-QB-cwb" secondAttribute="baseline" id="Z0g-Jj-YSy"/>
+                                    <constraint firstItem="mbG-zJ-HEX" firstAttribute="leading" secondItem="nq3-Bi-MY9" secondAttribute="trailing" constant="8" symbolic="YES" id="biL-sW-XxH"/>
+                                    <constraint firstItem="QIS-1p-q7A" firstAttribute="bottom" secondItem="mbG-zJ-HEX" secondAttribute="bottom" id="pwp-Jv-7CN"/>
+                                    <constraint firstItem="nq3-Bi-MY9" firstAttribute="top" secondItem="foN-My-rRe" secondAttribute="bottom" constant="8" symbolic="YES" id="q5Y-R3-mtI"/>
+                                    <constraint firstItem="foN-My-rRe" firstAttribute="leading" secondItem="QIS-1p-q7A" secondAttribute="leading" id="qPg-BG-wNh"/>
+                                    <constraint firstAttribute="bottom" secondItem="nq3-Bi-MY9" secondAttribute="bottom" constant="21" id="zM6-k7-klL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="voI-HX-CjF" firstAttribute="leading" secondItem="FtL-O8-Rqr" secondAttribute="leading" id="2CG-Nj-0PH"/>
+                            <constraint firstItem="4Px-fI-rNJ" firstAttribute="trailing" secondItem="G6t-dF-Dsr" secondAttribute="trailing" id="2Xl-Dd-H74"/>
                             <constraint firstItem="1kR-OO-v69" firstAttribute="leading" secondItem="tZv-Dz-HSw" secondAttribute="leading" constant="167" id="4Jj-Qg-cOV"/>
                             <constraint firstItem="voI-HX-CjF" firstAttribute="top" secondItem="tZv-Dz-HSw" secondAttribute="top" id="4d4-Eo-OjO"/>
                             <constraint firstItem="d8L-8t-qZA" firstAttribute="top" secondItem="tZv-Dz-HSw" secondAttribute="top" constant="180" id="Cwo-LE-0HZ"/>
@@ -173,7 +224,10 @@
                             <constraint firstAttribute="trailing" secondItem="g04-3I-r0M" secondAttribute="trailing" id="XX9-Kd-KQ7"/>
                             <constraint firstItem="FtL-O8-Rqr" firstAttribute="bottom" secondItem="d8L-8t-qZA" secondAttribute="bottom" id="Xsc-iq-ElC"/>
                             <constraint firstItem="tZv-Dz-HSw" firstAttribute="trailing" secondItem="1kR-OO-v69" secondAttribute="trailing" constant="173" id="ZEe-rv-6mu"/>
+                            <constraint firstItem="tZv-Dz-HSw" firstAttribute="bottom" secondItem="4Px-fI-rNJ" secondAttribute="bottom" constant="323" id="dyH-hf-DbR"/>
                             <constraint firstItem="g04-3I-r0M" firstAttribute="leading" secondItem="yRD-8J-p6x" secondAttribute="leading" id="en8-41-7yo"/>
+                            <constraint firstItem="4Px-fI-rNJ" firstAttribute="top" secondItem="g04-3I-r0M" secondAttribute="bottom" id="fs9-l8-Bod"/>
+                            <constraint firstItem="4Px-fI-rNJ" firstAttribute="leading" secondItem="FtL-O8-Rqr" secondAttribute="leading" id="qIZ-Dc-zTC"/>
                             <constraint firstItem="FtL-O8-Rqr" firstAttribute="top" secondItem="d8L-8t-qZA" secondAttribute="top" id="syh-ya-Qm3"/>
                             <constraint firstItem="1kR-OO-v69" firstAttribute="top" secondItem="tZv-Dz-HSw" secondAttribute="top" constant="85" id="tg4-Je-iwc"/>
                             <constraint firstItem="d8L-8t-qZA" firstAttribute="top" secondItem="G6t-dF-Dsr" secondAttribute="top" id="ygn-Cr-XaS"/>
@@ -185,6 +239,7 @@
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="0bN-Er-IHg"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="voI-HX-CjF" id="32D-ED-6ef"/>
                         <outlet property="fullScreenButton" destination="G6t-dF-Dsr" id="GWB-YG-PlV"/>
                         <outlet property="playButton" destination="1kR-OO-v69" id="Zb7-A3-N84"/>
                         <outlet property="progressSlider" destination="FtL-O8-Rqr" id="uZI-8z-Yzj"/>
@@ -423,11 +478,12 @@
         <image name="fullscreen" width="16" height="16"/>
         <image name="pause" width="37" height="37"/>
         <image name="pipeIcon" width="50" height="50"/>
+        <image name="playedIcon" width="11" height="15"/>
         <image name="profileIcon2" width="50" height="50"/>
+        <image name="ratingIcon" width="16" height="15"/>
         <image name="user" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lkq-68-DKa"/>
         <segue reference="BDQ-zG-dYQ"/>
     </inferredMetricsTieBreakers>
 </document>

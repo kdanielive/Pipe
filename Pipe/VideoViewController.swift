@@ -31,6 +31,7 @@ class VideoViewController: UIViewController {
     var timeObserver: Any?
     @IBOutlet var progressSlider: UISlider!
     @IBOutlet var timeRemainingLabel: UILabel!
+    @IBOutlet var backButton: UIButton!
     
     @IBAction func playbackSliderValueChanged(_ sender: UISlider) {
         let duration = player.currentItem!.duration
@@ -136,7 +137,7 @@ class VideoViewController: UIViewController {
         fullScreenButton.isHidden = true
         progressSlider.isHidden = true
         timeRemainingLabel.isHidden = true
-        
+        backButton.isHidden = true
         /* My effort for custom UI programmatically */
         
         /*
@@ -207,6 +208,7 @@ class VideoViewController: UIViewController {
             fullScreenButton.isHidden = false
             timeRemainingLabel.isHidden = false
             progressSlider.isHidden = false
+            backButton.isHidden = false
             
             screenTouchCount = 1 - screenTouchCount
         } else {
@@ -219,6 +221,7 @@ class VideoViewController: UIViewController {
             fullScreenButton.isHidden = true
             timeRemainingLabel.isHidden = true
             progressSlider.isHidden = true
+            backButton.isHidden = true
             
             screenTouchCount = 1 - screenTouchCount
         }
