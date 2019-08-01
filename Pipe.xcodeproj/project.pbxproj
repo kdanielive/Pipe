@@ -184,8 +184,8 @@
 		AB0D578822F2D4D900984A1B /* Recommended Videos */ = {
 			isa = PBXGroup;
 			children = (
-				AB0D578922F2D4F500984A1B /* RecommendedVideosTableViewCell.swift */,
 				AB0D578B22F2D55900984A1B /* RecommendedVideosTableViewController.swift */,
+				AB0D578922F2D4F500984A1B /* RecommendedVideosTableViewCell.swift */,
 			);
 			path = "Recommended Videos";
 			sourceTree = "<group>";
