@@ -252,30 +252,50 @@
                                             <constraint firstAttribute="height" constant="70" id="gb7-LA-092"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="spo-UB-Ydt">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spo-UB-Ydt">
                                         <rect key="frame" x="0.0" y="184" width="375" height="68"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More Videos in Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-QU-0gw">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Videos in Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-QU-0gw">
                                                 <rect key="frame" x="25" y="8" width="320" height="52"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="s9Y-QU-0gw" firstAttribute="top" secondItem="spo-UB-Ydt" secondAttribute="topMargin" id="3dw-SF-ZJl"/>
+                                            <constraint firstItem="s9Y-QU-0gw" firstAttribute="bottom" secondItem="spo-UB-Ydt" secondAttribute="bottomMargin" id="hnH-kd-AWI"/>
+                                            <constraint firstItem="s9Y-QU-0gw" firstAttribute="leading" secondItem="spo-UB-Ydt" secondAttribute="leading" constant="25" id="mHa-Kn-X2E"/>
+                                            <constraint firstAttribute="height" constant="68" id="q0j-Om-t4d"/>
+                                            <constraint firstAttribute="trailing" secondItem="s9Y-QU-0gw" secondAttribute="trailing" constant="30" id="yTt-iJ-Ivr"/>
+                                        </constraints>
                                     </view>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaP-fM-nbB">
+                                        <rect key="frame" x="0.0" y="252" width="375" height="232"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="232" id="rNR-6P-W2f"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="G88-Ve-3Xs" kind="embed" id="zXa-pd-Fog"/>
+                                        </connections>
+                                    </containerView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hdk-rY-wWg" firstAttribute="top" secondItem="4Px-fI-rNJ" secondAttribute="bottom" id="5G4-cU-rGj"/>
                                     <constraint firstItem="4Px-fI-rNJ" firstAttribute="top" secondItem="CKN-uR-djA" secondAttribute="top" id="8G6-am-nVL"/>
+                                    <constraint firstItem="spo-UB-Ydt" firstAttribute="leading" secondItem="PaP-fM-nbB" secondAttribute="leading" id="QKG-n7-p0b"/>
+                                    <constraint firstItem="spo-UB-Ydt" firstAttribute="trailing" secondItem="PaP-fM-nbB" secondAttribute="trailing" id="S0y-QK-WYk"/>
                                     <constraint firstItem="4Px-fI-rNJ" firstAttribute="leading" secondItem="CKN-uR-djA" secondAttribute="leading" id="ULA-u2-ggD"/>
+                                    <constraint firstItem="PaP-fM-nbB" firstAttribute="top" secondItem="spo-UB-Ydt" secondAttribute="bottom" id="Yfg-eR-HQj"/>
+                                    <constraint firstItem="spo-UB-Ydt" firstAttribute="top" secondItem="hdk-rY-wWg" secondAttribute="bottom" id="gXq-gO-xoS"/>
                                     <constraint firstAttribute="bottom" secondItem="hdk-rY-wWg" secondAttribute="bottom" constant="392" id="h7i-nk-ERg"/>
+                                    <constraint firstItem="spo-UB-Ydt" firstAttribute="leading" secondItem="hdk-rY-wWg" secondAttribute="leading" id="l8o-Kh-bjw"/>
                                     <constraint firstItem="4Px-fI-rNJ" firstAttribute="trailing" secondItem="hdk-rY-wWg" secondAttribute="trailing" id="rvS-d7-Pr6"/>
                                     <constraint firstItem="4Px-fI-rNJ" firstAttribute="centerX" secondItem="CKN-uR-djA" secondAttribute="centerX" id="xIf-1B-3DB"/>
                                     <constraint firstAttribute="trailing" secondItem="4Px-fI-rNJ" secondAttribute="trailing" id="xXv-JR-ZZL"/>
                                     <constraint firstItem="4Px-fI-rNJ" firstAttribute="leading" secondItem="hdk-rY-wWg" secondAttribute="leading" id="yo5-dP-NdQ"/>
+                                    <constraint firstItem="spo-UB-Ydt" firstAttribute="trailing" secondItem="hdk-rY-wWg" secondAttribute="trailing" id="zl8-4P-egy"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -564,7 +584,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYe-N8-WFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="-384"/>
+            <point key="canvasLocation" x="2134" y="-325"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3Jp-pH-qvz">
+            <objects>
+                <viewController id="G88-Ve-3Xs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jnQ-NO-hff">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ax6-eb-CLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2134" y="103"/>
         </scene>
     </scenes>
     <resources>
