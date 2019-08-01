@@ -22,8 +22,8 @@ class VideoViewController: UIViewController {
     //let controlOverlay = UIView()
     //let playButton = UIButton()
     //let fullscreenButton = UIButton()
-    let playImage = UIImage(named: "play2")
-    let pauseImage = UIImage(named: "pause2")
+    let playImage = UIImage(named: "play")
+    let pauseImage = UIImage(named: "pause")
     let fullscreenImage = UIImage(named:"fullscreen")
     
     @IBOutlet var playButton: UIButton!
@@ -31,7 +31,6 @@ class VideoViewController: UIViewController {
     var timeObserver: Any?
     @IBOutlet var progressSlider: UISlider!
     @IBOutlet var timeRemainingLabel: UILabel!
-    
     
     @IBAction func playbackSliderValueChanged(_ sender: UISlider) {
         let duration = player.currentItem!.duration
@@ -97,6 +96,8 @@ class VideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
         // Video Player at the top part of the view
         let videoURL = videos[0].url
         player = AVPlayer(url: videoURL)
@@ -133,6 +134,8 @@ class VideoViewController: UIViewController {
         // Custom UI through storyboard
         playButton.isHidden = true
         fullScreenButton.isHidden = true
+        progressSlider.isHidden = true
+        timeRemainingLabel.isHidden = true
         
         /* My effort for custom UI programmatically */
         
@@ -202,6 +205,8 @@ class VideoViewController: UIViewController {
             */
             playButton.isHidden = false
             fullScreenButton.isHidden = false
+            timeRemainingLabel.isHidden = false
+            progressSlider.isHidden = false
             
             screenTouchCount = 1 - screenTouchCount
         } else {
@@ -212,6 +217,8 @@ class VideoViewController: UIViewController {
             */
             playButton.isHidden = true
             fullScreenButton.isHidden = true
+            timeRemainingLabel.isHidden = true
+            progressSlider.isHidden = true
             
             screenTouchCount = 1 - screenTouchCount
         }
