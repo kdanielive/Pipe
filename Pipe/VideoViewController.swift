@@ -17,21 +17,28 @@ class VideoViewController: UIViewController {
     @IBOutlet var videoContainerView: UIView!
     let playerViewController = CustomAVPlayerViewController()
     var player = AVPlayer()
-    
     var screenTouchCount = 0
-    
-    let controlOverlay = UIView()
-    let playButton = UIButton()
+    //let controlOverlay = UIView()
+    //let playButton = UIButton()
+    //let fullscreenButton = UIButton()
     let playImage = UIImage(named: "play")
     let pauseImage = UIImage(named: "pause")
-    
-    let fullscreenButton = UIButton()
     let fullscreenImage = UIImage(named:"fullscreen")
     
-    @IBAction func speedUp15(_ sender: Any) {
-        player.rate = 1.5
-    }
+    @IBOutlet var playButton: UIButton!
     
+    
+    
+    @IBAction func playVideo(_ sender: UIButton) {
+        if(player.rate != 0) {
+            player.rate = 0
+            sender.setImage(playImage, for: .normal)
+        } else {
+            player.rate = 1
+            sender.setImage(pauseImage, for: .normal)
+        }
+    }
+    /*
     @objc func playVideo() {
         if(player.rate != 0) {
             player.rate = 0
@@ -41,10 +48,18 @@ class VideoViewController: UIViewController {
             playButton.setImage(pauseImage, for: .normal)
         }
     }
+    */
     
+    /*
+     @IBAction func speedUp15(_ sender: Any) {
+     player.rate = 1.5
+     }
+     */
+    
+    /*
     @objc func goFullScreen() {
         self.player.pause()
-        let newPlayerViewController = CustomAVPlayerViewController()
+        let newPlayerViewController = AVPlayerViewController()
         let videoURL = videos[0].url
         let newPlayer = AVPlayer(url: videoURL)
 
@@ -54,6 +69,7 @@ class VideoViewController: UIViewController {
             newPlayer.play()
         }
     }
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,8 +91,6 @@ class VideoViewController: UIViewController {
         playerViewController.showsPlaybackControls = false
         
         // Back to implementing video player at the top of the view
-        
-        
         playerViewController.player = player
         addChildViewController(playerViewController)
         playerViewController.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -85,10 +99,12 @@ class VideoViewController: UIViewController {
         videoContainerView.addSubview(playerViewController.view)
         playerViewController.player!.play()
         
-        // Do any additional setup after loading the view.
+        // Custom UI through storyboard
+        playButton.isHidden = true
         
-        /* My effort for custom UI */
+        /* My effort for custom UI programmatically */
         
+        /*
         videoContainerView.addSubview(controlOverlay)
         controlOverlay.frame = CGRect(x: 0, y: 0, width: videoContainerView.frame.width, height: videoContainerView.frame.height)
         controlOverlay.alpha = 0.1
@@ -109,9 +125,10 @@ class VideoViewController: UIViewController {
         fullscreenButton.isHidden = true
         fullscreenButton.addTarget(self, action: #selector(goFullScreen), for: .touchUpInside)
         fullscreenButton.setImage(fullscreenImage, for: .normal)
-        
+        */
         
         NotificationCenter.default.addObserver(self, selector: #selector(popOverlay), name: NSNotification.Name(rawValue: "overlay"), object: nil)
+ 
     }
 
     override func didReceiveMemoryWarning() {
@@ -146,15 +163,21 @@ class VideoViewController: UIViewController {
     
     @objc func popOverlay() {
         if(screenTouchCount == 0) {
+            /*
             controlOverlay.isHidden = false
             playButton.isHidden = false
             fullscreenButton.isHidden = false
+            */
+            playButton.isHidden = false
             
             screenTouchCount = 1 - screenTouchCount
         } else {
+            /*
             controlOverlay.isHidden = true
             playButton.isHidden = true
             fullscreenButton.isHidden = true
+            */
+            playButton.isHidden = true
             
             screenTouchCount = 1 - screenTouchCount
         }

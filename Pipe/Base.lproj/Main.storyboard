@@ -145,7 +145,10 @@
                                     <constraint firstAttribute="width" constant="60" id="8QL-Le-jsz"/>
                                     <constraint firstAttribute="height" constant="60" id="MGq-Gd-3BR"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="play"/>
+                                <state key="normal" title="Button" image="pause"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="4ow-x9-xFM" eventType="touchUpInside" id="1fI-pJ-dl1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -170,6 +173,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="playButton" destination="1kR-OO-v69" id="Zb7-A3-N84"/>
                         <outlet property="videoContainerView" destination="g04-3I-r0M" id="blu-Mu-frw"/>
                     </connections>
                 </viewController>
@@ -419,8 +423,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pause" width="512" height="512"/>
         <image name="pipeIcon" width="50" height="50"/>
-        <image name="play" width="512" height="512"/>
         <image name="profileIcon2" width="50" height="50"/>
         <image name="user" width="128" height="128"/>
     </resources>
