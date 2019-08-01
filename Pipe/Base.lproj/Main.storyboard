@@ -139,17 +139,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kR-OO-v69">
-                                <rect key="frame" x="157" y="139" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="8QL-Le-jsz"/>
-                                    <constraint firstAttribute="height" constant="60" id="MGq-Gd-3BR"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="pause"/>
-                                <connections>
-                                    <action selector="playVideo:" destination="4ow-x9-xFM" eventType="touchUpInside" id="1fI-pJ-dl1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6t-dF-Dsr">
                                 <rect key="frame" x="0.0" y="64" width="30" height="30"/>
                                 <constraints>
@@ -161,20 +150,39 @@
                                     <action selector="goFullScreen:" destination="4ow-x9-xFM" eventType="touchUpInside" id="AYM-HS-E1y"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FtL-O8-Rqr">
+                                <rect key="frame" x="-2" y="244" width="379" height="31"/>
+                                <color key="tintColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="thumbTintColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kR-OO-v69">
+                                <rect key="frame" x="167" y="149" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="N00-Yh-hPE"/>
+                                    <constraint firstAttribute="width" constant="40" id="Pt5-Dd-qG6"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="pause2"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="4ow-x9-xFM" eventType="touchUpInside" id="1fI-pJ-dl1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="g04-3I-r0M" firstAttribute="leading" secondItem="yRD-8J-p6x" secondAttribute="leading" id="Cba-5d-eQr"/>
-                            <constraint firstItem="1kR-OO-v69" firstAttribute="centerY" secondItem="g04-3I-r0M" secondAttribute="centerY" id="HMB-xl-jku"/>
+                            <constraint firstItem="FtL-O8-Rqr" firstAttribute="leading" secondItem="g04-3I-r0M" secondAttribute="leading" id="DPj-Di-3gx"/>
                             <constraint firstItem="g04-3I-r0M" firstAttribute="leading" secondItem="63K-Nz-SYO" secondAttribute="leading" id="LN7-dB-Pe5"/>
+                            <constraint firstItem="FtL-O8-Rqr" firstAttribute="bottom" secondItem="g04-3I-r0M" secondAttribute="bottom" id="Os8-f5-DiU"/>
                             <constraint firstItem="g04-3I-r0M" firstAttribute="trailing" secondItem="63K-Nz-SYO" secondAttribute="trailing" id="RJS-9g-FNS"/>
-                            <constraint firstItem="1kR-OO-v69" firstAttribute="centerX" secondItem="63K-Nz-SYO" secondAttribute="centerX" id="Tq6-pT-1ib"/>
                             <constraint firstItem="G6t-dF-Dsr" firstAttribute="top" secondItem="g04-3I-r0M" secondAttribute="top" id="W88-TK-eJt"/>
                             <constraint firstAttribute="trailing" secondItem="g04-3I-r0M" secondAttribute="trailing" id="bVa-iw-UzC"/>
                             <constraint firstItem="G6t-dF-Dsr" firstAttribute="leading" secondItem="g04-3I-r0M" secondAttribute="leading" id="fzz-a7-o6A"/>
+                            <constraint firstItem="1kR-OO-v69" firstAttribute="centerY" secondItem="g04-3I-r0M" secondAttribute="centerY" id="heo-Ww-uKU"/>
                             <constraint firstItem="tZv-Dz-HSw" firstAttribute="bottom" secondItem="63K-Nz-SYO" secondAttribute="bottom" constant="355" id="hqh-Ph-hHV"/>
+                            <constraint firstItem="FtL-O8-Rqr" firstAttribute="trailing" secondItem="g04-3I-r0M" secondAttribute="trailing" id="mrt-Bo-yXU"/>
                             <constraint firstItem="g04-3I-r0M" firstAttribute="top" secondItem="tZv-Dz-HSw" secondAttribute="top" id="qn0-3R-tij"/>
                             <constraint firstItem="63K-Nz-SYO" firstAttribute="top" secondItem="g04-3I-r0M" secondAttribute="bottom" constant="8" symbolic="YES" id="w9o-QT-bxp"/>
+                            <constraint firstItem="g04-3I-r0M" firstAttribute="leading" secondItem="1kR-OO-v69" secondAttribute="trailing" constant="-207" id="z6M-7D-rpK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tZv-Dz-HSw"/>
                     </view>
@@ -186,13 +194,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="fullScreenButton" destination="G6t-dF-Dsr" id="GWB-YG-PlV"/>
                         <outlet property="playButton" destination="1kR-OO-v69" id="Zb7-A3-N84"/>
                         <outlet property="videoContainerView" destination="g04-3I-r0M" id="blu-Mu-frw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EtJ-fv-eeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="-195"/>
+            <point key="canvasLocation" x="2133.5999999999999" y="-195.6521739130435"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="haI-0e-aWf">
@@ -219,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-B1-Gwa">
-                                <rect key="frame" x="127" y="81" width="120" height="128"/>
+                                <rect key="frame" x="127" y="81" width="121" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHo-iq-5IY">
                                 <rect key="frame" x="16" y="239" width="343" height="33"/>
@@ -437,7 +446,7 @@
     </scenes>
     <resources>
         <image name="fullscreen2" width="64" height="64"/>
-        <image name="pause" width="512" height="512"/>
+        <image name="pause2" width="480" height="480"/>
         <image name="pipeIcon" width="50" height="50"/>
         <image name="profileIcon2" width="50" height="50"/>
         <image name="user" width="128" height="128"/>

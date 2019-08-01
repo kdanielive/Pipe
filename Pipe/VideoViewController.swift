@@ -21,11 +21,12 @@ class VideoViewController: UIViewController {
     //let controlOverlay = UIView()
     //let playButton = UIButton()
     //let fullscreenButton = UIButton()
-    let playImage = UIImage(named: "play")
-    let pauseImage = UIImage(named: "pause")
+    let playImage = UIImage(named: "play2")
+    let pauseImage = UIImage(named: "pause2")
     let fullscreenImage = UIImage(named:"fullscreen")
     
     @IBOutlet var playButton: UIButton!
+    @IBOutlet var fullScreenButton: UIButton!
     
     
     
@@ -50,6 +51,7 @@ class VideoViewController: UIViewController {
         present(newPlayerViewController, animated: true) {
             newPlayer.play()
         }
+        playButton.setImage(playImage, for: .normal)
     }
     /*
     @objc func playVideo() {
@@ -63,11 +65,11 @@ class VideoViewController: UIViewController {
     }
     */
     
-    /*
+    
      @IBAction func speedUp15(_ sender: Any) {
      player.rate = 1.5
      }
-     */
+    
     
     /*
     @objc func goFullScreen() {
@@ -114,6 +116,7 @@ class VideoViewController: UIViewController {
         
         // Custom UI through storyboard
         playButton.isHidden = true
+        fullScreenButton.isHidden = true
         
         /* My effort for custom UI programmatically */
         
@@ -182,6 +185,7 @@ class VideoViewController: UIViewController {
             fullscreenButton.isHidden = false
             */
             playButton.isHidden = false
+            fullScreenButton.isHidden = false
             
             screenTouchCount = 1 - screenTouchCount
         } else {
@@ -191,6 +195,7 @@ class VideoViewController: UIViewController {
             fullscreenButton.isHidden = true
             */
             playButton.isHidden = true
+            fullScreenButton.isHidden = true
             
             screenTouchCount = 1 - screenTouchCount
         }
