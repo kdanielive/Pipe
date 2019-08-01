@@ -14,6 +14,7 @@ class VideoViewController: UIViewController {
 
     var videos = Video.allVideos()
     
+    
     @IBOutlet var videoContainerView: UIView!
     let playerViewController = CustomAVPlayerViewController()
     var player = AVPlayer()
@@ -27,8 +28,17 @@ class VideoViewController: UIViewController {
     
     @IBOutlet var playButton: UIButton!
     @IBOutlet var fullScreenButton: UIButton!
+    var timeObserver: Any?
+    @IBOutlet var progressSlider: UISlider!
+    @IBOutlet var timeRemainingLabel: UILabel!
     
     
+    @IBAction func playbackSliderValueChanged(_ sender: UISlider) {
+        let duration = player.currentItem!.duration
+        let value = Float64(progressSlider.value) * CMTimeGetSeconds(duration)
+        let seekTime = CMTime(value: CMTimeValue(value), timescale: 1)
+        player.seek(to: seekTime )
+    }
     
     @IBAction func playVideo(_ sender: UIButton) {
         if(player.rate != 0) {
@@ -64,8 +74,6 @@ class VideoViewController: UIViewController {
         }
     }
     */
-    
-    
      @IBAction func speedUp15(_ sender: Any) {
      player.rate = 1.5
      }
@@ -105,7 +113,7 @@ class VideoViewController: UIViewController {
         // Getting rid of the given controls
         playerViewController.showsPlaybackControls = false
         
-        // Back to implementing video player at the top of the view
+        // Implementing video player at the top of the view
         playerViewController.player = player
         addChildViewController(playerViewController)
         playerViewController.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -113,6 +121,14 @@ class VideoViewController: UIViewController {
         //playerViewController.videoGravity = "resize"
         videoContainerView.addSubview(playerViewController.view)
         playerViewController.player!.play()
+        
+        //Setting up the Slider
+        let interval = CMTime(seconds: 0.01, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
+        timeObserver = player.addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main, using: { elapsedTime in
+            self.updateVideoPlayerState()
+        })
+        timeRemainingLabel.textColor = UIColor.white
+        timeRemainingLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
         
         // Custom UI through storyboard
         playButton.isHidden = true
@@ -198,6 +214,35 @@ class VideoViewController: UIViewController {
             fullScreenButton.isHidden = true
             
             screenTouchCount = 1 - screenTouchCount
+        }
+    }
+    
+    func updateVideoPlayerState() {
+        let currentTime = player.currentTime() 
+        let currentTimeInSeconds = CMTimeGetSeconds(currentTime)
+        progressSlider.value = Float(currentTimeInSeconds)
+        if let currentItem = player.currentItem {
+            let duration = currentItem.duration
+            if (CMTIME_IS_INVALID(duration)) {
+                return;
+            }
+            let currentTime = currentItem.currentTime()
+            progressSlider.value = Float(CMTimeGetSeconds(currentTime) / CMTimeGetSeconds(duration))
+            
+            // Update time remaining label
+            let totalTimeInSeconds = CMTimeGetSeconds(duration)
+            let remainingTimeInSeconds = totalTimeInSeconds - currentTimeInSeconds
+            
+            let mins = remainingTimeInSeconds / 60
+            let secs = remainingTimeInSeconds.truncatingRemainder(dividingBy: 60)
+            let timeformatter = NumberFormatter()
+            timeformatter.minimumIntegerDigits = 2
+            timeformatter.minimumFractionDigits = 0
+            timeformatter.roundingMode = .down
+            guard let minsStr = timeformatter.string(from: NSNumber(value: mins)), let secsStr = timeformatter.string(from: NSNumber(value: secs)) else {
+                return
+            }
+            timeRemainingLabel.text = "\(minsStr):\(secsStr)"
         }
     }
 
