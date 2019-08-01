@@ -38,6 +38,19 @@ class VideoViewController: UIViewController {
             sender.setImage(pauseImage, for: .normal)
         }
     }
+    
+    @IBAction func goFullScreen(_ sender: UIButton) {
+        self.player.pause()
+        let newPlayerViewController = AVPlayerViewController()
+        let videoURL = videos[0].url
+        let newPlayer = AVPlayer(url: videoURL)
+        
+        newPlayerViewController.player = newPlayer
+        
+        present(newPlayerViewController, animated: true) {
+            newPlayer.play()
+        }
+    }
     /*
     @objc func playVideo() {
         if(player.rate != 0) {
