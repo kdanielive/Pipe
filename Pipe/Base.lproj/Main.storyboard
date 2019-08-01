@@ -94,7 +94,7 @@
             <objects>
                 <viewController id="4ow-x9-xFM" customClass="VideoViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yRD-8J-p6x">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g04-3I-r0M">
@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKN-uR-djA">
-                                <rect key="frame" x="0.0" y="275" width="375" height="576"/>
+                                <rect key="frame" x="0.0" y="275" width="375" height="876"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-fI-rNJ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
@@ -252,6 +252,20 @@
                                             <constraint firstAttribute="height" constant="70" id="gb7-LA-092"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="spo-UB-Ydt">
+                                        <rect key="frame" x="0.0" y="184" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More Videos in Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-QU-0gw">
+                                                <rect key="frame" x="25" y="8" width="320" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hdk-rY-wWg" firstAttribute="top" secondItem="4Px-fI-rNJ" secondAttribute="bottom" id="5G4-cU-rGj"/>
@@ -295,7 +309,7 @@
                     <navigationItem key="navigationItem" title="Title" id="gut-cT-OJj">
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="0bN-Er-IHg"/>
                     </navigationItem>
-                    <size key="freeformSize" width="375" height="900"/>
+                    <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="backButton" destination="voI-HX-CjF" id="32D-ED-6ef"/>
                         <outlet property="fullScreenButton" destination="G6t-dF-Dsr" id="GWB-YG-PlV"/>
@@ -307,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EtJ-fv-eeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392.8" y="-112.44377811094454"/>
+            <point key="canvasLocation" x="1392.8" y="60.26986506746627"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="haI-0e-aWf">
