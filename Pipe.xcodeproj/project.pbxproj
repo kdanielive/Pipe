@@ -168,6 +168,15 @@
 			path = HorizontalTableView;
 			sourceTree = "<group>";
 		};
+		AB0D578722F26E3300984A1B /* LoginFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AB4E23BA22F029DC0059166E /* SignInViewController.swift */,
+				AB0D578522F267E600984A1B /* ProfileViewController.swift */,
+			);
+			path = LoginFiles;
+			sourceTree = "<group>";
+		};
 		AB4E23AB22F013250059166E /* ImportedFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,11 +216,10 @@
 			isa = PBXGroup;
 			children = (
 				AB7208E422F0030F00F2913D /* AppDelegate.swift */,
+				AB0D578722F26E3300984A1B /* LoginFiles */,
 				AB4E23AB22F013250059166E /* ImportedFiles */,
 				AB0D577D22F17D7A00984A1B /* DataFiles */,
 				AB0D578022F17DB500984A1B /* HorizontalTableView */,
-				AB4E23BA22F029DC0059166E /* SignInViewController.swift */,
-				AB0D578522F267E600984A1B /* ProfileViewController.swift */,
 				AB7208E822F0030F00F2913D /* Main.storyboard */,
 				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
 				AB4E23BC22F0394C0059166E /* VideoViewController.swift */,
