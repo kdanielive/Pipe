@@ -17,7 +17,7 @@
             <objects>
                 <tableViewController id="A0z-40-5vy" customClass="VideoTableViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="va9-qx-Wfp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -407,6 +407,7 @@
                         <outlet property="backButton" destination="voI-HX-CjF" id="32D-ED-6ef"/>
                         <outlet property="contentView" destination="Tab-nj-JCy" id="h8d-W0-lVr"/>
                         <outlet property="fullScreenButton" destination="G6t-dF-Dsr" id="GWB-YG-PlV"/>
+                        <outlet property="moreButton" destination="TOI-sO-NaR" id="rud-v9-7BK"/>
                         <outlet property="playButton" destination="1kR-OO-v69" id="Zb7-A3-N84"/>
                         <outlet property="progressSlider" destination="FtL-O8-Rqr" id="uZI-8z-Yzj"/>
                         <outlet property="scrollView" destination="CKN-uR-djA" id="gkZ-X7-KbJ"/>
@@ -479,7 +480,7 @@
             <objects>
                 <viewController id="btm-ZC-I4i" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SIp-tM-lhe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xDi-Sg-fo1"/>
@@ -552,7 +553,7 @@
                     <tabBarItem key="tabBarItem" systemItem="recents" id="veN-92-gwE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4TS-48-gbK">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
@@ -572,7 +573,7 @@
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="WH3-hM-KGo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m25-Ts-dcO">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -784,6 +785,7 @@
         <image name="user" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="dpN-CM-UYt"/>
         <segue reference="11x-pY-6PN"/>
         <segue reference="vEJ-U0-1RA"/>
     </inferredMetricsTieBreakers>

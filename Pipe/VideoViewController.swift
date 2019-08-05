@@ -16,6 +16,7 @@ class VideoViewController: UIViewController {
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
+    @IBOutlet var moreButton: UIButton!
     
     @IBOutlet var videoContainerView: UIView!
     let playerViewController = CustomAVPlayerViewController()
