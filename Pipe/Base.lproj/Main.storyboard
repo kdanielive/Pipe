@@ -96,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g04-3I-r0M">
-                                <rect key="frame" x="0.0" y="64" width="375" height="210"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="CLB-eO-4KA"/>
                                     <constraint firstAttribute="width" constant="375" id="M3B-nx-buT"/>
@@ -105,7 +105,7 @@
                                 </constraints>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6t-dF-Dsr">
-                                <rect key="frame" x="345" y="244" width="30" height="30"/>
+                                <rect key="frame" x="345" y="200" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="4GM-EC-mB1"/>
                                 </constraints>
@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FtL-O8-Rqr">
-                                <rect key="frame" x="-2" y="244" width="291" height="31"/>
+                                <rect key="frame" x="-2" y="200" width="291" height="31"/>
                                 <color key="tintColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="thumbTintColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
@@ -123,20 +123,20 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kR-OO-v69">
-                                <rect key="frame" x="167" y="149" width="35" height="35"/>
+                                <rect key="frame" x="167" y="105" width="35" height="35"/>
                                 <state key="normal" image="pause"/>
                                 <connections>
                                     <action selector="playVideo:" destination="4ow-x9-xFM" eventType="touchUpInside" id="1fI-pJ-dl1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8L-8t-qZA">
-                                <rect key="frame" x="295" y="244" width="42" height="30"/>
+                                <rect key="frame" x="295" y="200" width="42" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voI-HX-CjF">
-                                <rect key="frame" x="0.0" y="64" width="20" height="30"/>
+                                <rect key="frame" x="0.0" y="20" width="20" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="raj-AG-KZB"/>
                                 </constraints>
@@ -146,10 +146,10 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKN-uR-djA">
-                                <rect key="frame" x="0.0" y="274" width="375" height="1526"/>
+                                <rect key="frame" x="0.0" y="230" width="375" height="1570"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tab-nj-JCy" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1526"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1570"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-fI-rNJ">
                                                 <rect key="frame" x="-4" y="0.0" width="379" height="114"/>
@@ -920,20 +920,59 @@
             </objects>
             <point key="canvasLocation" x="2134" y="504"/>
         </scene>
-        <!--View Controller-->
+        <!--Captions View Controller-->
         <scene sceneID="NtZ-9i-EBn">
             <objects>
-                <viewController id="8hD-Hj-8AY" sceneMemberID="viewController">
+                <viewController id="8hD-Hj-8AY" customClass="CaptionsViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c0U-xk-QzH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OsL-Hj-Ups">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D16-wq-dUU" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkt-QQ-Qjh">
+                                                <rect key="frame" x="8" y="8" width="359" height="631"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="D16-wq-dUU" secondAttribute="bottom" id="2KI-wR-OcJ"/>
+                                    <constraint firstItem="D16-wq-dUU" firstAttribute="top" secondItem="OsL-Hj-Ups" secondAttribute="top" id="9KD-IF-jeU"/>
+                                    <constraint firstItem="D16-wq-dUU" firstAttribute="leading" secondItem="OsL-Hj-Ups" secondAttribute="leading" id="CVM-20-4L8"/>
+                                    <constraint firstItem="D16-wq-dUU" firstAttribute="centerY" secondItem="OsL-Hj-Ups" secondAttribute="centerY" id="Y2F-JM-NYi"/>
+                                    <constraint firstAttribute="trailing" secondItem="D16-wq-dUU" secondAttribute="trailing" id="a2a-7z-7Mp"/>
+                                    <constraint firstItem="D16-wq-dUU" firstAttribute="centerX" secondItem="OsL-Hj-Ups" secondAttribute="centerX" id="clb-UK-Ih7"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wm5-Od-loN" firstAttribute="bottom" secondItem="OsL-Hj-Ups" secondAttribute="bottom" id="IHZ-cO-OIS"/>
+                            <constraint firstItem="OsL-Hj-Ups" firstAttribute="leading" secondItem="Wm5-Od-loN" secondAttribute="leading" id="cuV-9F-Lpt"/>
+                            <constraint firstItem="Wm5-Od-loN" firstAttribute="trailing" secondItem="OsL-Hj-Ups" secondAttribute="trailing" id="p7p-IJ-IfI"/>
+                            <constraint firstItem="OsL-Hj-Ups" firstAttribute="top" secondItem="Wm5-Od-loN" secondAttribute="top" id="xE1-qo-hHh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Wm5-Od-loN"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="D16-wq-dUU" id="XKa-ge-NXR"/>
+                        <outlet property="scriptLabel" destination="Gkt-QQ-Qjh" id="bLA-TK-cnQ"/>
+                        <outlet property="scrollView" destination="OsL-Hj-Ups" id="S0C-S8-LMa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCu-iW-usJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="1168"/>
+            <point key="canvasLocation" x="2133.5999999999999" y="1167.1664167916042"/>
         </scene>
     </scenes>
     <resources>
@@ -955,6 +994,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="11x-pY-6PN"/>
-        <segue reference="Lkq-68-DKa"/>
+        <segue reference="vEJ-U0-1RA"/>
     </inferredMetricsTieBreakers>
 </document>
