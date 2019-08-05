@@ -163,7 +163,17 @@ class VideoViewController: UIViewController {
     
     class CustomAVPlayerViewController: AVPlayerViewController {
         var screenTouchCount = 0
+        
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "overlay"), object: nil)
+        }
+        
+        override func viewDidLoad() {
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(procNotification))
+            self.view.addGestureRecognizer(gesture)
+        }
+        
+        @objc func procNotification() {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "overlay"), object: nil)
         }
     }
