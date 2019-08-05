@@ -272,8 +272,8 @@
 		ABA1D1DD22F7B175007B543F /* Comments Videos */ = {
 			isa = PBXGroup;
 			children = (
-				ABA1D1DE22F7B175007B543F /* VideoCommentsTableViewCell.swift */,
 				ABA1D1DF22F7B175007B543F /* VideoCommentsTableViewController.swift */,
+				ABA1D1DE22F7B175007B543F /* VideoCommentsTableViewCell.swift */,
 			);
 			path = "Comments Videos";
 			sourceTree = "<group>";
