@@ -14,7 +14,7 @@ class VideoViewController: UIViewController {
 
     var videos = Video.allVideos()
     
-    //
+    // Macro Scroll View
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
 
@@ -42,7 +42,9 @@ class VideoViewController: UIViewController {
     // Macro View Controls
     var popupView = UIView()
     var gestureRecognizerView = UIView()
-
+    var captionsView = UIView()
+    @IBOutlet var contentViewTopConstraint: NSLayoutConstraint!
+    
     @IBAction func playbackSliderValueChanged(_ sender: UISlider) {
         let duration = player.currentItem!.duration
         let value = Float64(progressSlider.value) * CMTimeGetSeconds(duration)
@@ -135,6 +137,8 @@ class VideoViewController: UIViewController {
     
         
         NotificationCenter.default.addObserver(self, selector: #selector(popOverlay), name: NSNotification.Name(rawValue: "overlay"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(popCaptions), name: NSNotification.Name(rawValue: "popCaptions"), object: nil)
  
     }
 
@@ -213,6 +217,18 @@ class VideoViewController: UIViewController {
     @objc func dismissModalView() {
         popupView.removeFromSuperview()
         gestureRecognizerView.removeFromSuperview()
+    }
+    
+    @objc func popCaptions() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let captionsViewController = storyboard.instantiateViewController(withIdentifier: "CaptionsViewController") as! CaptionsViewController
+        addChildViewController(captionsViewController)
+        captionsView = UIView(frame: CGRect(x: 0, y: videoContainerView.frame.height, width: self.view.frame.width, height: self.view.bounds.height / 3))
+        captionsViewController.view.frame = captionsView.bounds
+        self.view.addSubview(captionsView)
+        captionsView.addSubview(captionsViewController.view)
+        
+        //scrollView.bounds = CGRect(x: 0, y: videoContainerView.frame.height + captionsView.frame.height, width: self.view.frame.width, height: self.view.frame.height - videoContainerView.frame.height - captionsView.frame.height)
     }
     
     class CustomAVPlayerViewController: AVPlayerViewController {

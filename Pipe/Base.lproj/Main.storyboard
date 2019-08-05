@@ -407,6 +407,7 @@
                     <connections>
                         <outlet property="backButton" destination="voI-HX-CjF" id="32D-ED-6ef"/>
                         <outlet property="contentView" destination="Tab-nj-JCy" id="h8d-W0-lVr"/>
+                        <outlet property="contentViewTopConstraint" destination="USB-K8-f5q" id="zvm-Su-ouS"/>
                         <outlet property="fullScreenButton" destination="G6t-dF-Dsr" id="GWB-YG-PlV"/>
                         <outlet property="moreButton" destination="TOI-sO-NaR" id="rud-v9-7BK"/>
                         <outlet property="playButton" destination="1kR-OO-v69" id="Zb7-A3-N84"/>
@@ -923,7 +924,7 @@
         <!--Captions View Controller-->
         <scene sceneID="NtZ-9i-EBn">
             <objects>
-                <viewController id="8hD-Hj-8AY" customClass="CaptionsViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CaptionsViewController" id="8hD-Hj-8AY" customClass="CaptionsViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c0U-xk-QzH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
