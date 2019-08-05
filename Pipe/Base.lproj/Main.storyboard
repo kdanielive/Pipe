@@ -80,7 +80,7 @@
                     <navigationItem key="navigationItem" id="JcR-zz-OfU">
                         <leftBarButtonItems>
                             <barButtonItem title="Item" image="pipeIcon" id="Vj8-wK-aRJ"/>
-                            <barButtonItem title="Pipe[피페]" id="5VO-2X-Lc4"/>
+                            <barButtonItem title="LIPE" id="5VO-2X-Lc4"/>
                         </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="profileIcon2" id="ZKr-U6-dCd"/>
                     </navigationItem>
