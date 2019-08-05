@@ -425,14 +425,13 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="OOU-m5-Hia" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Muv-YO-B56">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kod-8I-CYp"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="EJ4-Hu-gvN"/>
                     <navigationItem key="navigationItem" id="EQv-Uk-4Fw"/>
-                    <size key="freeformSize" width="375" height="850"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSo-eT-gHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -919,7 +918,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oB-uE-lVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2133.5999999999999" y="933.28335832083962"/>
+            <point key="canvasLocation" x="2134" y="952"/>
         </scene>
     </scenes>
     <resources>

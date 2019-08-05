@@ -102,29 +102,9 @@ class VideoViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
         //self.viewDidLayoutSubviews()
         
-        // Showing the More Options Catalog
-        /*
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let popupViewController = storyboard.instantiateViewController(withIdentifier: "PopupTableView")
-        let popupView = UIView(frame: CGRect(x: 0, y: self.view.bounds.height - 220, width: self.view.bounds.width, height: 220))
-        addChildViewController(popupViewController)
-        popupViewController.view.frame = popupView.bounds
-        self.view.addSubview(popupView)
-        popupView.addSubview(popupViewController.view)
-         */
-        
         // Video Player at the top part of the view
         let videoURL = videos[0].url
         player = AVPlayer(url: videoURL)
-        
-        /*
-        // Custom controls part
-        playerViewController.showsPlaybackControls = false
-        playPauseButton = PlayPauseButton()
-        playPauseButton.avPlayer = player
-        videoContainerView.addSubview(playPauseButton)
-        playPauseButton.setup(in: self)
-        */
         
         // Getting rid of the given controls
         playerViewController.showsPlaybackControls = false
@@ -152,30 +132,7 @@ class VideoViewController: UIViewController {
         progressSlider.isHidden = true
         timeRemainingLabel.isHidden = true
         backButton.isHidden = true
-        /* My effort for custom UI programmatically */
-        
-        /*
-        videoContainerView.addSubview(controlOverlay)
-        controlOverlay.frame = CGRect(x: 0, y: 0, width: videoContainerView.frame.width, height: videoContainerView.frame.height)
-        controlOverlay.alpha = 0.1
-        controlOverlay.backgroundColor = UIColor.white
-        //controlOverlay.superview?.bringSubview(toFront: controlOverlay)
-        controlOverlay.isUserInteractionEnabled = false
-        controlOverlay.isHidden = true
-        
-        videoContainerView.addSubview(playButton)
-        playButton.setImage(pauseImage, for: .normal)
-        playButton.frame = CGRect(x: videoContainerView.frame.width / 2 - 30, y: videoContainerView.frame.height / 2 - 30, width: 60, height: 60)
-        playButton.isHidden = true
-        playButton.addTarget(self, action: #selector(playVideo), for: .touchUpInside)
-        
-        
-        videoContainerView.addSubview(fullscreenButton)
-        fullscreenButton.frame = CGRect(x:0, y:0, width:30, height:30)
-        fullscreenButton.isHidden = true
-        fullscreenButton.addTarget(self, action: #selector(goFullScreen), for: .touchUpInside)
-        fullscreenButton.setImage(fullscreenImage, for: .normal)
-        */
+    
         
         NotificationCenter.default.addObserver(self, selector: #selector(popOverlay), name: NSNotification.Name(rawValue: "overlay"), object: nil)
  
@@ -213,11 +170,6 @@ class VideoViewController: UIViewController {
     
     @objc func popOverlay() {
         if(screenTouchCount == 0) {
-            /*
-            controlOverlay.isHidden = false
-            playButton.isHidden = false
-            fullscreenButton.isHidden = false
-            */
             playButton.isHidden = false
             fullScreenButton.isHidden = false
             timeRemainingLabel.isHidden = false
@@ -226,11 +178,6 @@ class VideoViewController: UIViewController {
             
             screenTouchCount = 1 - screenTouchCount
         } else {
-            /*
-            controlOverlay.isHidden = true
-            playButton.isHidden = true
-            fullscreenButton.isHidden = true
-            */
             playButton.isHidden = true
             fullScreenButton.isHidden = true
             timeRemainingLabel.isHidden = true
