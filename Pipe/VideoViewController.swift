@@ -66,37 +66,7 @@ class VideoViewController: UIViewController {
         }
         playButton.setImage(playImage, for: .normal)
     }
-    /*
-    @objc func playVideo() {
-        if(player.rate != 0) {
-            player.rate = 0
-            playButton.setImage(playImage, for: .normal)
-        } else {
-            player.rate = 1
-            playButton.setImage(pauseImage, for: .normal)
-        }
-    }
-    */
-     @IBAction func speedUp15(_ sender: Any) {
-     player.rate = 1.5
-     }
-    
-    
-    /*
-    @objc func goFullScreen() {
-        self.player.pause()
-        let newPlayerViewController = AVPlayerViewController()
-        let videoURL = videos[0].url
-        let newPlayer = AVPlayer(url: videoURL)
 
-        newPlayerViewController.player = newPlayer
-        
-        present(newPlayerViewController, animated: true) {
-            newPlayer.play()
-        }
-    }
-    */
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height)

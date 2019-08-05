@@ -898,6 +898,7 @@
         <image name="user" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="dpN-CM-UYt"/>
         <segue reference="11x-pY-6PN"/>
         <segue reference="vEJ-U0-1RA"/>
     </inferredMetricsTieBreakers>
