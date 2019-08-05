@@ -43,6 +43,8 @@
 		AB8D9CEF22F00EE200A37C4A /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8D9CED22F00EE200A37C4A /* Layouts.swift */; };
 		ABA1D1E022F7B175007B543F /* VideoCommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA1D1DE22F7B175007B543F /* VideoCommentsTableViewCell.swift */; };
 		ABA1D1E122F7B175007B543F /* VideoCommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA1D1DF22F7B175007B543F /* VideoCommentsTableViewController.swift */; };
+		ABFF307622F7FA840058E961 /* MoreOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF307522F7FA840058E961 /* MoreOptionsTableViewController.swift */; };
+		ABFF307822F7FA900058E961 /* MoreOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF307722F7FA900058E961 /* MoreOptionsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = monkey.mp4; sourceTree = "<group>"; };
 		ABA1D1DE22F7B175007B543F /* VideoCommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCommentsTableViewCell.swift; sourceTree = "<group>"; };
 		ABA1D1DF22F7B175007B543F /* VideoCommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCommentsTableViewController.swift; sourceTree = "<group>"; };
+		ABFF307522F7FA840058E961 /* MoreOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOptionsTableViewController.swift; sourceTree = "<group>"; };
+		ABFF307722F7FA900058E961 /* MoreOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOptionsTableViewCell.swift; sourceTree = "<group>"; };
 		BA8AC051F714F265ABACBD1E /* Pods-PipeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipeTests.debug.xcconfig"; path = "Target Support Files/Pods-PipeTests/Pods-PipeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D88479A27BAFB62FA905C22C /* Pods-Pipe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pipe.debug.xcconfig"; path = "Target Support Files/Pods-Pipe/Pods-Pipe.debug.xcconfig"; sourceTree = "<group>"; };
 		F8C58DB2DBEBDD37C305F526 /* Pods-PipeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipeUITests.release.xcconfig"; path = "Target Support Files/Pods-PipeUITests/Pods-PipeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				AB7208E422F0030F00F2913D /* AppDelegate.swift */,
+				ABFF307422F7FA4E0058E961 /* More Options Panel */,
 				ABA1D1DD22F7B175007B543F /* Comments Videos */,
 				AB0D578822F2D4D900984A1B /* Recommended Videos */,
 				AB0D578722F26E3300984A1B /* LoginFiles */,
@@ -276,6 +281,15 @@
 				ABA1D1DE22F7B175007B543F /* VideoCommentsTableViewCell.swift */,
 			);
 			path = "Comments Videos";
+			sourceTree = "<group>";
+		};
+		ABFF307422F7FA4E0058E961 /* More Options Panel */ = {
+			isa = PBXGroup;
+			children = (
+				ABFF307522F7FA840058E961 /* MoreOptionsTableViewController.swift */,
+				ABFF307722F7FA900058E961 /* MoreOptionsTableViewCell.swift */,
+			);
+			path = "More Options Panel";
 			sourceTree = "<group>";
 		};
 		B4B57865A71981586F85CFAC /* Pods */ = {
@@ -536,7 +550,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABFF307822F7FA900058E961 /* MoreOptionsTableViewCell.swift in Sources */,
 				AB4E23BB22F029DC0059166E /* SignInViewController.swift in Sources */,
+				ABFF307622F7FA840058E961 /* MoreOptionsTableViewController.swift in Sources */,
 				AB0D577F22F17DA000984A1B /* CollectionHolderTableViewCell.swift in Sources */,
 				AB0D578222F17E1700984A1B /* HorizontalCollectionViewCell.swift in Sources */,
 				AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */,

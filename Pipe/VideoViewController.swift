@@ -81,7 +81,7 @@ class VideoViewController: UIViewController {
     
     @IBAction func pressedMoreOptionsPanelButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let popupViewController = storyboard.instantiateViewController(withIdentifier: "PopupTableView")
+        let popupViewController = storyboard.instantiateViewController(withIdentifier: "PopupTableView") as! MoreOptionsTableViewController
         addChildViewController(popupViewController)
         popupView = UIView(frame: CGRect(x: 0, y: self.view.bounds.height - 220, width: self.view.bounds.width, height: 220))
         popupViewController.view.frame = popupView.bounds
