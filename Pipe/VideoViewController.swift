@@ -228,7 +228,7 @@ class VideoViewController: UIViewController {
         self.view.addSubview(captionsView)
         captionsView.addSubview(captionsViewController.view)
         
-        //contentViewTopConstraint = NSLayoutConstraint(item: contentView, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.top, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)
+        //contentViewTopConstraint = NSLayoutConstraint(item: contentView, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.top, multiplier: , constant: )
         //scrollView.bounds = CGRect(x: 0, y: videoContainerView.frame.height + captionsView.frame.height, width: self.view.frame.width, height: self.view.frame.height - videoContainerView.frame.height - captionsView.frame.height)
         contentViewTopConstraint.constant = captionsView.frame.height
     }
