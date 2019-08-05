@@ -334,12 +334,6 @@
                                                     <constraint firstItem="a2d-Rh-npW" firstAttribute="baseline" secondItem="Kzf-Dw-KcC" secondAttribute="baseline" id="eWH-Hn-bSn"/>
                                                 </constraints>
                                             </view>
-                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fel-Tq-pnB">
-                                                <rect key="frame" x="-2" y="1342" width="375" height="220"/>
-                                                <connections>
-                                                    <segue destination="xz7-db-2Gk" kind="embed" id="tBX-xW-sEB"/>
-                                                </connections>
-                                            </containerView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -355,7 +349,6 @@
                                             <constraint firstItem="hdk-rY-wWg" firstAttribute="leading" secondItem="Tab-nj-JCy" secondAttribute="leading" id="OAG-Zn-iAw"/>
                                             <constraint firstItem="PaP-fM-nbB" firstAttribute="top" secondItem="spo-UB-Ydt" secondAttribute="bottom" id="QVU-DS-sb6"/>
                                             <constraint firstItem="PaP-fM-nbB" firstAttribute="leading" secondItem="rIP-Av-tdc" secondAttribute="leading" id="Tzc-OY-PiM"/>
-                                            <constraint firstAttribute="bottom" secondItem="fel-Tq-pnB" secondAttribute="bottom" constant="8" id="U1w-CK-uB4"/>
                                             <constraint firstAttribute="trailing" secondItem="4Px-fI-rNJ" secondAttribute="trailing" id="dMb-M2-W2o"/>
                                             <constraint firstItem="spo-UB-Ydt" firstAttribute="trailing" secondItem="PaP-fM-nbB" secondAttribute="trailing" id="jtU-RA-gm7"/>
                                             <constraint firstItem="hdk-rY-wWg" firstAttribute="trailing" secondItem="spo-UB-Ydt" secondAttribute="trailing" id="k0u-3a-OzG"/>
@@ -882,10 +875,11 @@
                             <outlet property="delegate" destination="xz7-db-2Gk" id="4Ci-Lt-k43"/>
                         </connections>
                     </tableView>
+                    <size key="freeformSize" width="375" height="220"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oB-uE-lVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2133.5999999999999" y="1099.2503748125937"/>
+            <point key="canvasLocation" x="2134" y="990"/>
         </scene>
     </scenes>
     <resources>
@@ -906,6 +900,7 @@
         <image name="user" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="dpN-CM-UYt"/>
         <segue reference="11x-pY-6PN"/>
         <segue reference="vEJ-U0-1RA"/>
     </inferredMetricsTieBreakers>
