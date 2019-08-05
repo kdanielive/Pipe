@@ -178,6 +178,9 @@
                                                             <constraint firstAttribute="width" constant="9" id="TXS-LS-vPJ"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="moreIcon"/>
+                                                        <connections>
+                                                            <action selector="pressedMoreOptionsPanelButton:" destination="4ow-x9-xFM" eventType="touchUpInside" id="0ep-7f-8hC"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq3-Bi-MY9">
                                                         <rect key="frame" x="47" y="84" width="42" height="19"/>
@@ -774,7 +777,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="PopupTableView" id="xz7-db-2Gk" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="M3W-GA-tcm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -873,11 +876,10 @@
                             <outlet property="delegate" destination="xz7-db-2Gk" id="4Ci-Lt-k43"/>
                         </connections>
                     </tableView>
-                    <size key="freeformSize" width="375" height="220"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oB-uE-lVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1997.5999999999999" y="874.36281859070471"/>
+            <point key="canvasLocation" x="2134" y="934"/>
         </scene>
     </scenes>
     <resources>
@@ -898,7 +900,6 @@
         <image name="user" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dpN-CM-UYt"/>
         <segue reference="11x-pY-6PN"/>
         <segue reference="vEJ-U0-1RA"/>
     </inferredMetricsTieBreakers>

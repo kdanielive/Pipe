@@ -14,10 +14,11 @@ class VideoViewController: UIViewController {
 
     var videos = Video.allVideos()
     
+    //
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
-    @IBOutlet var moreButton: UIButton!
-    
+
+    // Video control Images and Icons
     @IBOutlet var videoContainerView: UIView!
     let playerViewController = CustomAVPlayerViewController()
     var player = AVPlayer()
@@ -29,13 +30,19 @@ class VideoViewController: UIViewController {
     let pauseImage = UIImage(named: "pause")
     let fullscreenImage = UIImage(named:"fullscreen")
     
+    // Video controls
     @IBOutlet var playButton: UIButton!
     @IBOutlet var fullScreenButton: UIButton!
     var timeObserver: Any?
     @IBOutlet var progressSlider: UISlider!
     @IBOutlet var timeRemainingLabel: UILabel!
     @IBOutlet var backButton: UIButton!
+    @IBOutlet var moreButton: UIButton!
     
+    // Macro View Controls
+    var popupView = UIView()
+    var gestureRecognizerView = UIView()
+
     @IBAction func playbackSliderValueChanged(_ sender: UISlider) {
         let duration = player.currentItem!.duration
         let value = Float64(progressSlider.value) * CMTimeGetSeconds(duration)
@@ -71,6 +78,22 @@ class VideoViewController: UIViewController {
         super.viewDidLayoutSubviews()
         self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height)
     }
+    
+    @IBAction func pressedMoreOptionsPanelButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let popupViewController = storyboard.instantiateViewController(withIdentifier: "PopupTableView")
+        addChildViewController(popupViewController)
+        popupView = UIView(frame: CGRect(x: 0, y: self.view.bounds.height - 220, width: self.view.bounds.width, height: 220))
+        popupViewController.view.frame = popupView.bounds
+        self.view.addSubview(popupView)
+        popupView.addSubview(popupViewController.view)
+        gestureRecognizerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height - 220))
+        self.view.addSubview(gestureRecognizerView)
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissModalView))
+        gestureRecognizerView.addGestureRecognizer(gesture)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -245,6 +268,11 @@ class VideoViewController: UIViewController {
             }
             timeRemainingLabel.text = "\(minsStr):\(secsStr)"
         }
+    }
+    
+    @objc func dismissModalView() {
+        popupView.removeFromSuperview()
+        gestureRecognizerView.removeFromSuperview()
     }
 
 }
