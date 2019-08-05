@@ -14,6 +14,8 @@ class VideoViewController: UIViewController {
 
     var videos = Video.allVideos()
     
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var contentView: UIView!
     
     @IBOutlet var videoContainerView: UIView!
     let playerViewController = CustomAVPlayerViewController()
@@ -94,12 +96,17 @@ class VideoViewController: UIViewController {
     }
     */
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.setNavigationBarHidden(true, animated: true)
         self.tabBarController?.tabBar.isHidden = true
-        self.viewDidLayoutSubviews()
+        //self.viewDidLayoutSubviews()
         
         // Video Player at the top part of the view
         let videoURL = videos[0].url

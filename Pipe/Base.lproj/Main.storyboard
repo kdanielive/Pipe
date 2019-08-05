@@ -368,6 +368,7 @@
                                     <constraint firstItem="Tab-nj-JCy" firstAttribute="centerY" secondItem="CKN-uR-djA" secondAttribute="centerY" id="Jxt-cI-Bfd"/>
                                     <constraint firstAttribute="trailing" secondItem="Tab-nj-JCy" secondAttribute="trailing" id="O3h-g7-qUq"/>
                                     <constraint firstItem="Tab-nj-JCy" firstAttribute="top" secondItem="CKN-uR-djA" secondAttribute="top" id="USB-K8-f5q"/>
+                                    <constraint firstItem="Tab-nj-JCy" firstAttribute="height" secondItem="CKN-uR-djA" secondAttribute="height" id="mJH-Jl-XwE"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -404,9 +405,11 @@
                     <size key="freeformSize" width="375" height="1800"/>
                     <connections>
                         <outlet property="backButton" destination="voI-HX-CjF" id="32D-ED-6ef"/>
+                        <outlet property="contentView" destination="Tab-nj-JCy" id="h8d-W0-lVr"/>
                         <outlet property="fullScreenButton" destination="G6t-dF-Dsr" id="GWB-YG-PlV"/>
                         <outlet property="playButton" destination="1kR-OO-v69" id="Zb7-A3-N84"/>
                         <outlet property="progressSlider" destination="FtL-O8-Rqr" id="uZI-8z-Yzj"/>
+                        <outlet property="scrollView" destination="CKN-uR-djA" id="gkZ-X7-KbJ"/>
                         <outlet property="timeRemainingLabel" destination="d8L-8t-qZA" id="8nQ-dH-UJb"/>
                         <outlet property="videoContainerView" destination="g04-3I-r0M" id="blu-Mu-frw"/>
                     </connections>
