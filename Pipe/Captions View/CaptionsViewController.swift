@@ -11,14 +11,12 @@ import UIKit
 class CaptionsViewController: UIViewController {
 
     
-    @IBOutlet var scriptLabel: UILabel!
-    @IBOutlet var scrollView: UIScrollView!
-    @IBOutlet var contentView: UIView!
+    @IBOutlet var textView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scriptLabel.text = """
+        textView.text = """
         Shall I compare thee to a summer's day?
         Thou art more lovely and more temperate:
         Rough winds do shake the darling buds of May,
@@ -34,14 +32,10 @@ class CaptionsViewController: UIViewController {
         So long as men can breathe or eyes can see,
         So long lives this and this gives life to thee.
         """
-        scriptLabel.frame = CGRect(x: 0, y: 0, width: contentView.bounds.width, height: contentView.bounds.height)
+        textView.isEditable = false
+        textView.font = UIFont(name: "Times New Roman", size: 20)
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height)
     }
     
 

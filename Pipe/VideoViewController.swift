@@ -223,7 +223,7 @@ class VideoViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let captionsViewController = storyboard.instantiateViewController(withIdentifier: "CaptionsViewController") as! CaptionsViewController
         addChildViewController(captionsViewController)
-        captionsView = UIView(frame: CGRect(x: 0, y: videoContainerView.frame.height, width: self.view.frame.width, height: self.view.bounds.height / 3))
+        captionsView = UIView(frame: CGRect(x: 0, y: videoContainerView.frame.height + 50, width: self.view.frame.width, height: self.view.bounds.height / 3))
         captionsViewController.view.frame = captionsView.bounds
         self.view.addSubview(captionsView)
         captionsView.addSubview(captionsViewController.view)

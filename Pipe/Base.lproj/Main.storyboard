@@ -929,46 +929,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OsL-Hj-Ups">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D16-wq-dUU" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkt-QQ-Qjh">
-                                                <rect key="frame" x="8" y="8" width="359" height="631"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="D16-wq-dUU" secondAttribute="bottom" id="2KI-wR-OcJ"/>
-                                    <constraint firstItem="D16-wq-dUU" firstAttribute="top" secondItem="OsL-Hj-Ups" secondAttribute="top" id="9KD-IF-jeU"/>
-                                    <constraint firstItem="D16-wq-dUU" firstAttribute="leading" secondItem="OsL-Hj-Ups" secondAttribute="leading" id="CVM-20-4L8"/>
-                                    <constraint firstItem="D16-wq-dUU" firstAttribute="centerY" secondItem="OsL-Hj-Ups" secondAttribute="centerY" id="Y2F-JM-NYi"/>
-                                    <constraint firstAttribute="trailing" secondItem="D16-wq-dUU" secondAttribute="trailing" id="a2a-7z-7Mp"/>
-                                    <constraint firstItem="D16-wq-dUU" firstAttribute="centerX" secondItem="OsL-Hj-Ups" secondAttribute="centerX" id="clb-UK-Ih7"/>
-                                </constraints>
-                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bai-dp-mH3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Wm5-Od-loN" firstAttribute="bottom" secondItem="OsL-Hj-Ups" secondAttribute="bottom" id="IHZ-cO-OIS"/>
-                            <constraint firstItem="OsL-Hj-Ups" firstAttribute="leading" secondItem="Wm5-Od-loN" secondAttribute="leading" id="cuV-9F-Lpt"/>
-                            <constraint firstItem="Wm5-Od-loN" firstAttribute="trailing" secondItem="OsL-Hj-Ups" secondAttribute="trailing" id="p7p-IJ-IfI"/>
-                            <constraint firstItem="OsL-Hj-Ups" firstAttribute="top" secondItem="Wm5-Od-loN" secondAttribute="top" id="xE1-qo-hHh"/>
+                            <constraint firstItem="Bai-dp-mH3" firstAttribute="leading" secondItem="Wm5-Od-loN" secondAttribute="leading" id="47a-Fp-JGt"/>
+                            <constraint firstItem="Bai-dp-mH3" firstAttribute="top" secondItem="c0U-xk-QzH" secondAttribute="top" id="HsW-4M-IdJ"/>
+                            <constraint firstItem="Bai-dp-mH3" firstAttribute="bottom" secondItem="Wm5-Od-loN" secondAttribute="bottom" id="Sad-t1-gb3"/>
+                            <constraint firstItem="Bai-dp-mH3" firstAttribute="trailing" secondItem="Wm5-Od-loN" secondAttribute="trailing" id="cJL-ho-CfR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wm5-Od-loN"/>
                     </view>
                     <connections>
-                        <outlet property="contentView" destination="D16-wq-dUU" id="XKa-ge-NXR"/>
-                        <outlet property="scriptLabel" destination="Gkt-QQ-Qjh" id="bLA-TK-cnQ"/>
-                        <outlet property="scrollView" destination="OsL-Hj-Ups" id="S0C-S8-LMa"/>
+                        <outlet property="textView" destination="Bai-dp-mH3" id="rQt-NN-PTU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCu-iW-usJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
