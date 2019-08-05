@@ -413,69 +413,7 @@
                     <view key="view" contentMode="scaleToFill" id="Muv-YO-B56">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vL-oh-1Np">
-                                <rect key="frame" x="0.0" y="20" width="375" height="781"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulletTrain.png" translatesAutoresizingMaskIntoConstraints="NO" id="VHV-sI-A8k">
-                                        <rect key="frame" x="8" y="8" width="240" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="kSS-sm-qcJ"/>
-                                            <constraint firstAttribute="width" constant="240" id="ncz-II-Ng3"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulletTrain.png" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-gg-dEX">
-                                        <rect key="frame" x="8" y="144" width="240" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="8X3-M6-Meh"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulletTrain.png" translatesAutoresizingMaskIntoConstraints="NO" id="L28-Pk-hAQ">
-                                        <rect key="frame" x="8" y="280" width="240" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="aCz-pS-I9C"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulletTrain.png" translatesAutoresizingMaskIntoConstraints="NO" id="gua-Aw-XHH">
-                                        <rect key="frame" x="8" y="416" width="240" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="wHC-7V-FmJ"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulletTrain.png" translatesAutoresizingMaskIntoConstraints="NO" id="Usj-fE-UeX">
-                                        <rect key="frame" x="8" y="552" width="240" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="nct-Ep-Eyk"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="L28-Pk-hAQ" firstAttribute="leading" secondItem="gua-Aw-XHH" secondAttribute="leading" id="49y-kL-WTX"/>
-                                    <constraint firstItem="VHV-sI-A8k" firstAttribute="top" secondItem="8vL-oh-1Np" secondAttribute="topMargin" id="6da-8t-yIp"/>
-                                    <constraint firstItem="X5t-gg-dEX" firstAttribute="top" secondItem="VHV-sI-A8k" secondAttribute="bottom" constant="8" symbolic="YES" id="BMz-Va-G7s"/>
-                                    <constraint firstItem="gua-Aw-XHH" firstAttribute="leading" secondItem="Usj-fE-UeX" secondAttribute="leading" id="C4k-kU-UAA"/>
-                                    <constraint firstItem="X5t-gg-dEX" firstAttribute="leading" secondItem="L28-Pk-hAQ" secondAttribute="leading" id="DGM-Tt-FV7"/>
-                                    <constraint firstItem="Usj-fE-UeX" firstAttribute="top" secondItem="gua-Aw-XHH" secondAttribute="bottom" constant="8" symbolic="YES" id="JU8-xw-FP2"/>
-                                    <constraint firstItem="VHV-sI-A8k" firstAttribute="leading" secondItem="X5t-gg-dEX" secondAttribute="leading" id="OGd-ms-d6l"/>
-                                    <constraint firstItem="gua-Aw-XHH" firstAttribute="top" secondItem="L28-Pk-hAQ" secondAttribute="bottom" constant="8" symbolic="YES" id="QrG-A4-nuv"/>
-                                    <constraint firstAttribute="trailing" secondItem="VHV-sI-A8k" secondAttribute="trailing" constant="127" id="VIE-4s-iE2"/>
-                                    <constraint firstAttribute="bottom" secondItem="Usj-fE-UeX" secondAttribute="bottom" constant="101" id="Vze-1L-b36"/>
-                                    <constraint firstItem="VHV-sI-A8k" firstAttribute="trailing" secondItem="X5t-gg-dEX" secondAttribute="trailing" id="aLV-Ck-ahq"/>
-                                    <constraint firstItem="VHV-sI-A8k" firstAttribute="leading" secondItem="8vL-oh-1Np" secondAttribute="leadingMargin" id="fHC-R6-OAb"/>
-                                    <constraint firstItem="L28-Pk-hAQ" firstAttribute="trailing" secondItem="gua-Aw-XHH" secondAttribute="trailing" id="jat-VU-efE"/>
-                                    <constraint firstItem="L28-Pk-hAQ" firstAttribute="top" secondItem="X5t-gg-dEX" secondAttribute="bottom" constant="8" symbolic="YES" id="ubB-30-70w"/>
-                                    <constraint firstItem="X5t-gg-dEX" firstAttribute="trailing" secondItem="L28-Pk-hAQ" secondAttribute="trailing" id="vH5-fQ-Po3"/>
-                                    <constraint firstItem="gua-Aw-XHH" firstAttribute="trailing" secondItem="Usj-fE-UeX" secondAttribute="trailing" id="wS8-DX-4VY"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="8vL-oh-1Np" firstAttribute="top" secondItem="kod-8I-CYp" secondAttribute="top" id="6ys-51-X1G"/>
-                            <constraint firstAttribute="trailing" secondItem="8vL-oh-1Np" secondAttribute="trailing" id="M6u-7k-rjd"/>
-                            <constraint firstItem="8vL-oh-1Np" firstAttribute="leading" secondItem="Muv-YO-B56" secondAttribute="leading" id="kU4-BG-Bga"/>
-                            <constraint firstItem="8vL-oh-1Np" firstAttribute="bottom" secondItem="kod-8I-CYp" secondAttribute="bottom" id="wpA-Vx-qTy"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kod-8I-CYp"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="EJ4-Hu-gvN"/>
@@ -751,7 +689,6 @@
     </scenes>
     <resources>
         <image name="backarrow" width="11" height="18"/>
-        <image name="bulletTrain.png" width="2552" height="1440"/>
         <image name="fullscreen" width="16" height="16"/>
         <image name="moreIcon" width="4" height="18"/>
         <image name="pause" width="37" height="37"/>
