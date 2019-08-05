@@ -17,7 +17,6 @@ class VideoViewController: UIViewController {
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
     @IBOutlet var moreButton: UIButton!
-    @IBOutlet var moreContainerView: UIView!
     
     @IBOutlet var videoContainerView: UIView!
     let playerViewController = CustomAVPlayerViewController()
@@ -109,7 +108,17 @@ class VideoViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         self.tabBarController?.tabBar.isHidden = true
         //self.viewDidLayoutSubviews()
-        self.view.bringSubview(toFront: moreContainerView)
+        
+        // Showing the More Options Catalog
+        /*
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let popupViewController = storyboard.instantiateViewController(withIdentifier: "PopupTableView")
+        let popupView = UIView(frame: CGRect(x: 0, y: self.view.bounds.height - 220, width: self.view.bounds.width, height: 220))
+        addChildViewController(popupViewController)
+        popupViewController.view.frame = popupView.bounds
+        self.view.addSubview(popupView)
+        popupView.addSubview(popupViewController.view)
+         */
         
         // Video Player at the top part of the view
         let videoURL = videos[0].url
