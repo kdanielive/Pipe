@@ -555,18 +555,6 @@
                                 <rect key="frame" x="133" y="270" width="110" height="21.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nEu-Tp-h9h">
-                                <rect key="frame" x="20" y="570" width="339" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FacebookSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-PA-pgy">
-                                        <rect key="frame" x="0.0" y="0.0" width="162" height="50"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoogleSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="xIh-ak-xV6">
-                                        <rect key="frame" x="177" y="0.0" width="162" height="50"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtO-Qd-Gxf">
                                 <rect key="frame" x="20" y="510" width="335" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -583,6 +571,14 @@
                                 <rect key="frame" x="65" y="698" width="245" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GoogleSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="xIh-ak-xV6">
+                                <rect key="frame" x="193" y="570" width="162" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FacebookSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-PA-pgy">
+                                <rect key="frame" x="20" y="570" width="162" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aQ4-3D-qJI"/>
@@ -591,7 +587,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03z-ic-lY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3055.1999999999998" y="232.53373313343329"/>
+            <point key="canvasLocation" x="-3055.1999999999998" y="232.08395802098951"/>
         </scene>
         <!--LoginPage-->
         <scene sceneID="Cxu-CW-RWM">
