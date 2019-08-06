@@ -417,7 +417,7 @@
             </objects>
             <point key="canvasLocation" x="1312.8" y="389.5052473763119"/>
         </scene>
-        <!--Item-->
+        <!--Category-->
         <scene sceneID="ges-12-H2E">
             <objects>
                 <tableViewController id="JYM-NR-HCC" customClass="CategoryTableViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
@@ -499,11 +499,11 @@
                             <outlet property="delegate" destination="JYM-NR-HCC" id="jQD-wd-xQU"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="o9o-V3-8XI"/>
+                    <tabBarItem key="tabBarItem" title="Category" id="o9o-V3-8XI"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOW-9z-WEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-250.40000000000001" y="232.53373313343329"/>
+            <point key="canvasLocation" x="-250" y="233"/>
         </scene>
         <!--Title-->
         <scene sceneID="Cc2-we-r1C">
@@ -514,7 +514,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-B1-Gwa">
-                                <rect key="frame" x="127" y="37" width="121" height="102"/>
+                                <rect key="frame" x="127" y="81" width="121" height="102"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHo-iq-5IY">
                                 <rect key="frame" x="16" y="239" width="343" height="33"/>
@@ -541,23 +541,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQU-a0-NLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134" y="-875"/>
+            <point key="canvasLocation" x="486" y="966"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="wfM-cw-Qd1">
+        <scene sceneID="dge-nx-1Qx">
             <objects>
-                <viewController id="btm-ZC-I4i" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SIp-tM-lhe">
+                <viewController id="ixz-qa-WCl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XLL-gU-bF2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="xDi-Sg-fo1"/>
+                        <viewLayoutGuide key="safeArea" id="aQ4-3D-qJI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zaz-NO-BYU"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w1I-Y3-UZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="03z-ic-lY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="1232"/>
+            <point key="canvasLocation" x="-3156" y="233"/>
         </scene>
         <!--LoginPage-->
         <scene sceneID="Cxu-CW-RWM">
@@ -606,8 +605,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="Osj-E9-ZFC" kind="relationship" relationship="viewControllers" id="NZG-JT-Qgc"/>
-                        <segue destination="0kB-Gw-TQJ" kind="relationship" relationship="viewControllers" id="844-t3-3Jf"/>
                         <segue destination="JYM-NR-HCC" kind="relationship" relationship="viewControllers" id="mQ5-gr-qT5"/>
+                        <segue destination="0kB-Gw-TQJ" kind="relationship" relationship="viewControllers" id="844-t3-3Jf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meM-vu-63x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -646,12 +645,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="btm-ZC-I4i" kind="relationship" relationship="rootViewController" id="5dS-i2-G7U"/>
+                        <segue destination="ITn-xt-jhr" kind="relationship" relationship="rootViewController" id="WWP-9e-d1C"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IK2-Zd-A0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-775" y="1233"/>
+            <point key="canvasLocation" x="-250" y="966"/>
         </scene>
         <!--Recommended Videos Table View Controller-->
         <scene sceneID="nmr-D9-Zwe">
@@ -1039,7 +1038,7 @@
         <image name="user" width="102.40000152587891" height="102.40000152587891"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="11x-pY-6PN"/>
+        <segue reference="yJT-6g-k9s"/>
         <segue reference="Lkq-68-DKa"/>
     </inferredMetricsTieBreakers>
 </document>
