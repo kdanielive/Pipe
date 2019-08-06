@@ -76,11 +76,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="JcR-zz-OfU">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Item" image="pipeIcon" id="Vj8-wK-aRJ"/>
-                            <barButtonItem title="LIPE" id="5VO-2X-Lc4"/>
-                        </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="profileIcon2" id="ZKr-U6-dCd"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="LipeLogo" id="Vj8-wK-aRJ"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDs-oc-8xQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1027,6 +1023,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LipeLogo" width="47" height="19"/>
         <image name="backarrow" width="11" height="18"/>
         <image name="bookmarkIcon" width="18" height="22"/>
         <image name="captionsIcon" width="22" height="22"/>
@@ -1034,10 +1031,8 @@
         <image name="fullscreen" width="16" height="16"/>
         <image name="moreIcon" width="4" height="18"/>
         <image name="pause" width="37" height="37"/>
-        <image name="pipeIcon" width="50" height="50"/>
         <image name="playbackSpeedIcon" width="22" height="22"/>
         <image name="playedIcon" width="11" height="15"/>
-        <image name="profileIcon2" width="50" height="50"/>
         <image name="ratingIcon" width="16" height="15"/>
         <image name="reportIcon" width="18" height="22"/>
         <image name="shareIcon" width="20" height="20"/>
