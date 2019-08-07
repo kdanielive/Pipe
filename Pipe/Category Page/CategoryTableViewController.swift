@@ -10,16 +10,41 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController {
     
-    
-
+    let searchController = UISearchController(searchResultsController: nil)
+    let lessons = ["hihihi", "hellohello", "olaola"]
+    var filteredLessons = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search videos"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
+        navigationItem.searchController?.hidesNavigationBarDuringPresentation = true
+        navigationItem.hidesSearchBarWhenScrolling = true
+        navigationItem.searchController?.isActive = false
+                
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil. ?? overwrites the nil value
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredLessons = lessons.filter({( lesson : String) -> Bool in
+            return lesson.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -82,50 +107,17 @@ class CategoryTableViewController: UITableViewController {
             return 23
         }
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    @IBAction func openSearchBar(_ sender: Any) {
+        navigationItem.searchController?.isActive = true
     }
-    */
+    
+}
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+extension CategoryTableViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        // TODO
+        filterContentForSearchText(searchController.searchBar.text!)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

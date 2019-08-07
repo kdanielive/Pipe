@@ -536,7 +536,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Z0N-PS-OAw">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="LipeLogo" id="lRf-g2-1Pr"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="aBi-qX-4e7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="aBi-qX-4e7">
+                            <connections>
+                                <action selector="openSearchBar:" destination="JYM-NR-HCC" id="hId-Or-8J8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="812"/>
@@ -550,7 +554,7 @@
             <objects>
                 <viewController id="ITn-xt-jhr" customClass="ProfileViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rDC-dr-jin">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-B1-Gwa">
@@ -578,10 +582,11 @@
                     <navigationItem key="navigationItem" title="Title" id="vIe-Qg-kwd">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="GzO-G9-ldo"/>
                     </navigationItem>
+                    <size key="freeformSize" width="375" height="812"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQU-a0-NLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="1126"/>
+            <point key="canvasLocation" x="486" y="1191"/>
         </scene>
         <!--First Page View Controller-->
         <scene sceneID="dge-nx-1Qx">
@@ -1242,7 +1247,6 @@
         <image name="warrantyLogo" width="243" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dpN-CM-UYt"/>
         <segue reference="11x-pY-6PN"/>
         <segue reference="vEJ-U0-1RA"/>
     </inferredMetricsTieBreakers>
