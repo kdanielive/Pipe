@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryTableViewController: UITableViewController {
+class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
     
     let searchController = UISearchController(searchResultsController: nil)
     let lessons = ["hihihi", "hellohello", "olaola"]
@@ -20,18 +20,22 @@ class CategoryTableViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search videos"
-        navigationItem.searchController = searchController
+        navigationItem.searchController = nil
         definesPresentationContext = true
         
-        navigationItem.searchController?.hidesNavigationBarDuringPresentation = true
-        navigationItem.hidesSearchBarWhenScrolling = true
-        navigationItem.searchController?.isActive = false
-                
+        searchController.hidesNavigationBarDuringPresentation = true
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.searchController = nil
     }
     
     func searchBarIsEmpty() -> Bool {
@@ -109,7 +113,8 @@ class CategoryTableViewController: UITableViewController {
     }
     
     @IBAction func openSearchBar(_ sender: Any) {
-        navigationItem.searchController?.isActive = true
+        navigationItem.searchController = searchController
+        searchController.isActive = true
     }
     
 }
