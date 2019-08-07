@@ -10,5 +10,6 @@ import UIKit
 
 class HorizontalCategoryCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var cellLabel: UILabel!
+    @IBOutlet var categoryImage: UIImageView!
+    
 }

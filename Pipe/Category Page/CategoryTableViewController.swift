@@ -24,7 +24,7 @@ class CategoryTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,9 +52,11 @@ class CategoryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if(section == 0){
-            return "Topics"
+            return "Topics to learn"
+        } else if section == 1 {
+            return "살면서 들어보지 못한 흥미로운 주제들"
         } else {
-            return "주제"
+            return "LIPE 디자이너의 픽!"
         }
     }
     

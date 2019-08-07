@@ -12,14 +12,13 @@ class HorizontalCategoryTableViewCell: UITableViewCell, UICollectionViewDataSour
     
     @IBOutlet var horizontalCategoryCollectionView: UICollectionView!
     
+    let images = ["AcademicCategory"]
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryHorizontalCell", for: indexPath as IndexPath) as! HorizontalCategoryCollectionViewCell
+        cell.categoryImage.image = UIImage(named: images[0])
         
         cell.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
-        
-        let label = cell.cellLabel!
-        label.text = "Academic"
-        label.adjustsFontSizeToFitWidth = true
         
         
         return cell

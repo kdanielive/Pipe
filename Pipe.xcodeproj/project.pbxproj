@@ -261,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				AB4089DA22F9727400991EE3 /* Login Pages */,
-				AB7208E822F0030F00F2913D /* Main.storyboard */,
 				AB7208E422F0030F00F2913D /* AppDelegate.swift */,
 				ABFF307922F7FE0A0058E961 /* Captions View */,
 				ABFF307422F7FA4E0058E961 /* More Options Panel */,
@@ -270,6 +269,7 @@
 				AB4E23AB22F013250059166E /* ImportedFiles */,
 				AB0D577D22F17D7A00984A1B /* DataFiles */,
 				AB0D578022F17DB500984A1B /* HorizontalTableView */,
+				AB7208E822F0030F00F2913D /* Main.storyboard */,
 				AB4089D322F95C3300991EE3 /* Category Page */,
 				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
 				AB4E23BC22F0394C0059166E /* VideoViewController.swift */,
