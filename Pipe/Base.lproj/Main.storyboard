@@ -546,7 +546,7 @@
         <!--First Page View Controller-->
         <scene sceneID="dge-nx-1Qx">
             <objects>
-                <viewController id="ixz-qa-WCl" customClass="FirstPageViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstPageViewController" id="ixz-qa-WCl" customClass="FirstPageViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XLL-gU-bF2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -559,6 +559,9 @@
                                 <rect key="frame" x="20" y="510" width="335" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="EmailSignUp"/>
+                                <connections>
+                                    <segue destination="Qp3-lH-PG7" kind="show" id="PW0-4Q-ItT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account? Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXT-42-brV">
                                 <rect key="frame" x="62" y="655" width="252" height="21"/>
@@ -571,23 +574,27 @@
                                 <rect key="frame" x="65" y="698" width="245" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GoogleSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="xIh-ak-xV6">
-                                <rect key="frame" x="193" y="570" width="162" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FacebookSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-PA-pgy">
                                 <rect key="frame" x="20" y="570" width="162" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i2g-YM-rRM" customClass="GIDSignInButton">
+                                <rect key="frame" x="193" y="570" width="162" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aQ4-3D-qJI"/>
                     </view>
                     <size key="freeformSize" width="375" height="812"/>
+                    <connections>
+                        <outlet property="googleSignUpButton" destination="i2g-YM-rRM" id="7Z0-mu-ZcY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03z-ic-lY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3055.1999999999998" y="232.08395802098951"/>
+            <point key="canvasLocation" x="-3743" y="231"/>
         </scene>
         <!--LoginPage-->
         <scene sceneID="Cxu-CW-RWM">
@@ -1051,6 +1058,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCu-iW-usJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2133.5999999999999" y="1167.1664167916042"/>
+        </scene>
+        <!--Email Sign Up View Controller-->
+        <scene sceneID="Uro-po-YBt">
+            <objects>
+                <viewController id="Qp3-lH-PG7" customClass="EmailSignUpViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AYz-bj-HeV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMf-PO-gBc">
+                                <rect key="frame" x="20" y="510" width="335" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="EmailSignUp"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account? Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyh-ET-0LJ">
+                                <rect key="frame" x="62" y="655" width="252" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="warrantyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8ql-Mj-bI7">
+                                <rect key="frame" x="65" y="698" width="245" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GoogleSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="R3N-fK-EZS">
+                                <rect key="frame" x="193" y="570" width="162" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FacebookSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="htX-xX-1b0">
+                                <rect key="frame" x="20" y="570" width="162" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dof-em-fKq">
+                                <rect key="frame" x="30" y="244" width="60" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1Y-OK-Vvy">
+                                <rect key="frame" x="30" y="309" width="85" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO8-TW-tBp">
+                                <rect key="frame" x="30" y="374" width="129" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0gk-gc-1cF"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="812"/>
+                    <connections>
+                        <outletCollection property="labels" destination="Dof-em-fKq" collectionClass="NSMutableArray" id="WCp-Hm-Gp2"/>
+                        <outletCollection property="labels" destination="D1Y-OK-Vvy" collectionClass="NSMutableArray" id="sAc-qS-yfJ"/>
+                        <outletCollection property="labels" destination="kO8-TW-tBp" collectionClass="NSMutableArray" id="P3b-7u-DyL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7j-Ru-6d0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3026" y="231"/>
         </scene>
     </scenes>
     <resources>

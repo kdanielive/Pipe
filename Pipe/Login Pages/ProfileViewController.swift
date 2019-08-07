@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().signOut()
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginPage")
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FirstPageViewController") as! FirstPageViewController
         self.present(nextViewController, animated:true, completion:nil)
     }
     
