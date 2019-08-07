@@ -9,6 +9,8 @@
 import UIKit
 
 class CategoryTableViewController: UITableViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +72,14 @@ class CategoryTableViewController: UITableViewController {
             return 59
         } else{
             return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if(section == 0) {
+            return 52
+        } else {
+            return 23
         }
     }
 
