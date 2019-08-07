@@ -12,12 +12,12 @@ class HorizontalCategoryTableViewCell: UITableViewCell, UICollectionViewDataSour
     
     @IBOutlet var horizontalCategoryCollectionView: UICollectionView!
     
-    let images = ["AcademicCategory"]
+    let images = ["AcademicCategory", "LifeStyleCategory", "IndustryCategory", "ITCategory"]
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryHorizontalCell", for: indexPath as IndexPath) as! HorizontalCategoryCollectionViewCell
-        cell.categoryImage.image = UIImage(named: images[0])
+        cell.categoryImage.image = UIImage(named: images[indexPath.row])
         cell.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
         cell.layer.cornerRadius = 9
         
@@ -35,7 +35,7 @@ class HorizontalCategoryTableViewCell: UITableViewCell, UICollectionViewDataSour
      */
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
