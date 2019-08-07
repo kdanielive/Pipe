@@ -8,21 +8,31 @@
 
 import UIKit
 
-class HorizontalCategoryTableViewCell: UITableViewCell, UICollectionViewDataSource {
+class HorizontalCategoryTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     @IBOutlet var horizontalCategoryCollectionView: UICollectionView!
     
     let images = ["AcademicCategory"]
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryHorizontalCell", for: indexPath as IndexPath) as! HorizontalCategoryCollectionViewCell
         cell.categoryImage.image = UIImage(named: images[0])
-        
         cell.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
-        
+        cell.layer.cornerRadius = 9
         
         return cell
     }
+    
+    /*
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if(indexPath.section != 0) {
+            return CGSize(width: 152, height: 86)
+        } else {
+            
+        }
+    }
+     */
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5

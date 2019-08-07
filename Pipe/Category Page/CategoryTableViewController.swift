@@ -32,7 +32,7 @@ class CategoryTableViewController: UITableViewController {
         if(section == 0) {
             return 1
         } else {
-            return 10
+            return 1
         }
     }
 
@@ -40,12 +40,9 @@ class CategoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(indexPath.section == 0) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "horizontalCategoryCell", for: indexPath) as! HorizontalCategoryTableViewCell
-            
             return cell
         } else {
-        // Configure the cell...
-            let cell = tableView.dequeueReusableCell(withIdentifier: "verticalCategoryCell", for: indexPath)
-            cell.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "horizontalCategoryCell2", for: indexPath) as! HorizontalCategoryTableViewCell2
             return cell
         }
     }
@@ -64,7 +61,15 @@ class CategoryTableViewController: UITableViewController {
         if(indexPath.section == 0) {
             return 160
         } else {
-            return 160
+            return 85
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if(section == 0) {
+            return 59
+        } else{
+            return 0
         }
     }
 

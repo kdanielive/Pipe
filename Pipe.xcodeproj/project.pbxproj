@@ -21,6 +21,8 @@
 		AB4089D922F95F2800991EE3 /* HorizontalCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089D822F95F2800991EE3 /* HorizontalCategoryCollectionViewCell.swift */; };
 		AB4089DC22F9728F00991EE3 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089DB22F9728F00991EE3 /* FirstPageViewController.swift */; };
 		AB4089DE22FA525A00991EE3 /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089DD22FA525A00991EE3 /* EmailSignUpViewController.swift */; };
+		AB4089E022FA983C00991EE3 /* HorizontalCategoryCollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089DF22FA983C00991EE3 /* HorizontalCategoryCollectionViewCell2.swift */; };
+		AB4089E422FA993100991EE3 /* HorizontalCategoryTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089E322FA993100991EE3 /* HorizontalCategoryTableViewCell2.swift */; };
 		AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E23A922F013180059166E /* VideoTableViewController.swift */; };
 		AB4E23AC22F018910059166E /* bulletTrain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */; };
 		AB4E23AD22F018930059166E /* monkey.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */; };
@@ -88,6 +90,8 @@
 		AB4089D822F95F2800991EE3 /* HorizontalCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		AB4089DB22F9728F00991EE3 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		AB4089DD22FA525A00991EE3 /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
+		AB4089DF22FA983C00991EE3 /* HorizontalCategoryCollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCategoryCollectionViewCell2.swift; sourceTree = "<group>"; };
+		AB4089E322FA993100991EE3 /* HorizontalCategoryTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCategoryTableViewCell2.swift; sourceTree = "<group>"; };
 		AB4E23A922F013180059166E /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		AB4E23B022F018FE0059166E /* bulletTrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletTrain.png; sourceTree = "<group>"; };
 		AB4E23B122F018FE0059166E /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
@@ -186,8 +190,8 @@
 		AB0D578022F17DB500984A1B /* HorizontalTableView */ = {
 			isa = PBXGroup;
 			children = (
-				AB0D578122F17E1700984A1B /* HorizontalCollectionViewCell.swift */,
 				AB0D577E22F17DA000984A1B /* CollectionHolderTableViewCell.swift */,
+				AB0D578122F17E1700984A1B /* HorizontalCollectionViewCell.swift */,
 			);
 			path = HorizontalTableView;
 			sourceTree = "<group>";
@@ -207,6 +211,8 @@
 				AB4089D422F95C6500991EE3 /* CategoryTableViewController.swift */,
 				AB4089D622F95EC800991EE3 /* HorizontalCategoryTableViewCell.swift */,
 				AB4089D822F95F2800991EE3 /* HorizontalCategoryCollectionViewCell.swift */,
+				AB4089E322FA993100991EE3 /* HorizontalCategoryTableViewCell2.swift */,
+				AB4089DF22FA983C00991EE3 /* HorizontalCategoryCollectionViewCell2.swift */,
 			);
 			path = "Category Page";
 			sourceTree = "<group>";
@@ -595,11 +601,13 @@
 				AB8D9CEB22F00ECF00A37C4A /* VideoClip.swift in Sources */,
 				AB72091D22F00B1B00F2913D /* VideoLooperView.swift in Sources */,
 				AB7208ED22F0030F00F2913D /* Pipe.xcdatamodeld in Sources */,
+				AB4089E022FA983C00991EE3 /* HorizontalCategoryCollectionViewCell2.swift in Sources */,
 				AB7208E522F0030F00F2913D /* AppDelegate.swift in Sources */,
 				AB4089D722F95EC800991EE3 /* HorizontalCategoryTableViewCell.swift in Sources */,
 				ABA1D1E122F7B175007B543F /* VideoCommentsTableViewController.swift in Sources */,
 				AB4E23BD22F0394C0059166E /* VideoViewController.swift in Sources */,
 				AB8D9CE922F00EC100A37C4A /* Video.swift in Sources */,
+				AB4089E422FA993100991EE3 /* HorizontalCategoryTableViewCell2.swift in Sources */,
 				AB8D9CEF22F00EE200A37C4A /* Layouts.swift in Sources */,
 				AB4089D522F95C6500991EE3 /* CategoryTableViewController.swift in Sources */,
 				AB72091E22F00B1B00F2913D /* VideoPlayerView.swift in Sources */,
