@@ -217,7 +217,7 @@
 			path = "Category Page";
 			sourceTree = "<group>";
 		};
-		AB4089DA22F9727400991EE3 /* Login Pages */ = {
+		AB4089DA22F9727400991EE3 /* Old Login Pages */ = {
 			isa = PBXGroup;
 			children = (
 				AB4E23BA22F029DC0059166E /* SignInViewController.swift */,
@@ -225,7 +225,14 @@
 				AB4089DB22F9728F00991EE3 /* FirstPageViewController.swift */,
 				AB4089DD22FA525A00991EE3 /* EmailSignUpViewController.swift */,
 			);
-			path = "Login Pages";
+			path = "Old Login Pages";
+			sourceTree = "<group>";
+		};
+		AB4089E522FABFA500991EE3 /* New Login Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Login Pages";
 			sourceTree = "<group>";
 		};
 		AB4E23AB22F013250059166E /* ImportedFiles */ = {
@@ -266,7 +273,8 @@
 		AB7208E322F0030F00F2913D /* Pipe */ = {
 			isa = PBXGroup;
 			children = (
-				AB4089DA22F9727400991EE3 /* Login Pages */,
+				AB4089E522FABFA500991EE3 /* New Login Pages */,
+				AB4089DA22F9727400991EE3 /* Old Login Pages */,
 				AB7208E422F0030F00F2913D /* AppDelegate.swift */,
 				ABFF307922F7FE0A0058E961 /* Captions View */,
 				ABFF307422F7FA4E0058E961 /* More Options Panel */,
