@@ -9,11 +9,33 @@
 import UIKit
 import AVKit
 
-class VideoTableViewController: UITableViewController {
+class VideoTableViewController: UITableViewController, UISearchBarDelegate {
+
+    @IBOutlet var searchBarItem: UIBarButtonItem!
+    // Adding Searchbar
+    let searchController = UISearchController(searchResultsController: nil)
     var videos: [Video] = Video.allVideos()
+    
+    func addSearchBar() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search videos"
+        navigationItem.searchController = nil
+        definesPresentationContext = true
+        
+        searchController.hidesNavigationBarDuringPresentation = true
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.searchController = nil
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addSearchBar()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,6 +48,7 @@ class VideoTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 
     // MARK: - Table view data source
 
@@ -71,57 +94,21 @@ class VideoTableViewController: UITableViewController {
         } else {
             return 90
         }
-        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    @IBAction func openSearchBar(_ sender: Any) {
+        navigationItem.searchController = searchController
+        searchController.isActive = true
     }
-    */
+}
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+extension VideoTableViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        // TODO
+        //filterContentForSearchText(searchController.searchBar.text!)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

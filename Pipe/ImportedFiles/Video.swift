@@ -68,7 +68,7 @@ class Video: NSObject {
   
   class func allVideos() -> [Video] {
     var videos = localVideos()
-    let videoURLString = "https://wolverine.raywenderlich.com/content/ios/tutorials/video_streaming/foxVillage.mp4"
+    let videoURLString = "https://shinsaup.s3.ap-northeast-2.amazonaws.com/SampleVideo_1280x720_30mb.mp4"
 
     // Add one remote video
     if let url = URL(string: videoURLString) {

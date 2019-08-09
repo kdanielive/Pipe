@@ -77,7 +77,15 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="JcR-zz-OfU">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="LipeLogo" id="Vj8-wK-aRJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="LhT-Ja-gi1">
+                            <connections>
+                                <action selector="openSearchBar:" destination="A0z-40-5vy" id="QNV-J7-qO9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBarItem" destination="LhT-Ja-gi1" id="88M-zd-YFs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDs-oc-8xQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -581,6 +589,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="vIe-Qg-kwd">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="GzO-G9-ldo"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="V8q-xa-7jd"/>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="812"/>
                 </viewController>
@@ -1355,6 +1364,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="11x-pY-6PN"/>
         <segue reference="2Vx-un-HkG"/>
-        <segue reference="vEJ-U0-1RA"/>
+        <segue reference="Lkq-68-DKa"/>
     </inferredMetricsTieBreakers>
 </document>

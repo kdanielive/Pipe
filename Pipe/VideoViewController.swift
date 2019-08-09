@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class VideoViewController: UIViewController {
+class VideoViewController: UIViewController, UISearchBarDelegate {
 
     var videos = Video.allVideos()
     
@@ -105,7 +105,7 @@ class VideoViewController: UIViewController {
         //self.viewDidLayoutSubviews()
         
         // Video Player at the top part of the view
-        let videoURL = videos[0].url
+        let videoURL = videos[4].url
         player = AVPlayer(url: videoURL)
         
         // Getting rid of the given controls
@@ -146,25 +146,7 @@ class VideoViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        playPauseButton.updateUI()
-    }
-    */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     @objc func popOverlay() {
         if(screenTouchCount == 0) {
             playButton.isHidden = false
