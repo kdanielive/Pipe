@@ -589,7 +589,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="vIe-Qg-kwd">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="GzO-G9-ldo"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="V8q-xa-7jd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="V8q-xa-7jd">
+                            <connections>
+                                <action selector="openSearchBar:" destination="ITn-xt-jhr" id="9LX-34-umr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="812"/>
                 </viewController>

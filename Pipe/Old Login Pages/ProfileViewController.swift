@@ -9,7 +9,9 @@
 import UIKit
 import GoogleSignIn
 
-class ProfileViewController: UIViewController, GIDSignInUIDelegate {
+class ProfileViewController: UIViewController, GIDSignInUIDelegate, UISearchBarDelegate {
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     @IBAction func logoutAction(_ sender: Any) {
         GIDSignIn.sharedInstance().signOut()
@@ -19,11 +21,34 @@ class ProfileViewController: UIViewController, GIDSignInUIDelegate {
         self.present(nextViewController, animated:true, completion:nil)
     }
     
+    @IBAction func openSearchBar(_ sender: Any) {
+        navigationItem.searchController = searchController
+        searchController.isActive = true
+
+    }
+
+    func addSearchBar() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search videos"
+        navigationItem.searchController = nil
+        definesPresentationContext = true
+        
+        searchController.hidesNavigationBarDuringPresentation = true
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        navigationItem.searchController = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         GIDSignIn.sharedInstance().uiDelegate = self
 
+        addSearchBar()
         // Do any additional setup after loading the view.
     }
 
@@ -44,3 +69,12 @@ class ProfileViewController: UIViewController, GIDSignInUIDelegate {
     */
 
 }
+
+extension ProfileViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        // TODO
+        //filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
