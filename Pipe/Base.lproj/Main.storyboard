@@ -572,9 +572,11 @@
                                     <constraint firstAttribute="width" constant="62" id="Vhn-Is-6yM"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHo-iq-5IY">
-                                <rect key="frame" x="16" y="239" width="343" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-73-f58">
+                                <rect key="frame" x="326" y="108" width="24" height="24"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHo-iq-5IY">
+                                <rect key="frame" x="16" y="723" width="343" height="30"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -582,18 +584,29 @@
                                     <action selector="logoutAction:" destination="ITn-xt-jhr" eventType="touchUpInside" id="VbQ-be-Vzy"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-73-f58">
-                                <rect key="frame" x="326" y="108" width="24" height="24"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exr-yQ-gcH">
+                                <rect key="frame" x="0.0" y="228" width="375" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="buX-gL-gGo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Exr-yQ-gcH" firstAttribute="trailing" secondItem="Jt3-OI-s1Y" secondAttribute="trailing" id="BmP-hP-1mu"/>
                             <constraint firstItem="GAs-73-f58" firstAttribute="centerY" secondItem="ABd-B1-Gwa" secondAttribute="centerY" id="G7d-l3-Yv3"/>
+                            <constraint firstItem="Jt3-OI-s1Y" firstAttribute="trailing" secondItem="YHo-iq-5IY" secondAttribute="trailing" constant="16" id="LN6-J0-cE3"/>
                             <constraint firstItem="ABd-B1-Gwa" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" constant="25" id="S1S-fP-wb4"/>
+                            <constraint firstItem="Jt3-OI-s1Y" firstAttribute="bottom" secondItem="YHo-iq-5IY" secondAttribute="bottom" constant="10" id="V1p-Tq-bwq"/>
+                            <constraint firstItem="Exr-yQ-gcH" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" id="XiM-yC-xbk"/>
                             <constraint firstItem="Jt3-OI-s1Y" firstAttribute="trailing" secondItem="GAs-73-f58" secondAttribute="trailing" constant="25" id="YeQ-gQ-z1I"/>
                             <constraint firstItem="ABd-B1-Gwa" firstAttribute="top" secondItem="Jt3-OI-s1Y" secondAttribute="top" constant="25" id="qSm-Es-una"/>
                             <constraint firstItem="ABd-B1-Gwa" firstAttribute="top" secondItem="Jt3-OI-s1Y" secondAttribute="top" constant="25" id="rmS-zy-ejK"/>
+                            <constraint firstItem="Exr-yQ-gcH" firstAttribute="centerX" secondItem="Jt3-OI-s1Y" secondAttribute="centerX" id="v5D-GP-hL0"/>
                             <constraint firstItem="ABd-B1-Gwa" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" constant="25" id="vEu-ME-CkE"/>
+                            <constraint firstItem="Exr-yQ-gcH" firstAttribute="top" secondItem="Jt3-OI-s1Y" secondAttribute="top" constant="164" id="whK-OL-ybJ"/>
+                            <constraint firstItem="YHo-iq-5IY" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" constant="16" id="wjT-0V-zeB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jt3-OI-s1Y"/>
                     </view>
@@ -605,7 +618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQU-a0-NLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="1191"/>
+            <point key="canvasLocation" x="485.60000000000002" y="1190.1049475262371"/>
         </scene>
         <!--First Page View Controller-->
         <scene sceneID="dge-nx-1Qx">
