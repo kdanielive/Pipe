@@ -65,7 +65,7 @@ class VideoViewController: UIViewController, UISearchBarDelegate {
     @IBAction func goFullScreen(_ sender: UIButton) {
         self.player.pause()
         let newPlayerViewController = AVPlayerViewController()
-        let videoURL = videos[0].url
+        let videoURL = videos[4].url
         let newPlayer = AVPlayer(url: videoURL)
         
         newPlayerViewController.player = newPlayer
