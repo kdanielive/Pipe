@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileOptionsTableViewCell: UITableViewCell {
 
+    @IBOutlet var iconImage: UIImageView!
+    @IBOutlet var optionTitleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

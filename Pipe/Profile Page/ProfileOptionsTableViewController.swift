@@ -13,6 +13,9 @@ class ProfileOptionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.isScrollEnabled = false
+        tableView.layer.borderWidth = 1.0
+        tableView.layer.borderColor = UIColor.darkGray.cgColor
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,23 +27,42 @@ class ProfileOptionsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 4
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250/4
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileOptionsTableViewCell
+        
+        let row = indexPath.row
+        
+        if(row==0) {
+            cell.iconImage.image = UIImage(named: "mychannelIcon")
+            cell.optionTitleLabel.text = "My Channel"
+        } else if(row==1) {
+            cell.iconImage.image = UIImage(named: "historyIcon")
+            cell.optionTitleLabel.text = "History"
+        } else if(row==2) {
+            cell.iconImage.image = UIImage(named: "likedIcon")
+            cell.optionTitleLabel.text = "Liked"
+        } else  {
+            cell.iconImage.image = UIImage(named: "watchlaterIcon")
+            cell.optionTitleLabel.text = "Watch Later"
+        }
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

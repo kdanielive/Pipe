@@ -80,18 +80,19 @@ extension FeedTableViewCell {
         previewImageView.center = CGPoint(x: bounds.width/2.0, y: imageYCenter)
         // Rounding the upper left and right corners
         previewImageView.roundCorners(corners: [.topLeft, .topRight], radius: 10.0)
-        previewImageView.alpha = 0.5
+        previewImageView.alpha = 0.7
         
         let videoViewYCenter = padding + videoViewHeight/2.0
         videoView.bounds = CGRect(x: 0, y: 0, width: widthWithPadding, height: 260)
         videoView.center = CGPoint(x: bounds.width/2.0, y: videoViewYCenter)
-        videoView.backgroundColor = UIColor.gray
+        videoView.backgroundColor = UIColor.black
         
         let titleWidth = videoView.bounds.width - 35 - padding*2
         let titleHeight = 40.0
         let titleXCenter = (titleWidth + padding*2)/2.0
         titleLabel.bounds = CGRect(x: 0.0, y: 0.0, width: Double(titleWidth), height: titleHeight)
-        titleLabel.center = CGPoint(x: Double(titleXCenter), y: Double(previewHeight) + titleHeight/2.0)
+        titleLabel.center = CGPoint(x: Double(titleXCenter), y: Double(previewHeight) + titleHeight/2.0 + 10)
+        titleLabel.textColor = UIColor.white
         titleLabel.textAlignment = .left
         titleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         titleLabel.numberOfLines = 0

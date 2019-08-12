@@ -652,13 +652,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dLM-Ji-PPk" customClass="ProfileOptionsTableViewCell" customModule="Pipe" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCell" id="dLM-Ji-PPk" customClass="ProfileOptionsTableViewCell" customModule="Pipe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dLM-Ji-PPk" id="Uxc-L6-QUG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1dN-1L-02E">
+                                            <rect key="frame" x="20" y="10" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="7zg-E4-QfY"/>
+                                                <constraint firstAttribute="width" constant="24" id="bMX-uQ-DtS"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FW-hP-yTq">
+                                            <rect key="frame" x="59" y="13" width="300" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5FW-hP-yTq" firstAttribute="leading" secondItem="1dN-1L-02E" secondAttribute="trailing" constant="15" id="4EB-l1-lDv"/>
+                                        <constraint firstItem="1dN-1L-02E" firstAttribute="leading" secondItem="Uxc-L6-QUG" secondAttribute="leading" constant="20" id="TEy-SI-ktQ"/>
+                                        <constraint firstItem="1dN-1L-02E" firstAttribute="centerY" secondItem="Uxc-L6-QUG" secondAttribute="centerY" id="Z9v-lA-lOI"/>
+                                        <constraint firstAttribute="trailing" secondItem="5FW-hP-yTq" secondAttribute="trailing" constant="16" id="alw-Gl-cnX"/>
+                                        <constraint firstItem="5FW-hP-yTq" firstAttribute="centerY" secondItem="Uxc-L6-QUG" secondAttribute="centerY" id="teM-i5-6s9"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="iconImage" destination="1dN-1L-02E" id="IPF-Ax-pzu"/>
+                                    <outlet property="optionTitleLabel" destination="5FW-hP-yTq" id="Brn-GK-xvx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -669,7 +695,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytV-sb-MbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1241" y="1150"/>
+            <point key="canvasLocation" x="1240.8" y="1149.6251874062968"/>
         </scene>
         <!--First Page View Controller-->
         <scene sceneID="dge-nx-1Qx">
