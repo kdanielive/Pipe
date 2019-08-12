@@ -22,9 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
      
      // Adding firebase
      FirebaseApp.configure()
-        
-          GIDSignIn.sharedInstance().clientID = "783452828387-lm6rden5ib57f6urkq8iq1hvcvdpmoaj.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = self
+
+     GIDSignIn.sharedInstance().clientID = "783452828387-lm6rden5ib57f6urkq8iq1hvcvdpmoaj.apps.googleusercontent.com"
+     GIDSignIn.sharedInstance().delegate = self
         //GIDSignIn.sharedInstance().signInSilently()
      
      /* IMPORTANT CODE REMIND TO LOOK LATER

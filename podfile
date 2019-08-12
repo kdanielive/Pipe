@@ -6,6 +6,7 @@ target 'Pipe' do
   use_frameworks!
   pod 'GoogleSignIn'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Storage'
   # Pods for Pipe
 
   target 'PipeTests' do
