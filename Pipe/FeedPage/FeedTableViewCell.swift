@@ -53,15 +53,12 @@ extension FeedTableViewCell {
         //videoView.addSubview(previewImageView)
         addSubview(videoView)
         addSubview(previewImageView)
-        
-
-        //addSubview(titleLabel)
-        //addSubview(previewImageView)
+        videoView.addSubview(titleLabel)
     }
     
     func updateViews() {
         titleLabel.text = video?.title
-        titleLabel.font = UIFont.systemFont(ofSize: 24.0)
+        titleLabel.font = UIFont.systemFont(ofSize: 17.0)
         
         let image = UIImage(named: (video?.thumbURL.path)!)
         previewImageView.image = image
@@ -70,35 +67,40 @@ extension FeedTableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let videoHeight: CGFloat = 200
+        let previewHeight: CGFloat = 200
         let padding: CGFloat = 20
         let videoViewHeight: CGFloat = 260
         
         let widthWithPadding = bounds.width - (2*padding)
         
-        let titleSize = titleLabel.sizeThatFits(CGSize(width: widthWithPadding, height: .infinity))
-        titleLabel.bounds = CGRect(x: 0, y: 0, width: titleSize.width, height: titleSize.height)
-    
-        //previewImageView.bounds = CGRect(x: 0, y: 0, width: widthWithPadding, height: previewHeight)
-        previewImageView.bounds = CGRect(x: 0, y: 0, width: widthWithPadding, height: videoHeight)
+        previewImageView.bounds = CGRect(x: 0, y: 0, width: widthWithPadding, height: previewHeight)
 
-        //titleLabel.center = CGPoint(x: titleLabel.bounds.width/2.0 + padding, y: padding + titleLabel.bounds.height/2.0)
-
-        //let imageYCenter = titleLabel.frame.origin.y + titleSize.height + padding + previewHeight/2.0
-        let imageYCenter = padding + videoHeight/2.0
+        let imageYCenter = padding + previewHeight/2.0
         //previewImageView.center = CGPoint(x: bounds.width/2.0, y: imageYCenter)
         previewImageView.center = CGPoint(x: bounds.width/2.0, y: imageYCenter)
-        
+        // Rounding the upper left and right corners
         previewImageView.roundCorners(corners: [.topLeft, .topRight], radius: 10.0)
-
+        previewImageView.alpha = 0.5
         
         let videoViewYCenter = padding + videoViewHeight/2.0
         videoView.bounds = CGRect(x: 0, y: 0, width: widthWithPadding, height: 260)
         videoView.center = CGPoint(x: bounds.width/2.0, y: videoViewYCenter)
         videoView.backgroundColor = UIColor.black
+        videoView.alpha = 0.7
+        
+        let titleWidth = videoView.bounds.width - 35 - padding*2
+        let titleHeight = 40.0
+        let titleXCenter = (titleWidth + padding*2)/2.0
+        titleLabel.bounds = CGRect(x: 0.0, y: 0.0, width: Double(titleWidth), height: titleHeight)
+        titleLabel.center = CGPoint(x: Double(titleXCenter), y: Double(previewHeight) + titleHeight/2.0)
+        titleLabel.textAlignment = .left
+        titleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        titleLabel.numberOfLines = 0
+        titleLabel.sizeToFit()
     }
 }
 
+// Extension for rounding specific corners
 extension UIView {
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
