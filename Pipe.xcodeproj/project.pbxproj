@@ -287,8 +287,8 @@
 		AB7208E322F0030F00F2913D /* Pipe */ = {
 			isa = PBXGroup;
 			children = (
-				AB4089EE2300F63000991EE3 /* Swift Files */,
 				AB7208E422F0030F00F2913D /* AppDelegate.swift */,
+				AB4089EE2300F63000991EE3 /* Swift Files */,
 				AB4089E522FABFA500991EE3 /* New Login Pages */,
 				AB4089DA22F9727400991EE3 /* Old Login Pages */,
 				ABFF307922F7FE0A0058E961 /* Captions View */,
