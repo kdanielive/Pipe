@@ -566,7 +566,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-B1-Gwa">
-                                <rect key="frame" x="127" y="81" width="121" height="102"/>
+                                <rect key="frame" x="25" y="89" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="AXN-LB-PhG"/>
+                                    <constraint firstAttribute="width" constant="62" id="Vhn-Is-6yM"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHo-iq-5IY">
                                 <rect key="frame" x="16" y="239" width="343" height="33"/>
@@ -578,22 +582,31 @@
                                     <action selector="logoutAction:" destination="ITn-xt-jhr" eventType="touchUpInside" id="VbQ-be-Vzy"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-73-f58">
+                                <rect key="frame" x="326" y="108" width="24" height="24"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" constant="127" id="T2j-CO-9II"/>
-                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="centerX" secondItem="rDC-dr-jin" secondAttribute="centerX" id="YLu-jb-BT1"/>
-                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="top" secondItem="Jt3-OI-s1Y" secondAttribute="top" constant="17" id="z1a-fC-5e3"/>
+                            <constraint firstItem="GAs-73-f58" firstAttribute="centerY" secondItem="ABd-B1-Gwa" secondAttribute="centerY" id="G7d-l3-Yv3"/>
+                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" constant="25" id="S1S-fP-wb4"/>
+                            <constraint firstItem="Jt3-OI-s1Y" firstAttribute="trailing" secondItem="GAs-73-f58" secondAttribute="trailing" constant="25" id="YeQ-gQ-z1I"/>
+                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="top" secondItem="Jt3-OI-s1Y" secondAttribute="top" constant="25" id="qSm-Es-una"/>
+                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="top" secondItem="Jt3-OI-s1Y" secondAttribute="top" constant="25" id="rmS-zy-ejK"/>
+                            <constraint firstItem="ABd-B1-Gwa" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" constant="25" id="vEu-ME-CkE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jt3-OI-s1Y"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="vIe-Qg-kwd">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="GzO-G9-ldo"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="V8q-xa-7jd">
-                            <connections>
-                                <action selector="openSearchBar:" destination="ITn-xt-jhr" id="9LX-34-umr"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="notificationIcon" id="Yhm-Rr-aoD"/>
+                            <barButtonItem systemItem="search" id="V8q-xa-7jd">
+                                <connections>
+                                    <action selector="openSearchBar:" destination="ITn-xt-jhr" id="9LX-34-umr"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="812"/>
                 </viewController>
@@ -1355,11 +1368,13 @@
         <image name="filledRatingIcon" width="15" height="15"/>
         <image name="fullscreen" width="16" height="16"/>
         <image name="moreIcon" width="4" height="18"/>
+        <image name="notificationIcon" width="24" height="24"/>
         <image name="pause" width="37" height="37"/>
         <image name="playbackSpeedIcon" width="22" height="22"/>
         <image name="playedIcon" width="11" height="15"/>
         <image name="ratingIcon" width="16" height="15"/>
         <image name="reportIcon" width="18" height="22"/>
+        <image name="settingsIcon" width="24" height="24"/>
         <image name="shareIcon" width="20" height="20"/>
         <image name="user" width="102.40000152587891" height="102.40000152587891"/>
         <image name="warrantyLogo" width="243" height="46"/>
