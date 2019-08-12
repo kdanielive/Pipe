@@ -40,7 +40,7 @@ class VideoTableViewCell: UITableViewCell {
       updateViews()
     }
   }
-  
+    
   // Sizing
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(false, animated: false)

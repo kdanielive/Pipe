@@ -28,6 +28,7 @@
 		AB4089F02300F64200991EE3 /* FBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089EF2300F64200991EE3 /* FBStorage.swift */; };
 		AB4089F12300F64200991EE3 /* FBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089EF2300F64200991EE3 /* FBStorage.swift */; };
 		AB4089F22300F64200991EE3 /* FBStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089EF2300F64200991EE3 /* FBStorage.swift */; };
+		AB4089F52301282900991EE3 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089F42301282900991EE3 /* FeedTableViewCell.swift */; };
 		AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E23A922F013180059166E /* VideoTableViewController.swift */; };
 		AB4E23AC22F018910059166E /* bulletTrain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */; };
 		AB4E23AD22F018930059166E /* monkey.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */; };
@@ -98,6 +99,7 @@
 		AB4089E322FA993100991EE3 /* HorizontalCategoryTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCategoryTableViewCell2.swift; sourceTree = "<group>"; };
 		AB4089EA2300E96D00991EE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB4089EF2300F64200991EE3 /* FBStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBStorage.swift; sourceTree = "<group>"; };
+		AB4089F42301282900991EE3 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		AB4E23A922F013180059166E /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		AB4E23B022F018FE0059166E /* bulletTrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletTrain.png; sourceTree = "<group>"; };
 		AB4E23B122F018FE0059166E /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
@@ -249,6 +251,14 @@
 			path = "Swift Files";
 			sourceTree = "<group>";
 		};
+		AB4089F3230127FD00991EE3 /* FeedPage */ = {
+			isa = PBXGroup;
+			children = (
+				AB4089F42301282900991EE3 /* FeedTableViewCell.swift */,
+			);
+			path = FeedPage;
+			sourceTree = "<group>";
+		};
 		AB4E23AB22F013250059166E /* ImportedFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +297,7 @@
 		AB7208E322F0030F00F2913D /* Pipe */ = {
 			isa = PBXGroup;
 			children = (
+				AB4089F3230127FD00991EE3 /* FeedPage */,
 				AB7208E422F0030F00F2913D /* AppDelegate.swift */,
 				AB4089EE2300F63000991EE3 /* Swift Files */,
 				AB4089E522FABFA500991EE3 /* New Login Pages */,
@@ -637,6 +648,7 @@
 				AB8D9CE922F00EC100A37C4A /* Video.swift in Sources */,
 				AB4089E422FA993100991EE3 /* HorizontalCategoryTableViewCell2.swift in Sources */,
 				AB8D9CEF22F00EE200A37C4A /* Layouts.swift in Sources */,
+				AB4089F52301282900991EE3 /* FeedTableViewCell.swift in Sources */,
 				AB4089D522F95C6500991EE3 /* CategoryTableViewController.swift in Sources */,
 				AB72091E22F00B1B00F2913D /* VideoPlayerView.swift in Sources */,
 				AB0D578622F267E600984A1B /* ProfileViewController.swift in Sources */,

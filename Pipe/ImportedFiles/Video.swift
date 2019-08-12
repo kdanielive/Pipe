@@ -48,10 +48,7 @@ class Video: NSObject {
     var videos: [Video] = []
     let names = ["newYorkFlip", "bulletTrain", "monkey", "shark"]
     let titles = ["New York Flip", "Bullet Train Adventure", "Monkey Village", "Robot Battles"]
-    let subtitles = ["Can this guys really flip all of his bros? You'll never believe what happens!",
-                     "Enjoying the soothing view of passing towns in Japan",
-                     "Watch as a roving gang of monkeys terrorizes the top of this mountain!",
-                     "Have you ever seen a robot shark try to eat another robot?"]
+    let subtitles = ["Can this guys really flip all of his bros? You'll never believe what happens!", "Enjoying the soothing view of passing towns in Japan","Watch as a roving gang of monkeys terrorizes the top of this mountain!", "Have you ever seen a robot shark try to eat another robot?"]
     
     for (index, name) in names.enumerated() {
         let urlPath = Bundle.main.path(forResource: name, ofType: "mp4")!
