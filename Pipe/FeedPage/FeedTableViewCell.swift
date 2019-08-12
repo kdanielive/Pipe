@@ -85,8 +85,7 @@ extension FeedTableViewCell {
         let videoViewYCenter = padding + videoViewHeight/2.0
         videoView.bounds = CGRect(x: 0, y: 0, width: widthWithPadding, height: 260)
         videoView.center = CGPoint(x: bounds.width/2.0, y: videoViewYCenter)
-        videoView.backgroundColor = UIColor.black
-        videoView.alpha = 0.7
+        videoView.backgroundColor = UIColor.gray
         
         let titleWidth = videoView.bounds.width - 35 - padding*2
         let titleHeight = 40.0
