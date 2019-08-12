@@ -572,7 +572,7 @@
                                     <constraint firstAttribute="width" constant="62" id="Vhn-Is-6yM"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-73-f58">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="settingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GAs-73-f58">
                                 <rect key="frame" x="326" y="108" width="24" height="24"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHo-iq-5IY">
@@ -591,14 +591,22 @@
                                     <constraint firstAttribute="height" constant="250" id="buX-gL-gGo"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jC8-D5-oHR">
+                                <rect key="frame" x="107" y="96" width="199" height="25"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Exr-yQ-gcH" firstAttribute="trailing" secondItem="Jt3-OI-s1Y" secondAttribute="trailing" id="BmP-hP-1mu"/>
+                            <constraint firstItem="GAs-73-f58" firstAttribute="leading" secondItem="jC8-D5-oHR" secondAttribute="trailing" constant="20" id="FuD-WV-IpM"/>
                             <constraint firstItem="GAs-73-f58" firstAttribute="centerY" secondItem="ABd-B1-Gwa" secondAttribute="centerY" id="G7d-l3-Yv3"/>
                             <constraint firstItem="Jt3-OI-s1Y" firstAttribute="trailing" secondItem="YHo-iq-5IY" secondAttribute="trailing" constant="16" id="LN6-J0-cE3"/>
                             <constraint firstItem="ABd-B1-Gwa" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" constant="25" id="S1S-fP-wb4"/>
                             <constraint firstItem="Jt3-OI-s1Y" firstAttribute="bottom" secondItem="YHo-iq-5IY" secondAttribute="bottom" constant="10" id="V1p-Tq-bwq"/>
+                            <constraint firstItem="jC8-D5-oHR" firstAttribute="leading" secondItem="ABd-B1-Gwa" secondAttribute="trailing" constant="20" id="WXy-zk-vjf"/>
                             <constraint firstItem="Exr-yQ-gcH" firstAttribute="leading" secondItem="Jt3-OI-s1Y" secondAttribute="leading" id="XiM-yC-xbk"/>
                             <constraint firstItem="Jt3-OI-s1Y" firstAttribute="trailing" secondItem="GAs-73-f58" secondAttribute="trailing" constant="25" id="YeQ-gQ-z1I"/>
                             <constraint firstItem="ABd-B1-Gwa" firstAttribute="top" secondItem="Jt3-OI-s1Y" secondAttribute="top" constant="25" id="qSm-Es-una"/>
