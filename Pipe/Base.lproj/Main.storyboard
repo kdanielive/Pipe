@@ -599,14 +599,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="vIe-Qg-kwd">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="GzO-G9-ldo"/>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="notificationIcon" id="Yhm-Rr-aoD"/>
-                            <barButtonItem systemItem="search" id="V8q-xa-7jd">
-                                <connections>
-                                    <action selector="openSearchBar:" destination="ITn-xt-jhr" id="9LX-34-umr"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="notificationIcon" id="Yhm-Rr-aoD"/>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="812"/>
                 </viewController>
