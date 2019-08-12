@@ -15,9 +15,19 @@ class fbManager {
         
         let storage = Storage.storage()
         let storageRef = storage.reference()
-        print("StorageRef info: ", storageRef.fullPath, storageRef.name, storageRef.bucket)
-        let videoRef = storageRef.child("video1.mp4")
+        let videoRef = storageRef.child("/video1.mp4")
         print("VideoRef info: ", videoRef.fullPath, videoRef.name, videoRef.bucket)
-
+        
+        // Fetch the download URL
+        videoRef.downloadURL { url, error in
+            if let error = error {
+                // Handle any errors
+                print(error)
+            } else {
+                // Get the download URL for 'images/stars.jpg'
+                print("Printing url: ", url)
+            }
+        }
     }
 }
+
