@@ -1,17 +1,15 @@
 //
-//  ProfileOptionsTableViewCell.swift
+//  ProfileOptionVideosTableViewCell.swift
 //  Pipe
 //
-//  Created by Daniel Kim on 8/12/19.
+//  Created by Daniel Kim on 8/13/19.
 //  Copyright © 2019 Daniel Kim. All rights reserved.
 //
 
 import UIKit
 
-class ProfileOptionsTableViewCell: UITableViewCell {
+class ProfileOptionVideosTableViewCell: UITableViewCell {
 
-    @IBOutlet var iconImage: UIImageView!
-    @IBOutlet var optionTitleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,7 +19,6 @@ class ProfileOptionsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        
     }
 
 }
