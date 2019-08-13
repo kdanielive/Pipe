@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g04-3I-r0M">
-                                <rect key="frame" x="0.0" y="64" width="375" height="210"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="CLB-eO-4KA"/>
                                     <constraint firstAttribute="width" constant="375" id="M3B-nx-buT"/>
@@ -109,7 +109,7 @@
                                 </constraints>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6t-dF-Dsr">
-                                <rect key="frame" x="345" y="244" width="30" height="30"/>
+                                <rect key="frame" x="345" y="200" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="4GM-EC-mB1"/>
                                 </constraints>
@@ -119,7 +119,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FtL-O8-Rqr">
-                                <rect key="frame" x="-2" y="244" width="291" height="31"/>
+                                <rect key="frame" x="-2" y="200" width="291" height="31"/>
                                 <color key="tintColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="thumbTintColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
@@ -127,20 +127,20 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kR-OO-v69">
-                                <rect key="frame" x="167" y="149" width="35" height="35"/>
+                                <rect key="frame" x="167" y="105" width="35" height="35"/>
                                 <state key="normal" image="pause"/>
                                 <connections>
                                     <action selector="playVideo:" destination="4ow-x9-xFM" eventType="touchUpInside" id="1fI-pJ-dl1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8L-8t-qZA">
-                                <rect key="frame" x="295" y="244" width="42" height="30"/>
+                                <rect key="frame" x="295" y="200" width="42" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voI-HX-CjF">
-                                <rect key="frame" x="0.0" y="64" width="20" height="30"/>
+                                <rect key="frame" x="0.0" y="20" width="20" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="raj-AG-KZB"/>
                                 </constraints>
@@ -150,10 +150,10 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKN-uR-djA">
-                                <rect key="frame" x="0.0" y="274" width="375" height="1526"/>
+                                <rect key="frame" x="0.0" y="230" width="375" height="1570"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tab-nj-JCy" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1526"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1570"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-fI-rNJ">
                                                 <rect key="frame" x="-4" y="0.0" width="379" height="114"/>
@@ -634,7 +634,6 @@
                         <viewLayoutGuide key="safeArea" id="Jt3-OI-s1Y"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="vIe-Qg-kwd">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="GzO-G9-ldo"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="notificationIcon" id="Yhm-Rr-aoD"/>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="812"/>
@@ -1437,19 +1436,6 @@
             </objects>
             <point key="canvasLocation" x="-3031.1999999999998" y="230.28485757121442"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tBj-7k-fnV">
-            <objects>
-                <viewController id="V36-Vg-RIX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ry3-Ji-wib">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H0y-XR-CuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="Category" width="24" height="24"/>
@@ -1479,7 +1465,6 @@
         <image name="warrantyLogo" width="243" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AAV-AN-gFR"/>
         <segue reference="11x-pY-6PN"/>
         <segue reference="2Vx-un-HkG"/>
         <segue reference="Lkq-68-DKa"/>

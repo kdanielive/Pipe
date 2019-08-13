@@ -57,7 +57,6 @@ class VideoTableViewCell: UITableViewCell {
     label.text = viewModel.title
     let titleHeight = label.sizeThatFits(CGSize(width: UIScreen.main.bounds.width - 32, height: .infinity)).height
     
-    label.text = viewModel.subtitle
     label.font = UIFont.systemFont(ofSize: 14.0)
     let subtitleHeight = label.sizeThatFits(CGSize(width: UIScreen.main.bounds.width - 32, height: .infinity)).height
     

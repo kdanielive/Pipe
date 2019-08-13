@@ -31,6 +31,7 @@
 		AB4089F52301282900991EE3 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089F42301282900991EE3 /* FeedTableViewCell.swift */; };
 		AB4089F82301595100991EE3 /* ProfileOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089F72301595100991EE3 /* ProfileOptionsTableViewController.swift */; };
 		AB4089FA2301596100991EE3 /* ProfileOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089F92301596100991EE3 /* ProfileOptionsTableViewCell.swift */; };
+		AB4089FC230234DC00991EE3 /* VideoOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4089FB230234DC00991EE3 /* VideoOrganizer.swift */; };
 		AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E23A922F013180059166E /* VideoTableViewController.swift */; };
 		AB4E23AC22F018910059166E /* bulletTrain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */; };
 		AB4E23AD22F018930059166E /* monkey.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */; };
@@ -104,6 +105,7 @@
 		AB4089F42301282900991EE3 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		AB4089F72301595100991EE3 /* ProfileOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionsTableViewController.swift; sourceTree = "<group>"; };
 		AB4089F92301596100991EE3 /* ProfileOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionsTableViewCell.swift; sourceTree = "<group>"; };
+		AB4089FB230234DC00991EE3 /* VideoOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoOrganizer.swift; sourceTree = "<group>"; };
 		AB4E23A922F013180059166E /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		AB4E23B022F018FE0059166E /* bulletTrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletTrain.png; sourceTree = "<group>"; };
 		AB4E23B122F018FE0059166E /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4089EF2300F64200991EE3 /* FBStorage.swift */,
+				AB4089FB230234DC00991EE3 /* VideoOrganizer.swift */,
 			);
 			path = "Swift Files";
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				AB72091E22F00B1B00F2913D /* VideoPlayerView.swift in Sources */,
 				AB0D578622F267E600984A1B /* ProfileViewController.swift in Sources */,
 				AB0D578C22F2D55900984A1B /* RecommendedVideosTableViewController.swift in Sources */,
+				AB4089FC230234DC00991EE3 /* VideoOrganizer.swift in Sources */,
 				AB4089F02300F64200991EE3 /* FBStorage.swift in Sources */,
 				ABA1D1E022F7B175007B543F /* VideoCommentsTableViewCell.swift in Sources */,
 				AB4089DE22FA525A00991EE3 /* EmailSignUpViewController.swift in Sources */,

@@ -48,7 +48,6 @@ extension VideoTableViewCell {
     let image = UIImage(named: (video?.thumbURL.path)!)
     previewImageView.image = image
     
-    subtitleLabel.text = video?.subtitle
     subtitleLabel.font = UIFont.systemFont(ofSize: 14.0)
     subtitleLabel.numberOfLines = 0
   }
