@@ -28,6 +28,8 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.searchBar.delegate = self
         
+        searchController.searchBar.scopeButtonTitles = ["Hello", "Hi"]
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -63,6 +65,10 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
     @objc func deleteRecentSearch() {
         recentSearches.popLast()
         tableView.reloadData()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
     }
 
     // MARK: - Table view data source
@@ -176,11 +182,18 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
+    
+    
     @IBAction func openSearchBar(_ sender: Any) {
         navigationItem.searchController = searchController
         searchController.isActive = true
     }
     
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    }
+    */
 }
 
 extension CategoryTableViewController: UISearchResultsUpdating {
