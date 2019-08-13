@@ -36,6 +36,8 @@
 		AB408A012302448C00991EE3 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB408A002302448C00991EE3 /* NotificationTableViewCell.swift */; };
 		AB408A0323024ADA00991EE3 /* ProfileOptionVideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB408A0223024ADA00991EE3 /* ProfileOptionVideosTableViewController.swift */; };
 		AB408A0523024AEA00991EE3 /* ProfileOptionVideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB408A0423024AEA00991EE3 /* ProfileOptionVideosTableViewCell.swift */; };
+		AB408A092302787D00991EE3 /* SearchingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB408A082302787D00991EE3 /* SearchingTableViewCell.swift */; };
+		AB408A0B2302788800991EE3 /* SearchedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB408A0A2302788800991EE3 /* SearchedTableViewCell.swift */; };
 		AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E23A922F013180059166E /* VideoTableViewController.swift */; };
 		AB4E23AC22F018910059166E /* bulletTrain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */; };
 		AB4E23AD22F018930059166E /* monkey.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */; };
@@ -114,6 +116,8 @@
 		AB408A002302448C00991EE3 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		AB408A0223024ADA00991EE3 /* ProfileOptionVideosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionVideosTableViewController.swift; sourceTree = "<group>"; };
 		AB408A0423024AEA00991EE3 /* ProfileOptionVideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionVideosTableViewCell.swift; sourceTree = "<group>"; };
+		AB408A082302787D00991EE3 /* SearchingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingTableViewCell.swift; sourceTree = "<group>"; };
+		AB408A0A2302788800991EE3 /* SearchedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedTableViewCell.swift; sourceTree = "<group>"; };
 		AB4E23A922F013180059166E /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		AB4E23B022F018FE0059166E /* bulletTrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletTrain.png; sourceTree = "<group>"; };
 		AB4E23B122F018FE0059166E /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 		AB4089D322F95C3300991EE3 /* Category Page */ = {
 			isa = PBXGroup;
 			children = (
+				AB408A072302786800991EE3 /* CategorySearch Page */,
+				AB408A0623026F3B00991EE3 /* CategoryTopic Page */,
 				AB4089D422F95C6500991EE3 /* CategoryTableViewController.swift */,
 				AB4089D622F95EC800991EE3 /* HorizontalCategoryTableViewCell.swift */,
 				AB4089D822F95F2800991EE3 /* HorizontalCategoryCollectionViewCell.swift */,
@@ -292,6 +298,22 @@
 				AB408A002302448C00991EE3 /* NotificationTableViewCell.swift */,
 			);
 			path = "Notification Page";
+			sourceTree = "<group>";
+		};
+		AB408A0623026F3B00991EE3 /* CategoryTopic Page */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "CategoryTopic Page";
+			sourceTree = "<group>";
+		};
+		AB408A072302786800991EE3 /* CategorySearch Page */ = {
+			isa = PBXGroup;
+			children = (
+				AB408A082302787D00991EE3 /* SearchingTableViewCell.swift */,
+				AB408A0A2302788800991EE3 /* SearchedTableViewCell.swift */,
+			);
+			path = "CategorySearch Page";
 			sourceTree = "<group>";
 		};
 		AB4E23AB22F013250059166E /* ImportedFiles */ = {
@@ -674,6 +696,7 @@
 				ABFF307622F7FA840058E961 /* MoreOptionsTableViewController.swift in Sources */,
 				AB0D577F22F17DA000984A1B /* CollectionHolderTableViewCell.swift in Sources */,
 				AB0D578222F17E1700984A1B /* HorizontalCollectionViewCell.swift in Sources */,
+				AB408A092302787D00991EE3 /* SearchingTableViewCell.swift in Sources */,
 				AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */,
 				AB8D9CEB22F00ECF00A37C4A /* VideoClip.swift in Sources */,
 				AB72091D22F00B1B00F2913D /* VideoLooperView.swift in Sources */,
@@ -693,6 +716,7 @@
 				AB4089F52301282900991EE3 /* FeedTableViewCell.swift in Sources */,
 				AB4089D522F95C6500991EE3 /* CategoryTableViewController.swift in Sources */,
 				AB72091E22F00B1B00F2913D /* VideoPlayerView.swift in Sources */,
+				AB408A0B2302788800991EE3 /* SearchedTableViewCell.swift in Sources */,
 				AB0D578622F267E600984A1B /* ProfileViewController.swift in Sources */,
 				AB0D578C22F2D55900984A1B /* RecommendedVideosTableViewController.swift in Sources */,
 				AB4089FC230234DC00991EE3 /* VideoOrganizer.swift in Sources */,

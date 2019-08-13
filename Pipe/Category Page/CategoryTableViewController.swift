@@ -12,6 +12,7 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
     
     let searchController = UISearchController(searchResultsController: nil)
     let lessons = ["hihihi", "hellohello", "olaola"]
+    var recentSearches = ["hihi", "yolo", "recent search"]
     var filteredLessons = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,65 +51,128 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
         
         tableView.reloadData()
     }
+    
+    func isSearching() -> Bool {
+        return searchController.isActive && searchBarIsEmpty()
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    @objc func deleteRecentSearch() {
+        recentSearches.popLast()
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        if(isSearching()) {
+            return 1
+        } else if(isFiltering()) {
+            return 1
+        } else {
+            return 3
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if(section == 0) {
-            return 1
+        if(isSearching()){
+            return recentSearches.count
+        } else if(isFiltering()) {
+            return filteredLessons.count
         } else {
-            return 1
+            if(section == 0) {
+                return 1
+            } else {
+                return 1
+            }
         }
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.section == 0) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "horizontalCategoryCell", for: indexPath) as! HorizontalCategoryTableViewCell
+        if(isSearching()) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "searchingCell", for: indexPath) as! SearchingTableViewCell
+            let button = UIButton(type: .custom)
+            button.setImage(UIImage(named: "deleteRecentSearchIcon"), for: .normal)
+            button.addTarget(self, action: #selector(deleteRecentSearch), for: .touchUpInside)
+            button.tag = indexPath.row
+            cell.accessoryView = button
+            button.sizeToFit()
+            return cell
+        } else if(isFiltering()) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "searchedCell", for: indexPath) as! SearchedTableViewCell
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "horizontalCategoryCell2", for: indexPath) as! HorizontalCategoryTableViewCell2
-            return cell
+            if(indexPath.section == 0) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "horizontalCategoryCell", for: indexPath) as! HorizontalCategoryTableViewCell
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "horizontalCategoryCell2", for: indexPath) as! HorizontalCategoryTableViewCell2
+                return cell
+            }
         }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if(section == 0){
-            return "Topics to learn"
-        } else if section == 1 {
-            return "살면서 들어보지 못한 흥미로운 주제들"
+        if(isSearching()) {
+            return "Recent Search"
+        } else if(isFiltering()) {
+            return nil
         } else {
-            return "LIPE 디자이너의 픽!"
+            if(section == 0){
+                return "Topics to learn"
+            } else if section == 1 {
+                return "살면서 들어보지 못한 흥미로운 주제들"
+            } else {
+                return "LIPE 디자이너의 픽!"
+            }
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(indexPath.section == 0) {
-            return 160
+        if(isSearching()) {
+            return 44
+        } else if(isFiltering()) {
+            return 120
         } else {
-            return 85
+            if(indexPath.section == 0) {
+                return 160
+            } else {
+                return 85
+            }
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if(section == 0) {
-            return 59
-        } else{
+        if(isSearching()) {
             return 0
+        } else if(isFiltering()) {
+            return 0
+        } else {
+            if(section == 0) {
+                return 59
+            } else{
+                return 0
+            }
         }
+
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if(section == 0) {
-            return 52
+        if(isSearching()) {
+            return 25
+        } else if(isFiltering()) {
+            return 25
         } else {
-            return 23
+            if(section == 0) {
+                return 52
+            } else {
+                return 23
+            }
         }
     }
     
