@@ -13,7 +13,32 @@ class VideoOrganizer  {
         
     }
     
-    func sortByCreator() {
-        
+    func sortByCreator(videos: [Video]) -> [String:[Video]] {
+        var targetDict = [String:[Video]]()
+        for video in videos {
+            let creator = video.creator
+
+            if (targetDict.keys.contains(creator)) {
+                targetDict[creator]?.append(video)
+            } else {
+                targetDict[creator] = [video]
+            }
+        }
+        return targetDict
+    }
+    
+    func sortByCategory(videos: [Video]) -> [String:[Video]] {
+        var targetDict = [String:[Video]]()
+        for video in videos {
+            let category = video.category
+            
+            if (targetDict.keys.contains(category)) {
+                targetDict[category]?.append(video)
+            } else {
+                targetDict[category] = [video]
+            }
+        }
+        return targetDict
     }
 }
+
