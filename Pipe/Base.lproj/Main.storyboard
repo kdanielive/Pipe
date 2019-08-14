@@ -1644,6 +1644,10 @@
                         <viewLayoutGuide key="safeArea" id="ZbN-RJ-2eh"/>
                     </view>
                     <size key="freeformSize" width="375" height="1334"/>
+                    <connections>
+                        <outlet property="contentView" destination="6OK-ek-8lY" id="MJB-1l-2cv"/>
+                        <outlet property="scrollView" destination="FxM-SM-Fx3" id="LKL-x2-zBW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h01-bo-MYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

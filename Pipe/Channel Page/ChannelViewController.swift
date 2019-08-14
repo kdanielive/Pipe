@@ -10,12 +10,18 @@ import UIKit
 
 class ChannelViewController: UIViewController {
 
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var contentView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
+    }
 
     /*
     // MARK: - Navigation
@@ -26,5 +32,6 @@ class ChannelViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }

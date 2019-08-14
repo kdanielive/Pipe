@@ -284,10 +284,6 @@
 		AB4089F3230127FD00991EE3 /* FeedPage */ = {
 			isa = PBXGroup;
 			children = (
-				ABFF307922F7FE0A0058E961 /* Captions View */,
-				ABFF307422F7FA4E0058E961 /* More Options Panel */,
-				ABA1D1DD22F7B175007B543F /* Comments Videos */,
-				AB0D578822F2D4D900984A1B /* Recommended Videos */,
 				AB4089F42301282900991EE3 /* FeedTableViewCell.swift */,
 			);
 			path = FeedPage;
@@ -350,6 +346,19 @@
 			path = "Channel Page";
 			sourceTree = "<group>";
 		};
+		AB408A1B23039BA600991EE3 /* Video Page */ = {
+			isa = PBXGroup;
+			children = (
+				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
+				AB4E23BC22F0394C0059166E /* VideoViewController.swift */,
+				ABFF307922F7FE0A0058E961 /* Captions View */,
+				ABFF307422F7FA4E0058E961 /* More Options Panel */,
+				ABA1D1DD22F7B175007B543F /* Comments Videos */,
+				AB0D578822F2D4D900984A1B /* Recommended Videos */,
+			);
+			path = "Video Page";
+			sourceTree = "<group>";
+		};
 		AB4E23AB22F013250059166E /* ImportedFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +402,7 @@
 				AB4089E522FABFA500991EE3 /* New Login Pages */,
 				AB4089DA22F9727400991EE3 /* Old Login Pages */,
 				AB4089F3230127FD00991EE3 /* FeedPage */,
+				AB408A1B23039BA600991EE3 /* Video Page */,
 				AB4E23AB22F013250059166E /* ImportedFiles */,
 				AB0D578022F17DB500984A1B /* HorizontalTableView */,
 				AB4089D322F95C3300991EE3 /* Category Page */,
@@ -400,8 +410,6 @@
 				AB4089FD2302444C00991EE3 /* Notification Page */,
 				AB408A172303980F00991EE3 /* Channel Page */,
 				AB7208E822F0030F00F2913D /* Main.storyboard */,
-				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
-				AB4E23BC22F0394C0059166E /* VideoViewController.swift */,
 				AB0D577D22F17D7A00984A1B /* DataFiles */,
 				AB7208EE22F0030F00F2913D /* Assets.xcassets */,
 				AB7208F022F0030F00F2913D /* LaunchScreen.storyboard */,
