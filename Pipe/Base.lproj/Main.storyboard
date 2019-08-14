@@ -1627,10 +1627,49 @@
                                                     <constraint firstAttribute="width" constant="62" id="z4B-AR-Mki"/>
                                                 </constraints>
                                             </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Dt-HW-9C8">
+                                                <rect key="frame" x="90" y="162" width="195" height="22"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlV-yx-cgx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="31" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aW-ql-zvT">
+                                                        <rect key="frame" x="41" y="0.0" width="31" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSX-Mz-Yoo">
+                                                        <rect key="frame" x="82" y="0.0" width="31" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kR-Tp-iaa">
+                                                        <rect key="frame" x="123" y="0.0" width="31" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcN-u1-bFj">
+                                                        <rect key="frame" x="164" y="0.0" width="31" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="TnN-XD-GHA"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="VW5-mj-Bxk" firstAttribute="top" secondItem="6OK-ek-8lY" secondAttribute="top" constant="30" id="QT6-J2-F6d"/>
+                                            <constraint firstItem="9Dt-HW-9C8" firstAttribute="centerX" secondItem="6OK-ek-8lY" secondAttribute="centerX" id="cs8-Q6-blA"/>
                                             <constraint firstItem="VW5-mj-Bxk" firstAttribute="centerX" secondItem="6OK-ek-8lY" secondAttribute="centerX" id="nNC-lS-0nl"/>
                                         </constraints>
                                     </view>
@@ -1658,6 +1697,7 @@
                                     <constraint firstAttribute="bottom" secondItem="6OK-ek-8lY" secondAttribute="bottom" id="9ZR-2p-SJy"/>
                                     <constraint firstItem="6OK-ek-8lY" firstAttribute="centerY" secondItem="FxM-SM-Fx3" secondAttribute="centerY" id="BpK-tm-Mk1"/>
                                     <constraint firstItem="6OK-ek-8lY" firstAttribute="centerX" secondItem="FxM-SM-Fx3" secondAttribute="centerX" id="JeI-M8-iD3"/>
+                                    <constraint firstItem="9Dt-HW-9C8" firstAttribute="top" secondItem="Qip-Te-lWi" secondAttribute="bottom" constant="15" id="Ktu-2j-RJC"/>
                                     <constraint firstItem="CMq-rb-Oiy" firstAttribute="centerX" secondItem="6OK-ek-8lY" secondAttribute="centerX" id="MFZ-aQ-GnR"/>
                                     <constraint firstItem="6OK-ek-8lY" firstAttribute="leading" secondItem="FxM-SM-Fx3" secondAttribute="leading" id="SSc-s9-sQ4"/>
                                     <constraint firstAttribute="trailing" secondItem="6OK-ek-8lY" secondAttribute="trailing" id="UPa-Nh-b4x"/>
@@ -1690,6 +1730,11 @@
                     <connections>
                         <outlet property="contentView" destination="6OK-ek-8lY" id="MJB-1l-2cv"/>
                         <outlet property="scrollView" destination="FxM-SM-Fx3" id="LKL-x2-zBW"/>
+                        <outletCollection property="labels" destination="qlV-yx-cgx" collectionClass="NSMutableArray" id="UJU-y0-NWa"/>
+                        <outletCollection property="labels" destination="6aW-ql-zvT" collectionClass="NSMutableArray" id="D1h-YL-t9h"/>
+                        <outletCollection property="labels" destination="TSX-Mz-Yoo" collectionClass="NSMutableArray" id="JOr-vt-dva"/>
+                        <outletCollection property="labels" destination="6kR-Tp-iaa" collectionClass="NSMutableArray" id="Un3-wW-N4w"/>
+                        <outletCollection property="labels" destination="qcN-u1-bFj" collectionClass="NSMutableArray" id="02O-VE-EXy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h01-bo-MYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
