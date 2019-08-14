@@ -44,6 +44,7 @@ class VideoViewController: UIViewController, UISearchBarDelegate {
     var gestureRecognizerView = UIView()
     var captionsView = UIView()
     @IBOutlet var contentViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet var scrollViewTopConstraint: NSLayoutConstraint!
     
     @IBAction func playbackSliderValueChanged(_ sender: UISlider) {
         let duration = player.currentItem!.duration
@@ -212,7 +213,9 @@ class VideoViewController: UIViewController, UISearchBarDelegate {
         
         //contentViewTopConstraint = NSLayoutConstraint(item: contentView, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.top, multiplier: , constant: )
         //scrollView.bounds = CGRect(x: 0, y: videoContainerView.frame.height + captionsView.frame.height, width: self.view.frame.width, height: self.view.frame.height - videoContainerView.frame.height - captionsView.frame.height)
-        contentViewTopConstraint.constant = captionsView.frame.height
+        
+        scrollViewTopConstraint.constant = captionsView.frame.height
+        self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: 5000)
     }
     
     class CustomAVPlayerViewController: AVPlayerViewController {

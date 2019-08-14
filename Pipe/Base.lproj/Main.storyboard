@@ -433,6 +433,7 @@
                         <outlet property="playButton" destination="1kR-OO-v69" id="Zb7-A3-N84"/>
                         <outlet property="progressSlider" destination="FtL-O8-Rqr" id="uZI-8z-Yzj"/>
                         <outlet property="scrollView" destination="CKN-uR-djA" id="gkZ-X7-KbJ"/>
+                        <outlet property="scrollViewTopConstraint" destination="du6-Fd-VHt" id="Gmu-qC-8dW"/>
                         <outlet property="timeRemainingLabel" destination="d8L-8t-qZA" id="8nQ-dH-UJb"/>
                         <outlet property="videoContainerView" destination="g04-3I-r0M" id="blu-Mu-frw"/>
                     </connections>
