@@ -14,6 +14,7 @@ class VideoView: UIView {
     let titleLabel = UILabel()
     let previewImageView = UIImageView()
     let creatorLabel = UILabel()
+    let timeLabel = UILabel()
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -50,8 +51,8 @@ class VideoView: UIView {
         let titleLabelWidth = Double(accessoryView.frame.width) - accessoryPadding*2
         let titleLabelHeight = Double(accessoryView.frame.height*(2/3))
         titleLabel.bounds = CGRect(x: 0.0, y: 0.0, width: Double(titleLabelWidth), height: titleLabelHeight)
-        titleLabel.font = UIFont(name: "SFProText-Semibold", size: 17)
-        titleLabel.text = "HIhihihihihihihihihihihi"
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        titleLabel.text = "HIhihihihihihihialkfj;klsadfjds;fjdsklfj;kdjslfka;sdfkjshihihihi"
         titleLabel.textColor = UIColor.white
         titleLabel.sizeThatFits(CGSize(width: titleLabelWidth, height: titleLabelHeight))
         titleLabel.numberOfLines = 2
@@ -62,21 +63,34 @@ class VideoView: UIView {
         // Setting creator label
         let creatorLabelWidth = Double(accessoryView.frame.width) - accessoryPadding - 50
         let creatorLabelHeight = Double(accessoryView.frame.height*(1/4))
-        creatorLabel.font = UIFont(name: "SFProText-Medium", size: 14)
-        creatorLabel.text = "Muahmmad aliali ahalili"
+        creatorLabel.font = UIFont.systemFont(ofSize: 14)
+        creatorLabel.text = "Muahmmad aliali ahalilasldkfj;aklfdklaflkjfa;lsdkfdsafjkli"
         creatorLabel.textColor = UIColor.white
         creatorLabel.frame = CGRect(x: accessoryPadding, y: titleLabelHeight, width: creatorLabelWidth, height: creatorLabelHeight)
         
+        // Setting time label
+        let timeLabelWidth = 50.0
+        let timeLabelHeight = 22.0
+        timeLabel.font = UIFont.systemFont(ofSize: 12)
+        timeLabel.text = "12:18"
+        timeLabel.textAlignment = .center
+        timeLabel.textColor = UIColor.white
+        timeLabel.frame = CGRect(x: Double(accessoryView.frame.width) - timeLabelWidth, y: Double(accessoryView.frame.height) - timeLabelHeight, width: timeLabelWidth, height: timeLabelHeight)
+        timeLabel.backgroundColor = UIColor(red: 0.53, green: 0.53, blue: 0.53, alpha: 1.0)
+        timeLabel.roundCorners(corners: [UIRectCorner.topLeft], radius: 12)
         // Debugging purposes
+        /*
         titleLabel.layer.borderWidth = 1.0
         titleLabel.layer.borderColor = UIColor.white.cgColor
         accessoryView.layer.borderWidth = 1.0
         accessoryView.layer.borderColor = UIColor.white.cgColor
+         */
         
         addSubview(previewImageView)
         addSubview(accessoryView)
         accessoryView.addSubview(titleLabel)
         accessoryView.addSubview(creatorLabel)
+        accessoryView.addSubview(timeLabel)
         
         self.roundCorners(corners: UIRectCorner.allCorners, radius: 12.0)
         
