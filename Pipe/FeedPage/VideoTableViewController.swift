@@ -69,8 +69,6 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
         if(section == 0)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "videocell", for: indexPath) as! FeedTableViewCell
-            cell.video = videos[indexPath.row]
-            cell.addSubviews()
             return cell
         } else  {
             let cell = tableView.dequeueReusableCell(withIdentifier: "collectionCell") as! CollectionHolderTableViewCell

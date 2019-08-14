@@ -9,19 +9,19 @@
 import UIKit
 
 class FeedTableViewCell: UITableViewCell {
-    let videoView = UIView()
-    let titleLabel = UILabel()
-    let previewImageView = UIImageView()
-    
+
+    let videoCard = VideoView()
+
+    /*
     var video: Video? = nil {
         didSet {
             updateViews()
         }
     }
-
+    */
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // Initialization code¸
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,76 +35,6 @@ class FeedTableViewCell: UITableViewCell {
         let padding: CGFloat = 20
         
         return padding + videoViewHeight + 20
-    }
-}
-
-extension FeedTableViewCell {
-    func addSubviews() {
-        videoView.contentMode = .scaleAspectFill
-        videoView.clipsToBounds = true
-        
-        //previewImageView.contentMode = .scaleAspectFill
-        //previewImageView.clipsToBounds = true
-        //previewImageView.layer.cornerRadius = 4.0
-        
-        //videoView.addSubview(titleLabel)
-        //videoView.addSubview(previewImageView)
-        addSubview(previewImageView)
-        addSubview(videoView)
-        videoView.addSubview(titleLabel)
-    }
-    
-    func updateViews() {
-        titleLabel.text = video?.title
-        titleLabel.font = UIFont.systemFont(ofSize: 17.0)
-        
-        let image = UIImage(named: (video?.thumbURL.path)!)
-        previewImageView.image = image
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        let previewHeight: CGFloat = 200
-        let padding: CGFloat = 20
-        let videoViewHeight: CGFloat = 60
-        
-        let widthWithPadding = bounds.width - (2*padding)
-        
-        previewImageView.bounds = CGRect(x: 0, y: 0, width: widthWithPadding, height: previewHeight)
-
-        let imageYCenter = padding + previewHeight/2.0
-        //previewImageView.center = CGPoint(x: bounds.width/2.0, y: imageYCenter)
-        previewImageView.center = CGPoint(x: bounds.width/2.0, y: imageYCenter)
-        // Rounding the upper left and right corners
-        previewImageView.roundCorners(corners: [.topLeft, .topRight], radius: 10.0)
-        previewImageView.alpha = 1.0
-        
-        let videoViewYCenter = padding + previewHeight + videoViewHeight/2.0
-        videoView.bounds = CGRect(x: 0, y: 0, width: widthWithPadding, height: videoViewHeight)
-        videoView.center = CGPoint(x: bounds.width/2.0, y: videoViewYCenter)
-        videoView.backgroundColor = UIColor.black
-        
-        let titleWidth = videoView.bounds.width - 35 - padding*2
-        let titleHeight = 40.0
-        let titleXCenter = (titleWidth + padding*2)/2.0
-        titleLabel.bounds = CGRect(x: 0.0, y: 0.0, width: Double(titleWidth), height: titleHeight)
-        titleLabel.center = CGPoint(x: Double(titleXCenter), y: titleHeight/2.0 + 10)
-        titleLabel.textColor = UIColor.white
-        titleLabel.textAlignment = .left
-        titleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-        titleLabel.numberOfLines = 0
-        titleLabel.sizeToFit()
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.black.cgColor, UIColor.clear.cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
-        gradientLayer.locations = [0, 1]
-        gradientLayer.frame = previewImageView.bounds
-        
-        previewImageView.layer.insertSublayer(gradientLayer, at: 0)
-        
     }
 }
 
