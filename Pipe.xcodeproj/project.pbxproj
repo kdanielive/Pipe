@@ -10,6 +10,7 @@
 		15140B842445BE81F0378206 /* Pods_Pipe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4265DC94909E5BEE1CC09B38 /* Pods_Pipe.framework */; };
 		30CCC9569A0F7970F8EB4AF6 /* Pods_PipeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E59152F5FCF198571F4F92F /* Pods_PipeUITests.framework */; };
 		76CD1015C1377D207A942470 /* Pods_PipeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A16CF6BE9EDAB83DEA5CFA /* Pods_PipeTests.framework */; };
+		AB06447E2303D7F9002A187E /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB06447D2303D7F9002A187E /* VideoView.swift */; };
 		AB0D577F22F17DA000984A1B /* CollectionHolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0D577E22F17DA000984A1B /* CollectionHolderTableViewCell.swift */; };
 		AB0D578222F17E1700984A1B /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0D578122F17E1700984A1B /* HorizontalCollectionViewCell.swift */; };
 		AB0D578622F267E600984A1B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0D578522F267E600984A1B /* ProfileViewController.swift */; };
@@ -99,6 +100,7 @@
 		778258A91D901A545A9E999F /* Pods-PipeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipeTests.release.xcconfig"; path = "Target Support Files/Pods-PipeTests/Pods-PipeTests.release.xcconfig"; sourceTree = "<group>"; };
 		838E971FE672AD7B691DB802 /* Pods-Pipe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pipe.release.xcconfig"; path = "Target Support Files/Pods-Pipe/Pods-Pipe.release.xcconfig"; sourceTree = "<group>"; };
 		AAA5E5677A3890B4B643BE25 /* Pods-PipeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PipeUITests.debug.xcconfig"; path = "Target Support Files/Pods-PipeUITests/Pods-PipeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB06447D2303D7F9002A187E /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		AB0D577E22F17DA000984A1B /* CollectionHolderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHolderTableViewCell.swift; sourceTree = "<group>"; };
 		AB0D578122F17E1700984A1B /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		AB0D578522F267E600984A1B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				AB4089EF2300F64200991EE3 /* FBStorage.swift */,
 				AB4089FB230234DC00991EE3 /* VideoOrganizer.swift */,
+				AB06447D2303D7F9002A187E /* VideoView.swift */,
 			);
 			path = "Swift Files";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				AB4089F42301282900991EE3 /* FeedTableViewCell.swift */,
+				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
 			);
 			path = FeedPage;
 			sourceTree = "<group>";
@@ -349,7 +353,6 @@
 		AB408A1B23039BA600991EE3 /* Video Page */ = {
 			isa = PBXGroup;
 			children = (
-				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
 				AB4E23BC22F0394C0059166E /* VideoViewController.swift */,
 				ABFF307922F7FE0A0058E961 /* Captions View */,
 				ABFF307422F7FA4E0058E961 /* More Options Panel */,
@@ -733,6 +736,7 @@
 				AB4E23BB22F029DC0059166E /* SignInViewController.swift in Sources */,
 				AB4089FF2302446400991EE3 /* NotificationTableViewController.swift in Sources */,
 				AB408A102302866500991EE3 /* CategoryTopicTableViewCell.swift in Sources */,
+				AB06447E2303D7F9002A187E /* VideoView.swift in Sources */,
 				AB408A13230298C800991EE3 /* ProfileSettingsTableViewCell.swift in Sources */,
 				ABFF307622F7FA840058E961 /* MoreOptionsTableViewController.swift in Sources */,
 				AB0D577F22F17DA000984A1B /* CollectionHolderTableViewCell.swift in Sources */,

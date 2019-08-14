@@ -12,7 +12,7 @@ class ChannelViewController: UIViewController {
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
-
+    @IBOutlet var uploadButton: UIButton!
     @IBOutlet var labels: [UILabel]!
     let mockLabelTitles = ["helloooooooo", "slkdjflsk;fhi", "holoholo"]
     
@@ -20,12 +20,20 @@ class ChannelViewController: UIViewController {
         super.viewDidLoad()
         
         layoutCategoryLabels(labelTitles: mockLabelTitles)
-        
+        configureUploadButton()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
+    }
+    
+    func configureUploadButton() {
+        uploadButton.layer.borderWidth = 1.0
+        uploadButton.layer.borderColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1.0).cgColor
+        uploadButton.layer.cornerRadius = 11
+        uploadButton.setTitle("      Upload      ", for: .normal)
+        uploadButton.setTitleColor(UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1.0), for: .normal)
     }
     
     func layoutCategoryLabels(labelTitles: [String]) {
