@@ -34,15 +34,25 @@ class ChannelViewController: UIViewController {
         }
         
         // Setting label text
-        labels[1].text = mockLabelTitles[0]
-        labels[2].text = mockLabelTitles[1]
-        labels[3].text = mockLabelTitles[2]
+        labels[1].text = " " + mockLabelTitles[0] + " "
+        labels[2].text = " " + mockLabelTitles[1] + " "
+        labels[3].text = " " + mockLabelTitles[2] + " "
         
         // Hiding labels without text from view
         for label in labels{
             if label.text == "Label" {
                 label.isHidden = true
             }
+        }
+        
+        //Setting Label design
+        for label in labels {
+            //label.backgroundColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1)
+            //label.textColor = UIColor.white
+            //label.roundCorners(corners: UIRectCorner.allCorners, radius: 11)
+            label.layer.backgroundColor = UIColor(red: 0.77, green: 0.77, blue: 0.77, alpha: 1).cgColor
+            label.layer.cornerRadius = 11
+            label.textColor = UIColor.white
         }
     }
 
