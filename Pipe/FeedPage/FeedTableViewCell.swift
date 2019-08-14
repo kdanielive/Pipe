@@ -36,7 +36,6 @@ class FeedTableViewCell: UITableViewCell {
         
         return padding + videoViewHeight + 20
     }
-
 }
 
 extension FeedTableViewCell {
@@ -51,8 +50,8 @@ extension FeedTableViewCell {
         
         //videoView.addSubview(titleLabel)
         //videoView.addSubview(previewImageView)
-        addSubview(videoView)
         addSubview(previewImageView)
+        addSubview(videoView)
         videoView.addSubview(titleLabel)
     }
     
@@ -80,7 +79,7 @@ extension FeedTableViewCell {
         previewImageView.center = CGPoint(x: bounds.width/2.0, y: imageYCenter)
         // Rounding the upper left and right corners
         previewImageView.roundCorners(corners: [.topLeft, .topRight], radius: 10.0)
-        previewImageView.alpha = 0.7
+        previewImageView.alpha = 0.5
         
         let videoViewYCenter = padding + videoViewHeight/2.0
         videoView.bounds = CGRect(x: 0, y: 0, width: widthWithPadding, height: 260)
@@ -97,6 +96,16 @@ extension FeedTableViewCell {
         titleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         titleLabel.numberOfLines = 0
         titleLabel.sizeToFit()
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.black.cgColor, UIColor.clear.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.8)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
+        gradientLayer.locations = [0, 1]
+        gradientLayer.frame = videoView.bounds
+        
+        videoView.layer.insertSublayer(gradientLayer, at: 0)
+        
     }
 }
 

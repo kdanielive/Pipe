@@ -9,5 +9,6 @@
 import UIKit
 
 class HorizontalCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var titleLabel: UILabel!
     
 }

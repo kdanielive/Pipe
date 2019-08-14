@@ -12,8 +12,17 @@ class CollectionHolderTableViewCell: UITableViewCell, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "horizontalCollectionCell", for: indexPath as IndexPath) as! HorizontalCollectionViewCell
-
-        cell.backgroundColor = UIColor.blue
+        cell.bounds = CGRect(x: 0, y: 0, width: 120, height: 180)
+        cell.backgroundColor = UIColor(red: 0.53, green: 0.53, blue: 0.53, alpha: 1.0)
+        cell.layer.cornerRadius = 10
+        
+        let row = indexPath.row
+        if(row==0) {    cell.titleLabel.text = "Travel" }
+        else if(row==1) {   cell.titleLabel.text = "Music"  }
+        else if(row==2) {   cell.titleLabel.text = "Cooking"    }
+        else if(row==3) {   cell.titleLabel.text = "Shopping"   }
+        else    {   cell.titleLabel.text = "View More"  }
+        
         return cell
     }
 

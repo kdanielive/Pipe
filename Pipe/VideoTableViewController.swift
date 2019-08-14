@@ -65,16 +65,15 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.section == 0)
+        let section = indexPath.section
+        if(section == 0)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "videocell", for: indexPath) as! FeedTableViewCell
             cell.video = videos[indexPath.row]
             cell.addSubviews()
-            
             return cell
         } else  {
             let cell = tableView.dequeueReusableCell(withIdentifier: "collectionCell") as! CollectionHolderTableViewCell
-            
             return cell
         }
     }
@@ -82,8 +81,8 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if(section == 0) {
             return "Featured Videos"
-        } else {
-            return "Featured Titles"
+        } else  {
+            return "Topics in Lifestyle"
         }
     }
     
@@ -92,7 +91,7 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
             let video = videos[indexPath.row]
             return FeedTableViewCell.height(for: video)
         } else {
-            return 90
+            return 200
         }
     }
     

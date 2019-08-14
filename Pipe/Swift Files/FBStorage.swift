@@ -25,7 +25,6 @@ class fbManager {
                 print(error)
             } else {
                 // Get the download URL for 'images/stars.jpg'
-                print("Printing url: ", url)
             }
         }
     }
