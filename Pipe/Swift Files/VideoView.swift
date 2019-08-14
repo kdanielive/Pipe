@@ -13,6 +13,7 @@ class VideoView: UIView {
     let accessoryView = UIView()
     let titleLabel = UILabel()
     let previewImageView = UIImageView()
+    let creatorLabel = UILabel()
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -38,19 +39,19 @@ class VideoView: UIView {
         let padding = 20.0
         let accessoryPadding = 10.0
         
+        // Setting Macro views
         previewImageView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height*(3/4))
         accessoryView.frame = CGRect(x: 0, y: self.frame.height*(3/4), width: self.frame.width, height: self.frame.height/4.0)
-        
         previewImageView.image = UIImage(named: "newYorkFlip.png")
         accessoryView.backgroundColor = UIColor.black
 
+        // Setting title Label
         let titleLabelXCenter = (Double(accessoryView.frame.width) - accessoryPadding*2)/2.0 + accessoryPadding
         let titleLabelWidth = Double(accessoryView.frame.width) - accessoryPadding*2
         let titleLabelHeight = Double(accessoryView.frame.height*(2/3))
-        
         titleLabel.bounds = CGRect(x: 0.0, y: 0.0, width: Double(titleLabelWidth), height: titleLabelHeight)
-        titleLabel.text = "HIhihihihihihihihihihihi"
         titleLabel.font = UIFont(name: "SFProText-Semibold", size: 17)
+        titleLabel.text = "HIhihihihihihihihihihihi"
         titleLabel.textColor = UIColor.white
         titleLabel.sizeThatFits(CGSize(width: titleLabelWidth, height: titleLabelHeight))
         titleLabel.numberOfLines = 2
@@ -58,15 +59,24 @@ class VideoView: UIView {
         titleLabel.center = CGPoint(x: titleLabelXCenter, y: Double(titleLabel.frame.height/2.0))
         titleLabel.textAlignment = .left
         
+        // Setting creator label
+        let creatorLabelWidth = Double(accessoryView.frame.width) - accessoryPadding - 50
+        let creatorLabelHeight = Double(accessoryView.frame.height*(1/4))
+        creatorLabel.font = UIFont(name: "SFProText-Medium", size: 14)
+        creatorLabel.text = "Muahmmad aliali ahalili"
+        creatorLabel.textColor = UIColor.white
+        creatorLabel.frame = CGRect(x: accessoryPadding, y: titleLabelHeight, width: creatorLabelWidth, height: creatorLabelHeight)
+        
         // Debugging purposes
-        /*titleLabel.layer.borderWidth = 1.0
+        titleLabel.layer.borderWidth = 1.0
         titleLabel.layer.borderColor = UIColor.white.cgColor
         accessoryView.layer.borderWidth = 1.0
-        accessoryView.layer.borderColor = UIColor.white.cgColor*/
-                
+        accessoryView.layer.borderColor = UIColor.white.cgColor
+        
         addSubview(previewImageView)
         addSubview(accessoryView)
         accessoryView.addSubview(titleLabel)
+        accessoryView.addSubview(creatorLabel)
         
         self.roundCorners(corners: UIRectCorner.allCorners, radius: 12.0)
         
