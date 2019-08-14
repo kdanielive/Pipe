@@ -42,6 +42,7 @@
 		AB408A102302866500991EE3 /* CategoryTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB408A0F2302866500991EE3 /* CategoryTopicTableViewCell.swift */; };
 		AB408A13230298C800991EE3 /* ProfileSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB408A12230298C800991EE3 /* ProfileSettingsTableViewCell.swift */; };
 		AB408A15230298D500991EE3 /* ProfileSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB408A14230298D500991EE3 /* ProfileSettingsTableViewController.swift */; };
+		AB408A1A2303985100991EE3 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB408A192303985100991EE3 /* ChannelViewController.swift */; };
 		AB4E23AA22F013180059166E /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4E23A922F013180059166E /* VideoTableViewController.swift */; };
 		AB4E23AC22F018910059166E /* bulletTrain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF022F00F3C00A37C4A /* bulletTrain.mp4 */; };
 		AB4E23AD22F018930059166E /* monkey.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AB8D9CF322F00F3D00A37C4A /* monkey.mp4 */; };
@@ -126,6 +127,7 @@
 		AB408A0F2302866500991EE3 /* CategoryTopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTopicTableViewCell.swift; sourceTree = "<group>"; };
 		AB408A12230298C800991EE3 /* ProfileSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsTableViewCell.swift; sourceTree = "<group>"; };
 		AB408A14230298D500991EE3 /* ProfileSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsTableViewController.swift; sourceTree = "<group>"; };
+		AB408A192303985100991EE3 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		AB4E23A922F013180059166E /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		AB4E23B022F018FE0059166E /* bulletTrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletTrain.png; sourceTree = "<group>"; };
 		AB4E23B122F018FE0059166E /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
@@ -340,6 +342,14 @@
 			path = ProfileSettings;
 			sourceTree = "<group>";
 		};
+		AB408A172303980F00991EE3 /* Channel Page */ = {
+			isa = PBXGroup;
+			children = (
+				AB408A192303985100991EE3 /* ChannelViewController.swift */,
+			);
+			path = "Channel Page";
+			sourceTree = "<group>";
+		};
 		AB4E23AB22F013250059166E /* ImportedFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,15 +389,16 @@
 			isa = PBXGroup;
 			children = (
 				AB7208E422F0030F00F2913D /* AppDelegate.swift */,
-				AB4089FD2302444C00991EE3 /* Notification Page */,
-				AB4089F3230127FD00991EE3 /* FeedPage */,
 				AB4089EE2300F63000991EE3 /* Swift Files */,
 				AB4089E522FABFA500991EE3 /* New Login Pages */,
 				AB4089DA22F9727400991EE3 /* Old Login Pages */,
+				AB4089F3230127FD00991EE3 /* FeedPage */,
 				AB4E23AB22F013250059166E /* ImportedFiles */,
 				AB0D578022F17DB500984A1B /* HorizontalTableView */,
 				AB4089D322F95C3300991EE3 /* Category Page */,
 				AB4089F6230153D800991EE3 /* Profile Page */,
+				AB4089FD2302444C00991EE3 /* Notification Page */,
+				AB408A172303980F00991EE3 /* Channel Page */,
 				AB7208E822F0030F00F2913D /* Main.storyboard */,
 				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
 				AB4E23BC22F0394C0059166E /* VideoViewController.swift */,
@@ -726,6 +737,7 @@
 				AB4089E022FA983C00991EE3 /* HorizontalCategoryCollectionViewCell2.swift in Sources */,
 				AB7208E522F0030F00F2913D /* AppDelegate.swift in Sources */,
 				AB4089D722F95EC800991EE3 /* HorizontalCategoryTableViewCell.swift in Sources */,
+				AB408A1A2303985100991EE3 /* ChannelViewController.swift in Sources */,
 				ABA1D1E122F7B175007B543F /* VideoCommentsTableViewController.swift in Sources */,
 				AB4E23BD22F0394C0059166E /* VideoViewController.swift in Sources */,
 				AB8D9CE922F00EC100A37C4A /* Video.swift in Sources */,
