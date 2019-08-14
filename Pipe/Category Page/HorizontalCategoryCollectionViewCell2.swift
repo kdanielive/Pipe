@@ -10,4 +10,5 @@ import UIKit
 
 class HorizontalCategoryCollectionViewCell2: UICollectionViewCell {
     
+    @IBOutlet var videoCardView: VideoView!
 }

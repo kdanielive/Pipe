@@ -14,8 +14,8 @@ class HorizontalCategoryTableViewCell2: UITableViewCell, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryHorizontalCell2", for: indexPath as IndexPath) as! HorizontalCategoryCollectionViewCell2
-        
-        cell.backgroundColor = UIColor.blue
+ 
+        // Adding segue gesture recognizer
         
         return cell
     }

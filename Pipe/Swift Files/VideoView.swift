@@ -101,8 +101,16 @@ class VideoView: UIView {
         gradientLayer.locations = [0, 1]
         gradientLayer.frame = previewImageView.bounds
         previewImageView.layer.insertSublayer(gradientLayer, at: 0)
+        
+        
+        // Adding segue gesture recognizer
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(segueTransport))
+        self.addGestureRecognizer(gesture)
     }
     
+    @objc func segueTransport() {
+        
+    }
 
 
 }
