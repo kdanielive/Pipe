@@ -16,6 +16,10 @@ class ChannelViewController: UIViewController {
     @IBOutlet var labels: [UILabel]!
     let mockLabelTitles = ["helloooooooo", "slkdjflsk;fhi", "holoholo"]
     
+    @IBAction func goBackToProfile(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToProfileSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

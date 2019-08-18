@@ -13,12 +13,21 @@ class ProfileViewController: UIViewController, GIDSignInUIDelegate {
     
     
     @IBAction func logoutAction(_ sender: Any) {
+        
+        self.tabBarController?.tabBar.isHidden = false
+        
         GIDSignIn.sharedInstance().signOut()
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FirstPageViewController") as! FirstPageViewController
         self.present(nextViewController, animated:true, completion:nil)
     }
+    
+    @IBAction func unwindToProfile(segue: UIStoryboardSegue) {
+        
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -686,14 +686,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-B1-Gwa">
-                                <rect key="frame" x="25" y="45" width="62" height="62"/>
+                                <rect key="frame" x="25" y="89" width="62" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="AXN-LB-PhG"/>
                                     <constraint firstAttribute="width" constant="62" id="Vhn-Is-6yM"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHo-iq-5IY">
-                                <rect key="frame" x="16" y="772" width="343" height="30"/>
+                                <rect key="frame" x="16" y="723" width="343" height="30"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -702,19 +702,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jC8-D5-oHR">
-                                <rect key="frame" x="107" y="52" width="199" height="25"/>
+                                <rect key="frame" x="107" y="96" width="199" height="25"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPF-mN-atG">
-                                <rect key="frame" x="107" y="86" width="199" height="21"/>
+                                <rect key="frame" x="107" y="130" width="199" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUV-fa-u4d">
-                                <rect key="frame" x="0.0" y="184" width="375" height="250"/>
+                                <rect key="frame" x="0.0" y="228" width="375" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="rKo-CW-QTE"/>
                                 </constraints>
@@ -723,7 +723,7 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyO-Tl-PSW">
-                                <rect key="frame" x="326" y="64" width="24" height="24"/>
+                                <rect key="frame" x="326" y="108" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="2a4-LF-zMH"/>
                                     <constraint firstAttribute="height" constant="24" id="rCe-il-bUf"/>
@@ -1838,7 +1838,7 @@
                     <navigationItem key="navigationItem" title="My Channel" id="o6Z-oc-ipC">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="backarrow" id="wj1-fW-We4">
                             <connections>
-                                <segue destination="ITn-xt-jhr" kind="show" id="amE-p9-oJ8"/>
+                                <action selector="goBackToProfile:" destination="gIv-M9-wD9" id="Cj1-bG-8vo"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="moreIcon" id="0EB-ZM-MIA"/>
@@ -1853,9 +1853,11 @@
                         <outletCollection property="labels" destination="TSX-Mz-Yoo" collectionClass="NSMutableArray" id="JOr-vt-dva"/>
                         <outletCollection property="labels" destination="6kR-Tp-iaa" collectionClass="NSMutableArray" id="Un3-wW-N4w"/>
                         <outletCollection property="labels" destination="qcN-u1-bFj" collectionClass="NSMutableArray" id="02O-VE-EXy"/>
+                        <segue destination="BFn-i7-nRc" kind="unwind" identifier="unwindToProfileSegue" unwindAction="unwindToProfileWithSegue:" id="YuZ-ld-PBl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h01-bo-MYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BFn-i7-nRc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3996" y="930.13493253373315"/>
         </scene>
@@ -2320,7 +2322,6 @@
         <segue reference="OQ2-9K-FoO"/>
         <segue reference="11x-pY-6PN"/>
         <segue reference="2Vx-un-HkG"/>
-        <segue reference="amE-p9-oJ8"/>
         <segue reference="Lkq-68-DKa"/>
     </inferredMetricsTieBreakers>
 </document>
