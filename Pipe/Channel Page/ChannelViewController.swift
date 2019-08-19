@@ -21,6 +21,9 @@ class ChannelViewController: UIViewController {
     @IBAction func goBackToProfile(_ sender: Any) {
         performSegue(withIdentifier: "unwindToProfileSegue", sender: self)
     }
+    @IBAction func testPressed(_ sender: Any) {
+        print("fuck")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +34,26 @@ class ChannelViewController: UIViewController {
         horizontalCollectionView.layer.borderWidth = 2.0
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        /*
+        print("Printing contentView Height: ", contentView.frame.height)
+        self.contentView.frame.size = scrollView.contentSize
+        */
+
+    }
+    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        //These two lines are a must in a scrollview!!!!
+        
+        // The following two lines are a must in a scrollview!!!!
         scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height*2)
         // Genius Code here
         self.contentView.frame.size = scrollView.contentSize
+        
+        print("Printing:   ", scrollView.frame.height)
+        print("Printing2:   ", scrollView.contentSize.height)
+        print("Printing contentView Height: ", contentView.frame.height)
         
         horizontalCollectionView.delegate = self
         horizontalCollectionView.dataSource = self
