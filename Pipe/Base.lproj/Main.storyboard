@@ -1857,7 +1857,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6OK-ek-8lY" secondAttribute="bottom" id="9ZR-2p-SJy"/>
-                                    <constraint firstItem="6OK-ek-8lY" firstAttribute="centerY" secondItem="FxM-SM-Fx3" secondAttribute="centerY" id="BpK-tm-Mk1"/>
+                                    <constraint firstItem="6OK-ek-8lY" firstAttribute="centerY" secondItem="FxM-SM-Fx3" secondAttribute="centerY" priority="750" id="BpK-tm-Mk1"/>
                                     <constraint firstItem="6OK-ek-8lY" firstAttribute="centerX" secondItem="FxM-SM-Fx3" secondAttribute="centerX" id="JeI-M8-iD3"/>
                                     <constraint firstItem="6OK-ek-8lY" firstAttribute="leading" secondItem="FxM-SM-Fx3" secondAttribute="leading" id="SSc-s9-sQ4"/>
                                     <constraint firstAttribute="trailing" secondItem="6OK-ek-8lY" secondAttribute="trailing" id="UPa-Nh-b4x"/>

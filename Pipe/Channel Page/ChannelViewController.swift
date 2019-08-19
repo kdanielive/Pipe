@@ -33,7 +33,10 @@ class ChannelViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height*2)
+        //These two lines are a must in a scrollview!!!!
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height*2)
+        // Genius Code here
+        self.contentView.frame.size = scrollView.contentSize
         
         horizontalCollectionView.delegate = self
         horizontalCollectionView.dataSource = self
