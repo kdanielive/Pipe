@@ -29,7 +29,7 @@ class ChannelViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
+        scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height*2)
     }
     
     func configureUploadButton() {
