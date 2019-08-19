@@ -104,8 +104,8 @@ class VideoView: UIView {
         
         
         // Adding segue gesture recognizer
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(segueTransport))
-        self.addGestureRecognizer(gesture)
+        //let gesture = UITapGestureRecognizer(target: self, action: #selector(segueTransport))
+        //self.addGestureRecognizer(gesture)
     }
     
     @objc func segueTransport() {
