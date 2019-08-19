@@ -128,7 +128,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g04-3I-r0M">
-                                <rect key="frame" x="0.0" y="20" width="375" height="210"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="CLB-eO-4KA"/>
                                     <constraint firstAttribute="width" constant="375" id="M3B-nx-buT"/>
@@ -137,7 +137,7 @@
                                 </constraints>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6t-dF-Dsr">
-                                <rect key="frame" x="345" y="200" width="30" height="30"/>
+                                <rect key="frame" x="345" y="244" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="4GM-EC-mB1"/>
                                 </constraints>
@@ -147,7 +147,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FtL-O8-Rqr">
-                                <rect key="frame" x="-2" y="200" width="291" height="31"/>
+                                <rect key="frame" x="-2" y="244" width="291" height="31"/>
                                 <color key="tintColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="thumbTintColor" red="1" green="0.36082784210000002" blue="0.23497273730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
@@ -155,20 +155,20 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kR-OO-v69">
-                                <rect key="frame" x="167" y="105" width="35" height="35"/>
+                                <rect key="frame" x="167" y="149" width="35" height="35"/>
                                 <state key="normal" image="pause"/>
                                 <connections>
                                     <action selector="playVideo:" destination="4ow-x9-xFM" eventType="touchUpInside" id="1fI-pJ-dl1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8L-8t-qZA">
-                                <rect key="frame" x="295" y="200" width="42" height="30"/>
+                                <rect key="frame" x="295" y="244" width="42" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voI-HX-CjF">
-                                <rect key="frame" x="0.0" y="20" width="20" height="30"/>
+                                <rect key="frame" x="0.0" y="64" width="20" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="raj-AG-KZB"/>
                                 </constraints>
@@ -178,10 +178,10 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKN-uR-djA">
-                                <rect key="frame" x="0.0" y="230" width="375" height="1570"/>
+                                <rect key="frame" x="0.0" y="274" width="375" height="1526"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tab-nj-JCy" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1570"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1526"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-fI-rNJ">
                                                 <rect key="frame" x="-4" y="0.0" width="379" height="114"/>
@@ -556,6 +556,7 @@
                                                     <size key="customSize" width="152" height="85"/>
                                                     <connections>
                                                         <outlet property="videoCardView" destination="pBc-v7-ZZb" id="lUK-Td-3kq"/>
+                                                        <segue destination="4ow-x9-xFM" kind="show" id="cr2-3B-eVR"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -1794,13 +1795,13 @@
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="H5k-1l-h34">
                                                     <size key="itemSize" width="216" height="156"/>
-                                                    <size key="headerReferenceSize" width="50" height="50"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="headerReferenceSize" width="15" height="50"/>
+                                                    <size key="footerReferenceSize" width="15" height="50"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="tMB-UV-UoL" customClass="ChannelHorizontalCollectionViewCell" customModule="Pipe" customModuleProvider="target">
-                                                        <rect key="frame" x="50" y="0.0" width="216" height="156"/>
+                                                        <rect key="frame" x="15" y="0.0" width="216" height="156"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="216" height="156"/>
@@ -1824,7 +1825,11 @@
                                                     </collectionViewCell>
                                                 </cells>
                                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="r22-hn-lrk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="156"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="156"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionReusableView>
+                                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5Pf-ml-Fkq">
+                                                    <rect key="frame" x="231" y="0.0" width="15" height="156"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </collectionReusableView>
                                             </collectionView>

@@ -21,9 +21,6 @@ class ChannelViewController: UIViewController {
     @IBAction func goBackToProfile(_ sender: Any) {
         performSegue(withIdentifier: "unwindToProfileSegue", sender: self)
     }
-    @IBAction func testPressed(_ sender: Any) {
-        print("fuck")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +28,6 @@ class ChannelViewController: UIViewController {
         layoutCategoryLabels(labelTitles: mockLabelTitles)
         configureUploadButton()
         
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //print("1. Printing contentView Height: ", contentView.frame.height)
-        //print("2. Printing self.scrollview Height: ", self.scrollView.frame.height)
-        //print("3. Printing scrollview Height: ", scrollView.frame.height)
-
-        //self.contentView.frame.size.height = 1500
     }
     
     override func viewDidLayoutSubviews() {
