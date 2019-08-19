@@ -1787,20 +1787,20 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kKJ-H4-4Xw">
-                                                <rect key="frame" x="0.0" y="653.5" width="375" height="200"/>
+                                                <rect key="frame" x="0.0" y="686.5" width="375" height="156"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="fSx-WA-CjH"/>
+                                                    <constraint firstAttribute="height" constant="156" id="fSx-WA-CjH"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="H5k-1l-h34">
                                                     <size key="itemSize" width="216" height="156"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="headerReferenceSize" width="50" height="50"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="tMB-UV-UoL" customClass="ChannelHorizontalCollectionViewCell" customModule="Pipe" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="22" width="216" height="156"/>
+                                                        <rect key="frame" x="50" y="0.0" width="216" height="156"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="216" height="156"/>
@@ -1823,10 +1823,24 @@
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
+                                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="r22-hn-lrk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="156"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionReusableView>
                                             </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Basics for Beginners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D70-2A-eVI">
+                                                <rect key="frame" x="20" y="653.5" width="213.5" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="18" id="u29-gp-GIr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="kKJ-H4-4Xw" firstAttribute="top" secondItem="D70-2A-eVI" secondAttribute="bottom" constant="15" id="0lf-0z-TO5"/>
                                             <constraint firstItem="KK9-qx-YiY" firstAttribute="leading" secondItem="6OK-ek-8lY" secondAttribute="leading" constant="20" id="1zu-VQ-OBv"/>
                                             <constraint firstItem="9M9-zB-01k" firstAttribute="top" secondItem="aba-R7-Krz" secondAttribute="bottom" constant="2" id="2nc-s1-8wC"/>
                                             <constraint firstItem="9M9-zB-01k" firstAttribute="centerX" secondItem="yOB-c2-qYD" secondAttribute="centerX" id="79P-Xa-3Ab"/>
@@ -1835,7 +1849,6 @@
                                             <constraint firstAttribute="trailing" secondItem="KK9-qx-YiY" secondAttribute="trailing" constant="20" id="GxE-56-J4f"/>
                                             <constraint firstItem="9Dt-HW-9C8" firstAttribute="top" secondItem="Qip-Te-lWi" secondAttribute="bottom" constant="15" id="I5l-Xd-WgV"/>
                                             <constraint firstAttribute="height" constant="1270" id="Jkb-Ui-tei"/>
-                                            <constraint firstItem="kKJ-H4-4Xw" firstAttribute="top" secondItem="KK9-qx-YiY" secondAttribute="bottom" constant="40" id="KLG-S9-kqY"/>
                                             <constraint firstItem="VW5-mj-Bxk" firstAttribute="top" secondItem="6OK-ek-8lY" secondAttribute="top" constant="30" id="QT6-J2-F6d"/>
                                             <constraint firstItem="CMq-rb-Oiy" firstAttribute="centerX" secondItem="6OK-ek-8lY" secondAttribute="centerX" id="RBb-nL-ZbX"/>
                                             <constraint firstItem="0LK-xf-dIk" firstAttribute="centerX" secondItem="V8M-7J-3at" secondAttribute="centerX" id="RCk-CK-9TZ"/>
@@ -1843,6 +1856,7 @@
                                             <constraint firstItem="CMq-rb-Oiy" firstAttribute="top" secondItem="VW5-mj-Bxk" secondAttribute="bottom" constant="15" id="Zh8-gA-vuU"/>
                                             <constraint firstItem="Qip-Te-lWi" firstAttribute="centerX" secondItem="6OK-ek-8lY" secondAttribute="centerX" id="cQN-OW-uQv"/>
                                             <constraint firstItem="9Dt-HW-9C8" firstAttribute="centerX" secondItem="6OK-ek-8lY" secondAttribute="centerX" id="cs8-Q6-blA"/>
+                                            <constraint firstItem="D70-2A-eVI" firstAttribute="top" secondItem="KK9-qx-YiY" secondAttribute="bottom" constant="40" id="dTW-1x-zMM"/>
                                             <constraint firstItem="Qip-Te-lWi" firstAttribute="top" secondItem="CMq-rb-Oiy" secondAttribute="bottom" constant="10" id="fUh-Lf-oTk"/>
                                             <constraint firstItem="kKJ-H4-4Xw" firstAttribute="leading" secondItem="6OK-ek-8lY" secondAttribute="leading" id="g7t-GS-ANZ"/>
                                             <constraint firstItem="10j-HN-JXI" firstAttribute="centerX" secondItem="6OK-ek-8lY" secondAttribute="centerX" id="mbK-TH-IKo"/>
@@ -1852,6 +1866,7 @@
                                             <constraint firstItem="HHu-2R-AQU" firstAttribute="top" secondItem="aba-R7-Krz" secondAttribute="bottom" constant="2" id="rxh-n5-t6C"/>
                                             <constraint firstItem="0LK-xf-dIk" firstAttribute="top" secondItem="aba-R7-Krz" secondAttribute="bottom" constant="2" id="tXx-x6-6bR"/>
                                             <constraint firstItem="10j-HN-JXI" firstAttribute="top" secondItem="HHu-2R-AQU" secondAttribute="bottom" constant="25" id="uAR-Cf-mDH"/>
+                                            <constraint firstItem="D70-2A-eVI" firstAttribute="leading" secondItem="6OK-ek-8lY" secondAttribute="leading" constant="20" id="vpu-6I-DZM"/>
                                             <constraint firstItem="aba-R7-Krz" firstAttribute="top" secondItem="9Dt-HW-9C8" secondAttribute="bottom" constant="25" id="wSd-Hr-FIE"/>
                                         </constraints>
                                     </view>

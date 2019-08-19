@@ -31,28 +31,26 @@ class ChannelViewController: UIViewController {
         layoutCategoryLabels(labelTitles: mockLabelTitles)
         configureUploadButton()
         
-        horizontalCollectionView.layer.borderWidth = 2.0
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("1. Printing contentView Height: ", contentView.frame.height)
-        print("2. Printing self.scrollview Height: ", self.scrollView.frame.height)
-        print("3. Printing scrollview Height: ", scrollView.frame.height)
+        //print("1. Printing contentView Height: ", contentView.frame.height)
+        //print("2. Printing self.scrollview Height: ", self.scrollView.frame.height)
+        //print("3. Printing scrollview Height: ", scrollView.frame.height)
 
-        self.contentView.frame.size.height = 1500
+        //self.contentView.frame.size.height = 1500
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        // The following two lines are a must in a scrollview!!!!
+        // When dealing with scrollview, always be wary of the contentSize and the contentView size
         self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height*2)
-        // Genius Code here
-        self.contentView.frame.size.height = 1500
+        //self.contentView.frame.size.height = 1500
         
-        print("Printing:   ", scrollView.frame.height)
-        print("Printing2:   ", scrollView.contentSize.height)
-        print("4. Printing contentView Height: ", contentView.frame.height)
+        //print("Printing:   ", scrollView.frame.height)
+        //print("Printing2:   ", scrollView.contentSize.height)
+        //print("4. Printing contentView Height: ", contentView.frame.height)
         
         horizontalCollectionView.delegate = self
         horizontalCollectionView.dataSource = self
@@ -107,7 +105,7 @@ class ChannelViewController: UIViewController {
 }
 
 extension ChannelViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+        
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 216, height: 156)
     }
