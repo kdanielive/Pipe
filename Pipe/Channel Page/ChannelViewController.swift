@@ -10,6 +10,8 @@ import UIKit
 
 class ChannelViewController: UIViewController {
 
+    @IBOutlet var horizontalCollectionView: UICollectionView!
+    
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
     @IBOutlet var uploadButton: UIButton!
@@ -22,14 +24,19 @@ class ChannelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         layoutCategoryLabels(labelTitles: mockLabelTitles)
         configureUploadButton()
+        
+        horizontalCollectionView.layer.borderWidth = 2.0
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height*2)
+        
+        horizontalCollectionView.delegate = self
+        horizontalCollectionView.dataSource = self
     }
     
     func configureUploadButton() {
@@ -78,4 +85,23 @@ class ChannelViewController: UIViewController {
     }
     */
 
+}
+
+extension ChannelViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 216, height: 156)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ChannelHorizontalCollectionViewCell
+        cell.videoCardView.isUserInteractionEnabled = true
+        return cell
+    }
+    
+    
 }
