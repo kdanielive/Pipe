@@ -150,7 +150,7 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
             if(indexPath.section == 0) {
                 return 160
             } else {
-                return 85
+                return 224
             }
         }
     }

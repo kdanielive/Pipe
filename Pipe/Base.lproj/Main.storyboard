@@ -94,11 +94,11 @@
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
-                                            <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sC8-82-WQu">
+                                            <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="sC8-82-WQu">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="129.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </collectionReusableView>
-                                            <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BZU-h4-N9d">
+                                            <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="BZU-h4-N9d">
                                                 <rect key="frame" x="140" y="0.0" width="20" height="129.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </collectionReusableView>
@@ -537,54 +537,62 @@
                                     <outlet property="horizontalCategoryCollectionView" destination="zSO-jB-8dI" id="A4G-A3-jib"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="horizontalCategoryCell2" rowHeight="85" id="5Lo-DP-kdG" customClass="HorizontalCategoryTableViewCell2" customModule="Pipe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="188" width="375" height="85"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="horizontalCategoryCell2" rowHeight="229" id="5Lo-DP-kdG" customClass="HorizontalCategoryTableViewCell2" customModule="Pipe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="188" width="375" height="229"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Lo-DP-kdG" id="cRZ-5A-fQz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="228.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gIz-2K-Qqy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="228.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RdS-rk-dci">
-                                                <size key="itemSize" width="152" height="85"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="itemSize" width="371" height="227"/>
+                                                <size key="headerReferenceSize" width="20" height="50"/>
+                                                <size key="footerReferenceSize" width="20" height="50"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryHorizontalCell2" id="3Po-RW-1Jl" customClass="HorizontalCategoryCollectionViewCell2" customModule="Pipe" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="-0.5" width="152" height="85"/>
+                                                    <rect key="frame" x="20" y="2.5" width="229" height="224"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="85"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="229" height="224"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBc-v7-ZZb" customClass="VideoView" customModule="Pipe" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="152" height="85"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="229" height="224"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
                                                     </view>
                                                     <constraints>
-                                                        <constraint firstItem="pBc-v7-ZZb" firstAttribute="top" secondItem="3Po-RW-1Jl" secondAttribute="top" id="2LN-9n-jLS"/>
-                                                        <constraint firstAttribute="bottom" secondItem="pBc-v7-ZZb" secondAttribute="bottom" id="V3T-L5-lIv"/>
-                                                        <constraint firstAttribute="trailing" secondItem="pBc-v7-ZZb" secondAttribute="trailing" id="iBf-3C-Qop"/>
-                                                        <constraint firstItem="pBc-v7-ZZb" firstAttribute="leading" secondItem="3Po-RW-1Jl" secondAttribute="leading" id="mEk-Sg-pMU"/>
+                                                        <constraint firstItem="pBc-v7-ZZb" firstAttribute="top" secondItem="3Po-RW-1Jl" secondAttribute="top" id="2st-87-tim"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pBc-v7-ZZb" secondAttribute="bottom" id="ObG-PP-iCv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="pBc-v7-ZZb" secondAttribute="trailing" id="t5l-vm-3gI"/>
+                                                        <constraint firstItem="pBc-v7-ZZb" firstAttribute="leading" secondItem="3Po-RW-1Jl" secondAttribute="leading" id="vm9-60-UnK"/>
                                                     </constraints>
-                                                    <size key="customSize" width="152" height="85"/>
+                                                    <size key="customSize" width="229" height="224"/>
                                                     <connections>
                                                         <outlet property="videoCardView" destination="pBc-v7-ZZb" id="lUK-Td-3kq"/>
                                                         <segue destination="4ow-x9-xFM" kind="show" id="cr2-3B-eVR"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
+                                            <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="icm-Hr-NRH">
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="228.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </collectionReusableView>
+                                            <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="ebk-PJ-DHP">
+                                                <rect key="frame" x="249" y="0.0" width="20" height="228.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </collectionReusableView>
                                         </collectionView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="gIz-2K-Qqy" firstAttribute="top" secondItem="cRZ-5A-fQz" secondAttribute="top" id="IXd-Kl-mj4"/>
-                                        <constraint firstAttribute="bottom" secondItem="gIz-2K-Qqy" secondAttribute="bottom" id="JaG-Af-zf6"/>
+                                        <constraint firstAttribute="bottom" secondItem="gIz-2K-Qqy" secondAttribute="bottom" id="8sT-Md-bWS"/>
+                                        <constraint firstItem="gIz-2K-Qqy" firstAttribute="top" secondItem="cRZ-5A-fQz" secondAttribute="top" id="AWK-fA-N20"/>
                                         <constraint firstAttribute="trailing" secondItem="gIz-2K-Qqy" secondAttribute="trailing" id="RhK-HS-DKh"/>
                                         <constraint firstItem="gIz-2K-Qqy" firstAttribute="leading" secondItem="cRZ-5A-fQz" secondAttribute="leading" id="THz-t6-PBF"/>
                                     </constraints>
@@ -594,7 +602,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchingCell" id="33g-rS-s5j" customClass="SearchingTableViewCell" customModule="Pipe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="273" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="417" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="33g-rS-s5j" id="Fgo-KU-b77">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -602,7 +610,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchedCell" rowHeight="120" id="LP9-Le-zJM" customClass="SearchedTableViewCell" customModule="Pipe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="317" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="461" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LP9-Le-zJM" id="IC8-Yf-deQ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
@@ -696,7 +704,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOW-9z-WEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="343"/>
+            <point key="canvasLocation" x="460" y="342.72863568215894"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Cc2-we-r1C">

@@ -15,10 +15,18 @@ class HorizontalCategoryTableViewCell2: UITableViewCell, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryHorizontalCell2", for: indexPath as IndexPath) as! HorizontalCategoryCollectionViewCell2
  
-        // Adding segue gesture recognizer
-        
         return cell
     }
+    
+    /*
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    */
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
@@ -28,14 +36,21 @@ class HorizontalCategoryTableViewCell2: UITableViewCell, UICollectionViewDataSou
         return 1
     }
     
+    /*
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             
-        return CGSize(width: 152, height: 86)
+        return CGSize(width: 229, height: 224)
 
     }
+ */
     
     override func layoutSubviews() {
         collectionView.dataSource = self
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView.collectionViewLayout = layout
     }
     
     

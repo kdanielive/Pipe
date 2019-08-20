@@ -25,7 +25,6 @@ class CollectionHolderTableViewCell: UITableViewCell, UICollectionViewDataSource
         cell.titleLabel.font = UIFont.systemFont(ofSize: 15)
         
         cell.cellImage.image = UIImage(named: "cellIcon")
-        cell.bringSubview(toFront: cell.titleLabel)
         return cell
     }
     
