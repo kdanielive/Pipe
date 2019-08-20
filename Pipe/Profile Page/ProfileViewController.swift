@@ -24,7 +24,6 @@ class ProfileViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func unwindToProfile(segue: UIStoryboardSegue) {
-        
     }
     
     

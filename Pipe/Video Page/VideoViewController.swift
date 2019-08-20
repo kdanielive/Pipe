@@ -142,6 +142,11 @@ class VideoViewController: UIViewController, UISearchBarDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(popCaptions), name: NSNotification.Name(rawValue: "popCaptions"), object: nil)
  
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        self.tabBarController?.tabBar.isHidden = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -155,7 +160,6 @@ class VideoViewController: UIViewController, UISearchBarDelegate {
             timeRemainingLabel.isHidden = false
             progressSlider.isHidden = false
             backButton.isHidden = false
-            
             screenTouchCount = 1 - screenTouchCount
         } else {
             playButton.isHidden = true

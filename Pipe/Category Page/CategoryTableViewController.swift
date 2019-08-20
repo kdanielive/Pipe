@@ -191,6 +191,10 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
         searchController.isActive = true
     }
     
+    @IBAction func unwindFromVideo(segue: UIStoryboardSegue) {
+    }
+
+    
     /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 

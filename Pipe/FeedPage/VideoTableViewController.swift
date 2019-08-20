@@ -100,6 +100,10 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
         navigationItem.searchController = searchController
         searchController.isActive = true
     }
+    
+    @IBAction func unwindFromVideo(segue: UIStoryboardSegue) {
+    }
+
 }
 
 extension VideoTableViewController: UISearchResultsUpdating {

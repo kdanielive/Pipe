@@ -27,11 +27,12 @@ class ChannelViewController: UIViewController {
 
         layoutCategoryLabels(labelTitles: mockLabelTitles)
         configureUploadButton()
-        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        //scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
         
         // When dealing with scrollview, always be wary of the contentSize and the contentView size
         self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height*2)
