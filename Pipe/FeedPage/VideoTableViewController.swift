@@ -9,6 +9,10 @@
 import UIKit
 import AVKit
 
+let lessons = ["hihihi", "hellohello", "olaola"]
+var recentSearches = ["hihi", "yolo", "recent search"]
+var filteredLessons = [String]()
+
 class VideoTableViewController: UITableViewController, UISearchBarDelegate {
 
     @IBOutlet var searchBarItem: UIBarButtonItem!
@@ -16,9 +20,7 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
     let searchController = UISearchController(searchResultsController: nil)
     var videos: [Video] = Video.allVideos()
     
-    let lessons = ["hihihi", "hellohello", "olaola"]
-    var recentSearches = ["hihi", "yolo", "recent search"]
-    var filteredLessons = [String]()
+
     
     func addSearchBar() {
         searchController.searchResultsUpdater = self

@@ -12,11 +12,6 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    let lessons = ["hihihi", "hellohello", "olaola"]
-    var recentSearches = ["hihi", "yolo", "recent search"]
-    
-    var filteredLessons = [String]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -156,9 +151,9 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
             if(section == 0){
                 return "Topics to learn"
             } else if section == 1 {
-                return "살면서 들어보지 못한 흥미로운 주제들"
+                return "    살면서 들어보지 못한 흥미로운 주제들"
             } else {
-                return "LIPE 디자이너의 픽!"
+                return "    LIPE 디자이너의 픽!"
             }
         }
     }
@@ -189,7 +184,12 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
                 return 0
             }
         }
-
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if(section == 0) {
+            return "Editor's Pick"
+        } else  {   return nil  }
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
