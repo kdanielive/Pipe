@@ -11,8 +11,10 @@ import UIKit
 class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
     
     let searchController = UISearchController(searchResultsController: nil)
+    
     let lessons = ["hihihi", "hellohello", "olaola"]
     var recentSearches = ["hihi", "yolo", "recent search"]
+    
     var filteredLessons = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,9 +64,17 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
         return searchController.isActive && !searchBarIsEmpty()
     }
     
-    @objc func deleteRecentSearch() {
-        recentSearches.popLast()
+    @objc func deleteRecentSearch(sender: UIButton) {
+        recentSearches.remove(at: sender.tag)
         tableView.reloadData()
+    }
+    
+    func returnDeleteButton() -> UIButton {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "deleteRecentSearchIcon"), for: .normal)
+        button.addTarget(self, action: #selector(deleteRecentSearch), for: .touchUpInside)
+        
+        return button
     }
     
     /*
@@ -104,12 +114,24 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(isSearching()) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "searchingCell", for: indexPath) as! SearchingTableViewCell
-            let button = UIButton(type: .custom)
-            button.setImage(UIImage(named: "deleteRecentSearchIcon"), for: .normal)
-            button.addTarget(self, action: #selector(deleteRecentSearch), for: .touchUpInside)
+            
+            // Setting deleteRecentSearchButton
+            let button = returnDeleteButton()
             button.tag = indexPath.row
             cell.accessoryView = button
             button.sizeToFit()
+            
+            // Setting the recentSearchList
+            let searchLabel = UILabel()
+            let searchLabelX = cell.frame.width * (27/375)
+            let searchLabelY = cell.frame.height * (15/48)
+            let searchLabelHeight = cell.frame.height * (18/48)
+            let searchLabelWidth = cell.frame.width * (260/375)
+            searchLabel.frame = CGRect(x: searchLabelX, y: searchLabelY, width: searchLabelWidth, height: searchLabelHeight)
+            searchLabel.font = UIFont.systemFont(ofSize: 16)
+            searchLabel.text = recentSearches[indexPath.row]
+            cell.addSubview(searchLabel)
+            
             return cell
         } else if(isFiltering()) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "searchedCell", for: indexPath) as! SearchedTableViewCell
@@ -183,8 +205,6 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
             }
         }
     }
-    
-    
     
     @IBAction func openSearchBar(_ sender: Any) {
         navigationItem.searchController = searchController

@@ -555,14 +555,14 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryHorizontalCell2" id="3Po-RW-1Jl" customClass="HorizontalCategoryCollectionViewCell2" customModule="Pipe" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="2.5" width="229" height="224"/>
+                                                    <rect key="frame" x="20" y="2.5" width="290" height="224"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="229" height="224"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="224"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBc-v7-ZZb" customClass="VideoView" customModule="Pipe" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="229" height="224"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="290" height="224"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
@@ -573,7 +573,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="pBc-v7-ZZb" secondAttribute="trailing" id="t5l-vm-3gI"/>
                                                         <constraint firstItem="pBc-v7-ZZb" firstAttribute="leading" secondItem="3Po-RW-1Jl" secondAttribute="leading" id="vm9-60-UnK"/>
                                                     </constraints>
-                                                    <size key="customSize" width="229" height="224"/>
+                                                    <size key="customSize" width="290" height="224"/>
                                                     <connections>
                                                         <outlet property="videoCardView" destination="pBc-v7-ZZb" id="lUK-Td-3kq"/>
                                                         <segue destination="4ow-x9-xFM" kind="show" id="cr2-3B-eVR"/>
@@ -585,7 +585,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </collectionReusableView>
                                             <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="ebk-PJ-DHP">
-                                                <rect key="frame" x="249" y="0.0" width="20" height="228.5"/>
+                                                <rect key="frame" x="310" y="0.0" width="20" height="228.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </collectionReusableView>
                                         </collectionView>
@@ -2414,6 +2414,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="OQ2-9K-FoO"/>
         <segue reference="2Vx-un-HkG"/>
-        <segue reference="Lkq-68-DKa"/>
+        <segue reference="cr2-3B-eVR"/>
     </inferredMetricsTieBreakers>
 </document>
