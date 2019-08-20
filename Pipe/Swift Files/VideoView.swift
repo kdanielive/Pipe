@@ -127,7 +127,7 @@ class VideoView: UIView {
         let playImageWH = infoBarHeight
         let playImageX = ratingLabelX + ratingLabelWidth + playImagePadding
         playImage.frame = CGRect(x: playImageX, y: 0, width: starImageWH, height: starImageWH)
-        playImage.image = UIImage(named: "playedIcon")
+        playImage.image = UIImage(named: "playedStatIcon")
         infoBar.addSubview(playImage)
         
         // Creating the statLabel
@@ -159,7 +159,7 @@ class VideoView: UIView {
         accessoryView.addSubview(moreButton)
         previewImageView.addSubview(timeLabel)
         
-        // Adding a shadow
+        // Adding a shadow with rounded corners
         self.previewImageView.roundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 5)
         self.accessoryView.roundCorners(corners: [UIRectCorner.bottomLeft, UIRectCorner.bottomRight], radius: 5)
 
@@ -182,17 +182,6 @@ class VideoView: UIView {
         self.addSubview(shadowView)
         self.sendSubview(toBack: shadowView)
 
-        /*
-        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.11).cgColor
-        self.layer.shadowOpacity = 1
-        self.layer.shadowRadius = 4
-        self.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 5).cgPath
-        self.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        self.backgroundColor = UIColor.clear
-        self.layer.addShadow()
-        */
-        
-        
         /*
         // Adding a gradient to the layer
         let gradientLayer = CAGradientLayer()

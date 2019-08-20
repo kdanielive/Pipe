@@ -37,6 +37,8 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
         
         addSearchBar()
         self.tableView.separatorStyle = .none
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.isTranslucent = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -79,19 +81,29 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
+        headerView.backgroundColor  = UIColor.white
+        
+        let titleLabel = UILabel()
         switch section {
         case 0:
-            return "Featured Videos"
+            titleLabel.text = "Featured Videos"
         case 1:
-            return "Topics in Lifestyle"
+            titleLabel.text = "Topics in Lifestyle"
         case 2:
-            return "Contents in Travel"
+            titleLabel.text = "Contents in Travel"
         case 3:
-            return "Learning Economics"
+            titleLabel.text = "Learning Economics"
         default:
-            return "Oops"
+            titleLabel.text = "Oops"
         }
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        titleLabel.frame = CGRect(x: 20, y: 0, width: tableView.bounds.size.width-20, height: 30)
+        headerView.addSubview(titleLabel)
+        
+        return headerView
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
