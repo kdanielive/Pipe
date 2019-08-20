@@ -289,6 +289,7 @@
 		AB4089F3230127FD00991EE3 /* FeedPage */ = {
 			isa = PBXGroup;
 			children = (
+				AB0D578022F17DB500984A1B /* HorizontalTableView */,
 				AB4089F42301282900991EE3 /* FeedTableViewCell.swift */,
 				AB4E23A922F013180059166E /* VideoTableViewController.swift */,
 			);
@@ -410,7 +411,6 @@
 				AB4089F3230127FD00991EE3 /* FeedPage */,
 				AB408A1B23039BA600991EE3 /* Video Page */,
 				AB4E23AB22F013250059166E /* ImportedFiles */,
-				AB0D578022F17DB500984A1B /* HorizontalTableView */,
 				AB4089D322F95C3300991EE3 /* Category Page */,
 				AB4089F6230153D800991EE3 /* Profile Page */,
 				AB4089FD2302444C00991EE3 /* Notification Page */,

@@ -11,4 +11,5 @@ import UIKit
 class HorizontalCollectionViewCell: UICollectionViewCell {
     @IBOutlet var titleLabel: UILabel!
     
+    @IBOutlet var cellImage: UIImageView!
 }
