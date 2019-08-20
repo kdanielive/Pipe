@@ -19,23 +19,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="videocell" rowHeight="300" id="a5Q-qZ-6wW" customClass="FeedTableViewCell" customModule="Pipe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="300"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="videocell" rowHeight="340" id="a5Q-qZ-6wW" customClass="FeedTableViewCell" customModule="Pipe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="340"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a5Q-qZ-6wW" id="j9Z-H5-QPJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="339.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="add-M8-C8s" customClass="VideoView" customModule="Pipe" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="11" width="343" height="278"/>
+                                            <rect key="frame" x="20" y="21" width="335" height="298"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="add-M8-C8s" secondAttribute="height" multiplier="335:298" id="jky-bL-t6w"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="add-M8-C8s" firstAttribute="leading" secondItem="j9Z-H5-QPJ" secondAttribute="leadingMargin" id="X5z-s5-r9I"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="add-M8-C8s" secondAttribute="trailing" id="dsv-cD-wWU"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="add-M8-C8s" secondAttribute="bottom" id="oCo-za-3Of"/>
-                                        <constraint firstItem="add-M8-C8s" firstAttribute="top" secondItem="j9Z-H5-QPJ" secondAttribute="topMargin" id="qzC-Hi-6e8"/>
+                                        <constraint firstItem="add-M8-C8s" firstAttribute="centerY" secondItem="j9Z-H5-QPJ" secondAttribute="centerY" id="A5h-bc-YZX"/>
+                                        <constraint firstAttribute="trailing" secondItem="add-M8-C8s" secondAttribute="trailing" constant="20" id="DOm-IC-T3o"/>
+                                        <constraint firstItem="add-M8-C8s" firstAttribute="leading" secondItem="j9Z-H5-QPJ" secondAttribute="leading" constant="20" id="baX-QV-vt8"/>
+                                        <constraint firstItem="add-M8-C8s" firstAttribute="centerX" secondItem="j9Z-H5-QPJ" secondAttribute="centerX" id="gwc-v2-VKi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -43,7 +46,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="collectionCell" rowHeight="180" id="MnH-zi-Mb1" customClass="CollectionHolderTableViewCell" customModule="Pipe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="328" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="368" width="375" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MnH-zi-Mb1" id="rmp-v8-jwc">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>

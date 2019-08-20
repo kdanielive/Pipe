@@ -30,12 +30,6 @@ class FeedTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    class func height(for viewModel: Video) -> CGFloat {
-        let videoViewHeight: CGFloat = 260
-        let padding: CGFloat = 20
-        
-        return padding + videoViewHeight + 20
-    }
 }
 
 // Extension for rounding specific corners

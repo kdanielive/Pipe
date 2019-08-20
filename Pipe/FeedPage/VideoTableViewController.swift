@@ -98,8 +98,10 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
         if(indexPath.section == 1){
             return 200
         } else {
-            let video = videos[indexPath.row]
-            return FeedTableViewCell.height(for: video)
+            let viewWidth = self.view.frame.width
+            let requiredHeight = (viewWidth-40)*(298/335)+40
+            print("printing", requiredHeight)
+            return requiredHeight
         }
     }
     

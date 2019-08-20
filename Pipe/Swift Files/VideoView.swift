@@ -37,15 +37,21 @@ class VideoView: UIView {
     
     //common func to init our view
     private func setupView() {
+        let parentWidth = self.frame.width
+        let parentHeight = self.frame.height
+        
         let padding = 20.0
         let accessoryPadding = 10.0
         
+        let previewImageViewHeight = parentHeight * (189/298)
+        let previewImageViewWidth = parentWidth
+        let accessoryViewHeight = parentHeight * (109/298)
+        let accessoryViewWidth = parentWidth
         // Setting Macro views
-        previewImageView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height*(3/4))
-        accessoryView.frame = CGRect(x: 0, y: self.frame.height*(3/4), width: self.frame.width, height: self.frame.height/4.0)
+        previewImageView.frame = CGRect(x: 0, y: 0, width: previewImageViewWidth, height: previewImageViewHeight)
+        accessoryView.frame = CGRect(x: 0, y: previewImageViewHeight, width: accessoryViewWidth, height: accessoryViewHeight)
         previewImageView.image = UIImage(named: "newYorkFlip.png")
         accessoryView.backgroundColor = UIColor.white
-        //accessoryView.roundCorners(corners: [UIRectCorner.bottomRight, UIRectCorner.bottomLeft], radius: 12)
 
         // Setting title Label
         let titleLabelXCenter = (Double(accessoryView.frame.width) - accessoryPadding*2)/2.0 + accessoryPadding
@@ -100,7 +106,6 @@ class VideoView: UIView {
         let shadowView = UIView()
         shadowView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         shadowView.clipsToBounds = false
-        print("Printing centers: ", shadowView.frame, " and ", self.frame)
         shadowView.layer.backgroundColor = UIColor.clear.cgColor
         shadowView.backgroundColor = UIColor.clear
         
