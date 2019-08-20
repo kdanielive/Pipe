@@ -25,23 +25,27 @@ class ProfileOptionsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    /*
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        if(section == 0) {
+            return 4
+        } else {
+            return 1
+        }
+
     }
-    */
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250/4
+        return 62.5
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileOptionsTableViewCell
         
@@ -51,12 +55,15 @@ class ProfileOptionsTableViewController: UITableViewController {
             cell.iconImage.image = UIImage(named: "mychannelIcon")
             cell.optionTitleLabel.text = "My Channel"
         } else if(row==1) {
+            cell.iconImage.image = UIImage(named: "subscriptionsIcon")
+            cell.optionTitleLabel.text = "Subscriptions"
+        } else if(row==2) {
             cell.iconImage.image = UIImage(named: "historyIcon")
             cell.optionTitleLabel.text = "History"
-        } else if(row==2) {
+        } else if(row==3)  {
             cell.iconImage.image = UIImage(named: "likedIcon")
             cell.optionTitleLabel.text = "Liked"
-        } else  {
+        } else {
             cell.iconImage.image = UIImage(named: "watchlaterIcon")
             cell.optionTitleLabel.text = "Watch Later"
         }
@@ -64,7 +71,14 @@ class ProfileOptionsTableViewController: UITableViewController {
 
         return cell
     }
-    */
+ 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row == 0) {
+            performSegue(withIdentifier: "showChannel", sender: self)
+        } else {
+            performSegue(withIdentifier: "showVideos", sender: self)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
