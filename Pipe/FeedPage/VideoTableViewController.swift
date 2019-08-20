@@ -98,56 +98,110 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4
+        if(isSearching()) {
+            return 1
+        } else if(isFiltering()) {
+            return 1
+        } else {
+            return 4
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if(section == 0) {  return videos.count }
-        else if (section == 1){   return 1;   }
-        else {
-            return videos.count
+        if(isSearching()){
+            return recentSearches.count
+        } else if(isFiltering()) {
+            return filteredLessons.count
+        } else {
+            if(section == 0) {  return videos.count }
+            else if (section == 1){   return 1;   }
+            else {
+                return videos.count
+            }
         }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
-        if(section == 1)  {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "collectionCell") as! CollectionHolderTableViewCell
+        
+        if(isSearching()) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "searchingCell", for: indexPath) as! SearchingTableViewCell
+            
+            // Setting deleteRecentSearchButton
+            let button = returnDeleteButton()
+            button.tag = indexPath.row
+            cell.accessoryView = button
+            button.sizeToFit()
+            
+            // Setting the recentSearchList
+            let searchLabel = cell.searchLabel!
+            let searchLabelX = cell.frame.width * (27/375)
+            let searchLabelY = cell.frame.height * (15/48)
+            let searchLabelHeight = cell.frame.height * (18/48)
+            let searchLabelWidth = cell.frame.width * (260/375)
+            searchLabel.frame = CGRect(x: searchLabelX, y: searchLabelY, width: searchLabelWidth, height: searchLabelHeight)
+            searchLabel.font = UIFont.systemFont(ofSize: 16)
+            searchLabel.text = recentSearches[indexPath.row]
+            cell.contentView.addSubview(searchLabel)
+            
+            return cell
+        } else if(isFiltering()) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "searchedCell", for: indexPath) as! SearchedTableViewCell
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "videocell", for: indexPath) as! FeedTableViewCell
-            return cell
+            if(section == 1)  {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "collectionCell") as! CollectionHolderTableViewCell
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "videocell", for: indexPath) as! FeedTableViewCell
+                return cell
+            }
         }
+
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
         headerView.backgroundColor  = UIColor.white
         
-        let titleLabel = UILabel()
-        switch section {
-        case 0:
-            titleLabel.text = "Featured Videos"
-        case 1:
-            titleLabel.text = "Topics in Lifestyle"
-        case 2:
-            titleLabel.text = "Contents in Travel"
-        case 3:
-            titleLabel.text = "Learning Economics"
-        default:
-            titleLabel.text = "Oops"
-        }
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
-        titleLabel.frame = CGRect(x: 20, y: 0, width: tableView.bounds.size.width-20, height: 30)
-        headerView.addSubview(titleLabel)
+        if(!isSearching() && !isFiltering()) {
+            let titleLabel = UILabel()
+            switch section {
+            case 0:
+                titleLabel.text = "Featured Videos"
+            case 1:
+                titleLabel.text = "Topics in Lifestyle"
+            case 2:
+                titleLabel.text = "Contents in Travel"
+            case 3:
+                titleLabel.text = "Learning Economics"
+            default:
+                titleLabel.text = "Oops"
+            }
+            titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+            titleLabel.frame = CGRect(x: 20, y: 0, width: tableView.bounds.size.width-20, height: 30)
+            headerView.addSubview(titleLabel)
+        } else if(isSearching()) {
+            let titleLabel = UILabel()
+            titleLabel.text = "Recent Searches"
+            titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+            titleLabel.frame = CGRect(x: 20, y: 0, width: tableView.bounds.size.width-20, height: 30)
+            headerView.addSubview(titleLabel)
+        } else {    }
         
         return headerView
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 50
+        if(isSearching()) {
+            return 0
+        } else if(isFiltering()) {
+            return 0
+        } else {
+            return 50
+        }
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -157,13 +211,19 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(indexPath.section == 1){
-            return 200
+        if(isSearching()) {
+            return 44
+        } else if(isFiltering()) {
+            return 120
         } else {
-            let viewWidth = self.view.frame.width
-            let requiredHeight = (viewWidth-40)*(298/335)+40
-            print("printing", requiredHeight)
-            return requiredHeight
+            if(indexPath.section == 1){
+                return 200
+            } else {
+                let viewWidth = self.view.frame.width
+                let requiredHeight = (viewWidth-40)*(298/335)+40
+                print("printing", requiredHeight)
+                return requiredHeight
+            }
         }
     }
     
@@ -184,6 +244,6 @@ extension VideoTableViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
         // TODO
-        //filterContentForSearchText(searchController.searchBar.text!)
+        filterContentForSearchText(searchController.searchBar.text!)
     }
 }

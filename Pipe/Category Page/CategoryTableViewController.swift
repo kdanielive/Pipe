@@ -53,7 +53,6 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
         filteredLessons = lessons.filter({( lesson : String) -> Bool in
             return lesson.lowercased().contains(searchText.lowercased())
         })
-        
         tableView.reloadData()
     }
     
