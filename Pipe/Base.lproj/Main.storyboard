@@ -1411,22 +1411,22 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGy-UB-LOt">
-                                            <rect key="frame" x="68" y="94.5" width="76" height="15"/>
+                                            <rect key="frame" x="68" y="94.5" width="68" height="15"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filledRatingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Z4q-cr-j85">
-                                                    <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="13" height="15"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filledRatingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="WVz-YW-bmh">
-                                                    <rect key="frame" x="15" y="0.0" width="15" height="15"/>
+                                                    <rect key="frame" x="13" y="0.0" width="13" height="15"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filledRatingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gM7-iV-jTi">
-                                                    <rect key="frame" x="30" y="0.0" width="15" height="15"/>
+                                                    <rect key="frame" x="26" y="0.0" width="13" height="15"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filledRatingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0OH-Wn-JF3">
-                                                    <rect key="frame" x="45" y="0.0" width="15" height="15"/>
+                                                    <rect key="frame" x="39" y="0.0" width="13" height="15"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ratingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rsu-Bq-KWE">
-                                                    <rect key="frame" x="60" y="0.0" width="16" height="15"/>
+                                                    <rect key="frame" x="52" y="0.0" width="16" height="15"/>
                                                 </imageView>
                                             </subviews>
                                         </stackView>
@@ -2366,11 +2366,11 @@
         <image name="backarrow" width="11" height="18"/>
         <image name="bookmarkIcon" width="18" height="22"/>
         <image name="captionsIcon" width="22" height="22"/>
-        <image name="filledRatingIcon" width="15" height="15"/>
+        <image name="filledRatingIcon" width="13" height="12"/>
         <image name="fullscreen" width="16" height="16"/>
         <image name="historyIcon" width="24" height="24"/>
         <image name="likedIcon" width="24" height="24"/>
-        <image name="moreIcon" width="4" height="18"/>
+        <image name="moreIcon" width="4" height="15"/>
         <image name="mychannelIcon" width="24" height="24"/>
         <image name="newYorkFlip.png" width="2560" height="1438"/>
         <image name="notificationIcon" width="24" height="24"/>

@@ -54,49 +54,109 @@ class VideoView: UIView {
         accessoryView.backgroundColor = UIColor.white
 
         // Setting title Label
-        let titleLabelXCenter = (Double(accessoryView.frame.width) - accessoryPadding*2)/2.0 + accessoryPadding
-        let titleLabelWidth = Double(accessoryView.frame.width) - accessoryPadding*2
-        let titleLabelHeight = Double(accessoryView.frame.height*(2/3))
-        titleLabel.bounds = CGRect(x: 0.0, y: 0.0, width: Double(titleLabelWidth), height: titleLabelHeight)
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
-        titleLabel.text = "HIhihihihihihihialkfj;klsadfjds;fjdsklfj;kdjslfka;sdfkjshihihihi"
+        let titleLabelWidth = accessoryViewWidth * (290/335)
+        let titleLabelHeight = accessoryViewHeight * (40/109)
+        let titleLabelX = accessoryViewWidth * (16/335)
+        let titleLabelY = accessoryViewHeight * (13/109)
+        titleLabel.frame = CGRect(x: titleLabelX, y: titleLabelY, width: titleLabelWidth, height: titleLabelHeight)
+        titleLabel.font = UIFont.systemFont(ofSize: 16)
+        titleLabel.text = "3 Things You Should Never Do In Debates"
         titleLabel.textColor = UIColor.black
         titleLabel.sizeThatFits(CGSize(width: titleLabelWidth, height: titleLabelHeight))
         titleLabel.numberOfLines = 2
+        titleLabel.lineBreakMode = .byWordWrapping
         //titleLabel.preferredMaxLayoutWidth = CGFloat(titleLabelWidth)
-        titleLabel.center = CGPoint(x: titleLabelXCenter, y: Double(titleLabel.frame.height/2.0))
         titleLabel.textAlignment = .left
         
         // Setting creator label
-        let creatorLabelWidth = Double(accessoryView.frame.width) - accessoryPadding - 50
-        let creatorLabelHeight = Double(accessoryView.frame.height*(1/4))
+        let creatorLabelWidth = accessoryViewWidth * (260/335)
+        let creatorLabelHeight = accessoryViewHeight * (18/109)
+        let creatorLabelX = titleLabelX
+        let creatorLabelYPadding = CGFloat(2)
+        let creatorLabelY = titleLabelY+titleLabelHeight+creatorLabelYPadding
         creatorLabel.font = UIFont.systemFont(ofSize: 14)
-        creatorLabel.text = "Muahmmad aliali ahalilasldkfj;aklfdklaflkjfa;lsdkfdsafjkli"
+        creatorLabel.text = "Andrew Yun"
         creatorLabel.textColor = UIColor.gray
-        creatorLabel.frame = CGRect(x: accessoryPadding, y: titleLabelHeight, width: creatorLabelWidth, height: creatorLabelHeight)
+        creatorLabel.frame = CGRect(x: creatorLabelX, y: creatorLabelY, width: creatorLabelWidth, height: creatorLabelHeight)
         
         // Setting time label
-        let timeLabelWidth = 50.0
-        let timeLabelHeight = 22.0
-        let timeLabelPadding = 5.0
+        let timeLabelWidth = previewImageViewWidth * (38/335)
+        let timeLabelHeight = previewImageViewHeight * (18/189)
+        let timeLabelPadding = CGFloat(5)
+        let timeLabelX = previewImageViewWidth - timeLabelPadding - timeLabelWidth
+        let timeLabelY = previewImageViewHeight - timeLabelPadding - timeLabelHeight
         timeLabel.font = UIFont.systemFont(ofSize: 12)
         timeLabel.text = "12:18"
         timeLabel.textAlignment = .center
         timeLabel.textColor = UIColor.white
-        timeLabel.frame = CGRect(x: Double(previewImageView.frame.width) - timeLabelWidth - timeLabelPadding, y: Double(previewImageView.frame.height) - timeLabelHeight - timeLabelPadding, width: timeLabelWidth, height: timeLabelHeight)
+        timeLabel.frame = CGRect(x: timeLabelX, y: timeLabelY, width: timeLabelWidth, height: timeLabelHeight)
         timeLabel.backgroundColor = UIColor.black
-        // Debugging purposes
-        /*
-        titleLabel.layer.borderWidth = 1.0
-        titleLabel.layer.borderColor = UIColor.white.cgColor
-        accessoryView.layer.borderWidth = 1.0
-        accessoryView.layer.borderColor = UIColor.white.cgColor
-         */
+        
+        // Creating the lower information bar
+        let infoBar = UIView()
+        let infoBarPadding = CGFloat(5)
+        let infoBarWidth = creatorLabelWidth
+        let infoBarHeight = accessoryViewHeight * (18/109)
+        let infoBarX = creatorLabelX
+        let infoBarY = creatorLabelY + creatorLabelHeight + infoBarPadding
+        infoBar.frame = CGRect(x: infoBarX, y: infoBarY, width: infoBarWidth, height: infoBarHeight)
+        
+        // Creating the star in the infobar
+        let starImage = UIImageView()
+        let starImageWH = infoBarHeight
+        starImage.frame = CGRect(x: 0, y: 0, width: starImageWH, height: starImageWH)
+        starImage.image = UIImage(named: "filledRatingIcon")
+        infoBar.addSubview(starImage)
+        
+        // Creating the rating label
+        let ratingLabelPadding = CGFloat(2)
+        let ratingLabel = UILabel()
+        let ratingLabelX = starImageWH + ratingLabelPadding
+        let ratingLabelY = CGFloat(0)
+        let ratingLabelWidth = infoBarWidth * (40/260)
+        let ratingLabelHeight = starImageWH
+        ratingLabel.font = UIFont.systemFont(ofSize: 14)
+        ratingLabel.numberOfLines = 1
+        ratingLabel.frame = CGRect(x: ratingLabelX, y: ratingLabelY, width: ratingLabelWidth, height: ratingLabelHeight)
+        ratingLabel.text = "4.0"
+        infoBar.addSubview(ratingLabel)
+        
+        // Creating the playImage
+        let playImagePadding = CGFloat(2)
+        let playImage = UIImageView()
+        let playImageWH = infoBarHeight
+        let playImageX = ratingLabelX + ratingLabelWidth + playImagePadding
+        playImage.frame = CGRect(x: playImageX, y: 0, width: starImageWH, height: starImageWH)
+        playImage.image = UIImage(named: "playedIcon")
+        infoBar.addSubview(playImage)
+        
+        // Creating the statLabel
+        let statLabelPadding = CGFloat(5)
+        let statLabel = UILabel()
+        let statLabelX = playImageX + playImageWH + statLabelPadding
+        let statLabelWidth = infoBarWidth - statLabelX
+        let statLabelHeight = infoBarHeight
+        statLabel.font = UIFont.systemFont(ofSize: 14)
+        statLabel.numberOfLines = 1
+        statLabel.frame = CGRect(x: statLabelX, y: 0, width: statLabelWidth, height: statLabelHeight)
+        statLabel.text = "52K * 2 months ago"
+        infoBar.addSubview(statLabel)
+        
+        // Creating the moreButton
+        let moreButton = UIButton()
+        let moreButtonXPadding = accessoryViewWidth * (18/335)
+        let moreButtonYPadding = accessoryViewHeight * (18/109)
+        let moreButtonWidth = accessoryViewWidth * (10/335)
+        let moreButtonHeight = accessoryViewHeight * (20/109)
+        moreButton.setImage(UIImage(named: "moreIcon"), for: .normal)
+        moreButton.frame = CGRect(x: accessoryViewWidth - moreButtonXPadding - moreButtonWidth, y: accessoryViewHeight - moreButtonYPadding - moreButtonHeight, width: moreButtonWidth, height: moreButtonHeight)
         
         addSubview(previewImageView)
         addSubview(accessoryView)
         accessoryView.addSubview(titleLabel)
         accessoryView.addSubview(creatorLabel)
+        accessoryView.addSubview(infoBar)
+        accessoryView.addSubview(moreButton)
         previewImageView.addSubview(timeLabel)
         
         // Adding a shadow

@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Vector (2).png",
+      "filename" : "RatingIcon (1).png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "RatingIcon (2).png",
       "scale" : "2x"
     },
     {
