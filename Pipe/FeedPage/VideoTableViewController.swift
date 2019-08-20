@@ -36,9 +36,12 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         addSearchBar()
+        
+        // Removing tableview cell borderlines
         self.tableView.separatorStyle = .none
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-        self.navigationController?.navigationBar.isTranslucent = true
+
+        // Removing navigation bar color
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -103,7 +106,16 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
         headerView.addSubview(titleLabel)
         
         return headerView
-        
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 50))
+
+        return footerView
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
