@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ixz-qa-WCl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kpt-8Z-4tt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -2034,6 +2034,51 @@
             </objects>
             <point key="canvasLocation" x="2913" y="2320"/>
         </scene>
+        <!--Video View Controller2-->
+        <scene sceneID="C4G-B9-sEM">
+            <objects>
+                <viewController id="kpt-8Z-4tt" customClass="VideoViewController2" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1xN-uB-k4X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFv-GC-H2K">
+                                <rect key="frame" x="0.0" y="20" width="375" height="1480"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="516-fM-fBj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1480"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="516-fM-fBj" secondAttribute="bottom" id="AWs-R1-VRo"/>
+                                    <constraint firstItem="516-fM-fBj" firstAttribute="top" secondItem="MFv-GC-H2K" secondAttribute="top" id="Dme-qZ-qLc"/>
+                                    <constraint firstItem="516-fM-fBj" firstAttribute="centerX" secondItem="MFv-GC-H2K" secondAttribute="centerX" id="XYt-8D-cTM"/>
+                                    <constraint firstAttribute="trailing" secondItem="516-fM-fBj" secondAttribute="trailing" id="bwd-cY-5qc"/>
+                                    <constraint firstItem="516-fM-fBj" firstAttribute="leading" secondItem="MFv-GC-H2K" secondAttribute="leading" id="gRw-qB-ebQ"/>
+                                    <constraint firstItem="516-fM-fBj" firstAttribute="centerY" secondItem="MFv-GC-H2K" secondAttribute="centerY" id="l9L-ck-24j"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MFv-GC-H2K" firstAttribute="leading" secondItem="L2J-Cj-9O7" secondAttribute="leading" id="45b-A3-4Kc"/>
+                            <constraint firstItem="MFv-GC-H2K" firstAttribute="top" secondItem="L2J-Cj-9O7" secondAttribute="top" id="4yu-LQ-6aL"/>
+                            <constraint firstItem="L2J-Cj-9O7" firstAttribute="trailing" secondItem="MFv-GC-H2K" secondAttribute="trailing" id="hNW-QA-ShS"/>
+                            <constraint firstItem="L2J-Cj-9O7" firstAttribute="bottom" secondItem="MFv-GC-H2K" secondAttribute="bottom" id="lL0-8p-lij"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L2J-Cj-9O7"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1500"/>
+                    <connections>
+                        <outlet property="contentView" destination="516-fM-fBj" id="g2e-zB-G9d"/>
+                        <outlet property="scrollView" destination="MFv-GC-H2K" id="D3p-g2-HGg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2G-5U-rpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3882" y="1453"/>
+        </scene>
         <!--Email Sign Up View Controller-->
         <scene sceneID="Uro-po-YBt">
             <objects>
@@ -2489,7 +2534,7 @@
         <image name="warrantyLogo" width="243" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Vx-un-HkG"/>
+        <segue reference="EOx-e1-Hj8"/>
         <segue reference="Lkq-68-DKa"/>
     </inferredMetricsTieBreakers>
 </document>
