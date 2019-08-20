@@ -44,7 +44,8 @@ class VideoView: UIView {
         previewImageView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height*(3/4))
         accessoryView.frame = CGRect(x: 0, y: self.frame.height*(3/4), width: self.frame.width, height: self.frame.height/4.0)
         previewImageView.image = UIImage(named: "newYorkFlip.png")
-        accessoryView.backgroundColor = UIColor.black
+        accessoryView.backgroundColor = UIColor.white
+        //accessoryView.roundCorners(corners: [UIRectCorner.bottomRight, UIRectCorner.bottomLeft], radius: 12)
 
         // Setting title Label
         let titleLabelXCenter = (Double(accessoryView.frame.width) - accessoryPadding*2)/2.0 + accessoryPadding
@@ -53,7 +54,7 @@ class VideoView: UIView {
         titleLabel.bounds = CGRect(x: 0.0, y: 0.0, width: Double(titleLabelWidth), height: titleLabelHeight)
         titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
         titleLabel.text = "HIhihihihihihihialkfj;klsadfjds;fjdsklfj;kdjslfka;sdfkjshihihihi"
-        titleLabel.textColor = UIColor.white
+        titleLabel.textColor = UIColor.black
         titleLabel.sizeThatFits(CGSize(width: titleLabelWidth, height: titleLabelHeight))
         titleLabel.numberOfLines = 2
         //titleLabel.preferredMaxLayoutWidth = CGFloat(titleLabelWidth)
@@ -65,19 +66,19 @@ class VideoView: UIView {
         let creatorLabelHeight = Double(accessoryView.frame.height*(1/4))
         creatorLabel.font = UIFont.systemFont(ofSize: 14)
         creatorLabel.text = "Muahmmad aliali ahalilasldkfj;aklfdklaflkjfa;lsdkfdsafjkli"
-        creatorLabel.textColor = UIColor.white
+        creatorLabel.textColor = UIColor.gray
         creatorLabel.frame = CGRect(x: accessoryPadding, y: titleLabelHeight, width: creatorLabelWidth, height: creatorLabelHeight)
         
         // Setting time label
         let timeLabelWidth = 50.0
         let timeLabelHeight = 22.0
+        let timeLabelPadding = 5.0
         timeLabel.font = UIFont.systemFont(ofSize: 12)
         timeLabel.text = "12:18"
         timeLabel.textAlignment = .center
         timeLabel.textColor = UIColor.white
-        timeLabel.frame = CGRect(x: Double(accessoryView.frame.width) - timeLabelWidth, y: Double(accessoryView.frame.height) - timeLabelHeight, width: timeLabelWidth, height: timeLabelHeight)
-        timeLabel.backgroundColor = UIColor(red: 0.53, green: 0.53, blue: 0.53, alpha: 1.0)
-        timeLabel.roundCorners(corners: [UIRectCorner.topLeft], radius: 12)
+        timeLabel.frame = CGRect(x: Double(previewImageView.frame.width) - timeLabelWidth - timeLabelPadding, y: Double(previewImageView.frame.height) - timeLabelHeight - timeLabelPadding, width: timeLabelWidth, height: timeLabelHeight)
+        timeLabel.backgroundColor = UIColor.black
         // Debugging purposes
         /*
         titleLabel.layer.borderWidth = 1.0
@@ -90,10 +91,45 @@ class VideoView: UIView {
         addSubview(accessoryView)
         accessoryView.addSubview(titleLabel)
         accessoryView.addSubview(creatorLabel)
-        accessoryView.addSubview(timeLabel)
+        previewImageView.addSubview(timeLabel)
         
-        self.roundCorners(corners: UIRectCorner.allCorners, radius: 12.0)
+        // Adding a shadow
+        self.previewImageView.roundCorners(corners: [UIRectCorner.topLeft, UIRectCorner.topRight], radius: 5)
+        self.accessoryView.roundCorners(corners: [UIRectCorner.bottomLeft, UIRectCorner.bottomRight], radius: 5)
+
+        let shadowView = UIView()
+        shadowView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+        shadowView.clipsToBounds = false
+        print("Printing centers: ", shadowView.frame, " and ", self.frame)
+        shadowView.layer.backgroundColor = UIColor.clear.cgColor
+        shadowView.backgroundColor = UIColor.clear
         
+        let shadowSize: Double = 5
+        
+        shadowView.layer.shadowPath = UIBezierPath(roundedRect: CGRect(x: -shadowSize/2, y: -shadowSize/2, width: Double(self.frame.size.width)+shadowSize, height: Double(self.frame.height)+shadowSize), cornerRadius: 5.0).cgPath
+        shadowView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.11).cgColor
+        shadowView.layer.shadowOpacity = 1
+        shadowView.layer.shadowRadius = 4
+        shadowView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        layer.bounds = self.bounds
+        shadowView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.addSubview(shadowView)
+        self.sendSubview(toBack: shadowView)
+
+        /*
+        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.11).cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 4
+        self.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 5).cgPath
+        self.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        self.backgroundColor = UIColor.clear
+        self.layer.addShadow()
+        */
+        
+        
+        /*
+        // Adding a gradient to the layer
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.black.cgColor, UIColor.clear.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
@@ -101,16 +137,69 @@ class VideoView: UIView {
         gradientLayer.locations = [0, 1]
         gradientLayer.frame = previewImageView.bounds
         previewImageView.layer.insertSublayer(gradientLayer, at: 0)
+         */
         
         
         // Adding segue gesture recognizer
         //let gesture = UITapGestureRecognizer(target: self, action: #selector(segueTransport))
         //self.addGestureRecognizer(gesture)
     }
-    
-    @objc func segueTransport() {
+}
+
+extension CALayer {
+    func addShadow() {
+        self.shadowOffset = .zero
+        self.shadowOpacity = 1
+        self.shadowRadius = 12
+        self.shadowColor = UIColor.black.cgColor
+        self.masksToBounds = false
+        if cornerRadius != 0 {
+            addShadowWithRoundedCorners()
+        }
+    }
+    func roundCorners(radius: CGFloat) {
+        self.cornerRadius = radius
+        if shadowOpacity != 0 {
+            addShadowWithRoundedCorners()
+        }
+    }
+    private func addShadowWithRoundedCorners() {
+        if let contents = self.contents {
+            masksToBounds = false
+            sublayers?.filter{ $0.frame.equalTo(self.bounds) }
+                .forEach{ $0.roundCorners(radius: self.cornerRadius) }
+            self.contents = nil
+            if let sublayer = sublayers?.first,
+                sublayer.name == "hi" {
+                
+                sublayer.removeFromSuperlayer()
+            }
+            let contentLayer = CALayer()
+            contentLayer.name = "hi"
+            contentLayer.contents = contents
+            contentLayer.frame = bounds
+            contentLayer.cornerRadius = cornerRadius
+            contentLayer.masksToBounds = true
+            insertSublayer(contentLayer, at: 0)
+        }
+    }
+}
+
+/*
+extension UIView {
+    func dropShadow(scale: Bool = true) {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: -1, height: 1)
+        layer.shadowRadius = 1
         
+        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+        layer.shouldRasterize = true
+        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
 
-
 }
+*/
+
+

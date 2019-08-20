@@ -36,6 +36,7 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         addSearchBar()
+        self.tableView.separatorStyle = .none
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -54,42 +55,51 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if(section == 0) {  return videos.count }
-        else{   return 1;   }
+        else if (section == 1){   return 1;   }
+        else {
+            return videos.count
+        }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
-        if(section == 0)
-        {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "videocell", for: indexPath) as! FeedTableViewCell
-            return cell
-        } else  {
+        if(section == 1)  {
             let cell = tableView.dequeueReusableCell(withIdentifier: "collectionCell") as! CollectionHolderTableViewCell
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "videocell", for: indexPath) as! FeedTableViewCell
             return cell
         }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if(section == 0) {
+        switch section {
+        case 0:
             return "Featured Videos"
-        } else  {
+        case 1:
             return "Topics in Lifestyle"
+        case 2:
+            return "Contents in Travel"
+        case 3:
+            return "Learning Economics"
+        default:
+            return "Oops"
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(indexPath.section == 0) {
+        if(indexPath.section == 1){
+            return 200
+        } else {
             let video = videos[indexPath.row]
             return FeedTableViewCell.height(for: video)
-        } else {
-            return 200
         }
     }
     
