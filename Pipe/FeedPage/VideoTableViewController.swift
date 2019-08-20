@@ -16,6 +16,10 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
     let searchController = UISearchController(searchResultsController: nil)
     var videos: [Video] = Video.allVideos()
     
+    let lessons = ["hihihi", "hellohello", "olaola"]
+    var recentSearches = ["hihi", "yolo", "recent search"]
+    var filteredLessons = [String]()
+    
     func addSearchBar() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -30,6 +34,40 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         navigationItem.searchController = nil
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil. ?? overwrites the nil value
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredLessons = lessons.filter({( lesson : String) -> Bool in
+            return lesson.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
+    
+    func isSearching() -> Bool {
+        return searchController.isActive && searchBarIsEmpty()
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    @objc func deleteRecentSearch(sender: UIButton) {
+        recentSearches.remove(at: sender.tag)
+        tableView.reloadData()
+    }
+    
+    func returnDeleteButton() -> UIButton {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "deleteRecentSearchIcon"), for: .normal)
+        button.addTarget(self, action: #selector(deleteRecentSearch), for: .touchUpInside)
+        
+        return button
     }
 
     override func viewDidLoad() {

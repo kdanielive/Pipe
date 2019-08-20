@@ -16,6 +16,7 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
     var recentSearches = ["hihi", "yolo", "recent search"]
     
     var filteredLessons = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -122,7 +123,7 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
             button.sizeToFit()
             
             // Setting the recentSearchList
-            let searchLabel = UILabel()
+            let searchLabel = cell.searchLabel!
             let searchLabelX = cell.frame.width * (27/375)
             let searchLabelY = cell.frame.height * (15/48)
             let searchLabelHeight = cell.frame.height * (18/48)
@@ -130,7 +131,7 @@ class CategoryTableViewController: UITableViewController, UISearchBarDelegate {
             searchLabel.frame = CGRect(x: searchLabelX, y: searchLabelY, width: searchLabelWidth, height: searchLabelHeight)
             searchLabel.font = UIFont.systemFont(ofSize: 16)
             searchLabel.text = recentSearches[indexPath.row]
-            cell.addSubview(searchLabel)
+            cell.contentView.addSubview(searchLabel)
             
             return cell
         } else if(isFiltering()) {
