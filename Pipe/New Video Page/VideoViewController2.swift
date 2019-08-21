@@ -57,6 +57,13 @@ class VideoViewController2: UIViewController {
         playbackButton.setImage(UIImage(named: "pause"), for: .normal)
         playbackButton.addTarget(self, action: #selector(playbackPressed), for: .touchUpInside)
         videoContainerView.addSubview(playbackButton)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(videoFinished), name: .AVPlayerItemDidPlayToEndTime, object: nil)
+    }
+    
+    @objc func videoFinished() {
+        playbackButton.setImage(UIImage(named: "rewind"), for: .normal)
+        playbackButton.tag = 2
     }
     
     @objc func playbackPressed() {
@@ -64,9 +71,14 @@ class VideoViewController2: UIViewController {
             playbackButton.setImage(UIImage(named: "play"), for: .normal)
             playbackButton.tag = 1
             player.pause()
+        } else if playbackButton.tag == 1 {
+            playbackButton.setImage(UIImage(named: "pause"), for: .normal)
+            playbackButton.tag = 0
+            player.play()
         } else {
             playbackButton.setImage(UIImage(named: "pause"), for: .normal)
             playbackButton.tag = 0
+            player.seek(to: CMTime(seconds: 0, preferredTimescale: 1))
             player.play()
         }
     }
@@ -113,7 +125,6 @@ class VideoViewController2: UIViewController {
         player.seek(to: seekTime )
     }
 
-    
     func updateVideoPlayerState() {
         let currentTime = player.currentTime()
         let currentTimeInSeconds = CMTimeGetSeconds(currentTime)
