@@ -33,6 +33,8 @@ class VideoViewController2: UIViewController {
     let playbackButton = UIButton()
     // Fullscreen Button
     let fullScreenButton = UIButton()
+    // Options Button
+    let optionsButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +54,22 @@ class VideoViewController2: UIViewController {
         setupFullScreenButton()
         setupTimeRemainingLabel()
         setupTimeSpentLabel()
+        setupOptionsButton()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setupOptionsButton() {
+        let buttonCenterX = fullScreenButton.center.x
+        let buttonCenterY = videoContainerView.frame.height * (30/211)
+        let buttonWidth = videoContainerView.frame.width * (10/375)
+        let buttonHeight = videoContainerView.frame.height * (17/211)
+        
+        optionsButton.frame = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
+        optionsButton.center = CGPoint(x: buttonCenterX, y: buttonCenterY)
+        optionsButton.setImage(UIImage(named: "moreIcon"), for: .normal)
+        
+        videoContainerView.addSubview(optionsButton)
     }
     
     func setupTimeSpentLabel() {
