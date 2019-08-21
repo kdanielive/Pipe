@@ -28,6 +28,8 @@ class VideoViewController2: UIViewController {
     var timeObserver: Any?
     let timeRemainingLabel = UILabel()
     let progressSlider = UISlider()
+    // Play Button
+    let playbackButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +45,30 @@ class VideoViewController2: UIViewController {
 
         //// Set up components in the containerView
         setupSlider()
+        setupPlaybackButton()
 
         // Do any additional setup after loading the view.
     }
     
-    func setupPlayButton() {
-        
+    func setupPlaybackButton() {
+        let playbackButtonWH = videoContainerView.frame.width * (35/375)
+        playbackButton.frame = CGRect(x: 0, y: 0, width: playbackButtonWH, height: playbackButtonWH)
+        playbackButton.center = videoContainerView.center
+        playbackButton.setImage(UIImage(named: "pause"), for: .normal)
+        playbackButton.addTarget(self, action: #selector(playbackPressed), for: .touchUpInside)
+        videoContainerView.addSubview(playbackButton)
+    }
+    
+    @objc func playbackPressed() {
+        if(playbackButton.tag == 0) {
+            playbackButton.setImage(UIImage(named: "play"), for: .normal)
+            playbackButton.tag = 1
+            player.pause()
+        } else {
+            playbackButton.setImage(UIImage(named: "pause"), for: .normal)
+            playbackButton.tag = 0
+            player.play()
+        }
     }
     
     func setupSlider() {
