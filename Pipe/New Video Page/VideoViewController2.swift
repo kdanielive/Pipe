@@ -122,6 +122,7 @@ class VideoViewController2: UIViewController {
         script.isEditable = false
         contentView.addSubview(script)
         
+        // Adding the expand bar
         let expandY = script.frame.maxY
         let expandWidth = contentView.frame.width
         let expandHeight = CGFloat(30)
@@ -131,6 +132,15 @@ class VideoViewController2: UIViewController {
         let expandButton = UIButton(frame: CGRect(x: 0, y: 0, width: 80, height: 30))
         expandButton.center = CGPoint(x: expandView.frame.width/2, y: expandView.frame.height/2)
         expandButton.setImage(UIImage(named: "expand"), for: .normal)
+        
+        //Adding gradient. For YOU TO DO
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor, UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0.25, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 0.75, y: 0.5)
+        gradientLayer.locations = [0, 1]
+        gradientLayer.frame = script.bounds
+        script.layer.insertSublayer(gradientLayer, at: 0)
         
         expandView.addSubview(expandButton)
         contentView.addSubview(expandView)
