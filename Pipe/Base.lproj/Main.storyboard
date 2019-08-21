@@ -2520,6 +2520,7 @@
         <image name="warrantyLogo" width="243" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="dpN-CM-UYt"/>
         <segue reference="EOx-e1-Hj8"/>
         <segue reference="vEJ-U0-1RA"/>
     </inferredMetricsTieBreakers>

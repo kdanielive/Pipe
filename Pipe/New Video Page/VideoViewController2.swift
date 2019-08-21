@@ -110,7 +110,12 @@ class VideoViewController2: UIViewController {
 
         // Setup the recommendedBlock
         setupRecommendedBlock()
+        
+        // Setup the Comments Header
+        setupCommentsHeader()
     }
+    
+    func setupCommentsHeader()
     
     func setupRecommendedBlock() {
         let blockY = ratingBlock.frame.height + CGFloat(30)
