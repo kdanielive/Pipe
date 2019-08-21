@@ -50,6 +50,10 @@ class VideoViewController2: UIViewController {
     //// Profile View
     let profileBackgroundView = UIView()
     
+    //// Script View
+    let script = UITextView()
+    let expandView = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -84,12 +88,55 @@ class VideoViewController2: UIViewController {
         setupInfoBar()
         
         // Setup the profileView
-        setupProfileView()
+        setupProfileBar()
+        
+        // Setup the Script
+        setupScript()
 
-        // Do any additional setup after loading the view.
     }
     
-    func setupProfileView() {
+    func setupScript() {
+        let scriptWidth = contentView.frame.width
+        let scriptHeight = CGFloat(80)
+        let scriptY = profileBackgroundView.frame.maxY
+        
+        script.frame = CGRect(x: 0, y: scriptY, width: scriptWidth, height: scriptHeight)
+        script.text = """
+        Shall I compare thee to a summer's day?
+        Thou art more lovely and more temperate:
+        Rough winds do shake the darling buds of May,
+        And summer's lease hath all too short a date:
+        Sometime too hot the eye of heaven shines,
+        And often is his gold complexion dimm'd;
+        And every fair from fair sometime declines,
+        By chance or nature's changing course untrimm'd;
+        But thy eternal summer shall not fade
+        Nor lose possession of that fair thou owest;
+        Nor shall Death brag thou wander'st in his shade,
+        When in eternal lines to time thou growest:
+        So long as men can breathe or eyes can see,
+        So long lives this and this gives life to thee.
+        """
+        script.font = UIFont.systemFont(ofSize: 14)
+        script.isScrollEnabled = false
+        script.isEditable = false
+        contentView.addSubview(script)
+        
+        let expandY = script.frame.maxY
+        let expandWidth = contentView.frame.width
+        let expandHeight = CGFloat(30)
+        expandView.frame = CGRect(x: 0, y: expandY, width: expandWidth, height: expandHeight)
+        expandView.layer.borderWidth = 0.5
+        
+        let expandButton = UIButton(frame: CGRect(x: 0, y: 0, width: 80, height: 30))
+        expandButton.center = CGPoint(x: expandView.frame.width/2, y: expandView.frame.height/2)
+        expandButton.setImage(UIImage(named: "expand"), for: .normal)
+        
+        expandView.addSubview(expandButton)
+        contentView.addSubview(expandView)
+    }
+    
+    func setupProfileBar() {
         let backViewY = infoBar.frame.maxY + CGFloat(20)
         let backViewWidth = contentView.frame.width
         let backViewHeight = CGFloat(60)
