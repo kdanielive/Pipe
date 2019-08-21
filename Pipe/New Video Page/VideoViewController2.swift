@@ -270,6 +270,7 @@ class VideoViewController2: UIViewController {
         expandButton.addTarget(self, action: #selector(expandScript), for: .touchUpInside)
         
         //Adding gradient. For YOU TO DO
+        /*
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor, UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.25, y: 0.5)
@@ -277,13 +278,39 @@ class VideoViewController2: UIViewController {
         gradientLayer.locations = [0, 1]
         gradientLayer.frame = script.bounds
         script.layer.insertSublayer(gradientLayer, at: 0)
+        */
         
         expandView.addSubview(expandButton)
         contentView.addSubview(expandView)
     }
     
     @objc func expandScript(sender: UIButton) {
+    
+        let newHeight2 = script.sizeThatFits(CGSize(width: script.frame.width, height: CGFloat(300))).height
+        let expandedHeight = newHeight2 - CGFloat(80)
         
+        script.frame = CGRect(x: 0, y: script.frame.minY, width: script.frame.width, height: newHeight2)
+        expandView.frame = CGRect(x: 0, y: expandView.frame.minY + expandedHeight, width: expandView.frame.width, height: expandView.frame.height)
+        holderView.frame = CGRect(x: 0, y: holderView.frame.minY + expandedHeight, width: holderView.frame.width, height: holderView.frame.height)
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height*2 + expandedHeight)
+        contentView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
+                
+        sender.setImage(UIImage(named: "fold"), for: .normal)
+        sender.removeTarget(self, action: #selector(expandScript), for: .touchUpInside)
+        sender.addTarget(self, action: #selector(foldScript), for: .touchUpInside)
+    }
+    
+    @objc func foldScript(sender: UIButton) {
+        let foldingHeight = script.frame.height - CGFloat(80)
+        script.frame = CGRect(x: 0, y: script.frame.minY, width: script.frame.width, height: script.frame.height - foldingHeight)
+        expandView.frame = CGRect(x: 0, y: expandView.frame.minY - foldingHeight, width: expandView.frame.width, height: expandView.frame.height)
+        holderView.frame = CGRect(x: 0, y: holderView.frame.minY - foldingHeight, width: holderView.frame.width, height: holderView.frame.height)
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height*2)
+        contentView.frame = CGRect(x: 0, y: 0, width: scrollView.contentSize.width, height: scrollView.contentSize.height)
+        
+        sender.setImage(UIImage(named: "expand"), for: .normal)
+        sender.removeTarget(self, action: #selector(foldScript), for: .touchUpInside)
+        sender.addTarget(self, action: #selector(expandScript), for: .touchUpInside)
     }
     
     func setupProfileBar() {
