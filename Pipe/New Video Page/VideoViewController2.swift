@@ -63,6 +63,10 @@ class VideoViewController2: UIViewController {
     //// RecommendedView
     let recommendedBlock = UIView()
     
+    //// Comments
+    // Comments Header View
+    let commentsHeaderView = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -115,7 +119,42 @@ class VideoViewController2: UIViewController {
         setupCommentsHeader()
     }
     
-    func setupCommentsHeader()
+    func setupCommentsHeader() {
+        let headerViewY = recommendedBlock.frame.maxY
+        let headerViewWidth = holderView.frame.width
+        let headerViewHeight = CGFloat(110)
+        commentsHeaderView.frame = CGRect(x: 0, y: headerViewY, width: headerViewWidth, height: headerViewHeight)
+        
+        let headerLabel = UILabel()
+        let labelX = CGFloat(25)
+        let labelY = CGFloat(25)
+        let labelHeight = CGFloat(20)
+        let labelWidth = CGFloat(holderView.frame.width - 25 - 25)
+        headerLabel.frame = CGRect(x: labelX, y: labelY, width: labelWidth, height: labelHeight)
+        headerLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        headerLabel.text = "Comments"
+        
+        let proPic = UIImageView()
+        let proPicX = CGFloat(25)
+        let proPicY = headerLabel.frame.maxY + CGFloat(20)
+        let proPicWH = CGFloat(35)
+        proPic.frame = CGRect(x: proPicX, y: proPicY, width: proPicWH, height: proPicWH)
+        proPic.image = UIImage(named: "profileSample")
+        
+        let userComments = UITextField()
+        let userCommentsCenterY = proPic.center.y
+        let userCommentsX = CGFloat(75)
+        let userCommentsY = headerLabel.frame.maxY + CGFloat(30)
+        let userCommentsHeight = CGFloat(20)
+        let userCommentsWidth = holderView.frame.width - CGFloat(75) - CGFloat(25)
+        userComments.frame = CGRect(x: userCommentsX, y: userCommentsY, width: userCommentsWidth, height: userCommentsHeight)
+        userComments.placeholder = "Please write a comment..."
+        
+        commentsHeaderView.addSubview(headerLabel)
+        commentsHeaderView.addSubview(proPic)
+        commentsHeaderView.addSubview(userComments)
+        holderView.addSubview(commentsHeaderView)
+    }
     
     func setupRecommendedBlock() {
         let blockY = ratingBlock.frame.height + CGFloat(30)
