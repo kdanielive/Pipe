@@ -27,6 +27,7 @@ class VideoViewController2: UIViewController {
     // Slider
     var timeObserver: Any?
     let timeRemainingLabel = UILabel()
+    let timeSpentLabel = UILabel()
     let progressSlider = UISlider()
     // Play Button
     let playbackButton = UIButton()
@@ -49,8 +50,34 @@ class VideoViewController2: UIViewController {
         setupSlider()
         setupPlaybackButton()
         setupFullScreenButton()
+        setupTimeRemainingLabel()
+        setupTimeSpentLabel()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setupTimeSpentLabel() {
+        let labelCenterX = videoContainerView.frame.width * (40/375)
+        let labelCenterY = videoContainerView.frame.height * (187/211)
+        timeSpentLabel.frame = timeRemainingLabel.frame
+        timeSpentLabel.center = CGPoint(x: labelCenterX, y: labelCenterY)
+        timeSpentLabel.font = UIFont.boldSystemFont(ofSize: 12)
+        timeSpentLabel.textColor = UIColor.white
+        
+        videoContainerView.addSubview(timeSpentLabel)
+    }
+    
+    func setupTimeRemainingLabel() {
+        let labelCenterX = fullScreenButton.center.x - videoContainerView.frame.width * (42/375)
+        let labelCenterY = fullScreenButton.center.y
+        let labelWidth = videoContainerView.frame.width * (50/375)
+        let labelHeight = videoContainerView.frame.height * (17/211)
+        
+        timeRemainingLabel.frame = CGRect(x: 0, y: 0, width: labelWidth, height: labelHeight)
+        timeRemainingLabel.center = CGPoint(x: labelCenterX, y: labelCenterY)
+        timeRemainingLabel.font = UIFont.boldSystemFont(ofSize: 12)
+        
+        videoContainerView.addSubview(timeRemainingLabel)
     }
     
     func setupFullScreenButton() {
@@ -175,6 +202,11 @@ class VideoViewController2: UIViewController {
                 return
             }
             timeRemainingLabel.text = "\(minsStr):\(secsStr)"
+            
+            guard let minsStr2 = timeformatter.string(from: NSNumber(value: currentTimeInSeconds / 60)), let secsStr2 = timeformatter.string(from: NSNumber(value: currentTimeInSeconds.truncatingRemainder(dividingBy: 60))) else {
+                return
+            }
+            timeSpentLabel.text = "\(minsStr2):\(secsStr2)"
         }
     }
     
