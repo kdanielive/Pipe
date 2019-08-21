@@ -339,9 +339,9 @@ class VideoViewController2: UIViewController {
         scrollView.contentSize = CGSize(width: scrollViewWidth, height: self.view.frame.height)
         backgroundView.addSubview(scrollView)
         
-        contentView.frame = CGRect(x: 0, y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
+        contentView.frame = CGRect(x: 0, y: 0, width: scrollView.frame.width, height: scrollView.contentSize.height)
+        
         scrollView.addSubview(contentView)
-    
     }
     
     func setupOverlay() {
