@@ -267,6 +267,7 @@ class VideoViewController2: UIViewController {
         let expandButton = UIButton(frame: CGRect(x: 0, y: 0, width: 80, height: 30))
         expandButton.center = CGPoint(x: expandView.frame.width/2, y: expandView.frame.height/2)
         expandButton.setImage(UIImage(named: "expand"), for: .normal)
+        expandButton.addTarget(self, action: #selector(expandScript), for: .touchUpInside)
         
         //Adding gradient. For YOU TO DO
         let gradientLayer = CAGradientLayer()
@@ -279,6 +280,10 @@ class VideoViewController2: UIViewController {
         
         expandView.addSubview(expandButton)
         contentView.addSubview(expandView)
+    }
+    
+    @objc func expandScript(sender: UIButton) {
+        
     }
     
     func setupProfileBar() {
@@ -327,12 +332,21 @@ class VideoViewController2: UIViewController {
         subscribeButton.setTitle("Subscribe", for: .normal)
         subscribeButton.setTitleColor(UIColor.white, for: .normal)
         subscribeButton.titleLabel!.font = UIFont.boldSystemFont(ofSize: 14)
+        subscribeButton.addTarget(self, action: #selector(userSubscribed), for: .touchUpInside)
     
         profileBackgroundView.addSubview(proPic)
         profileBackgroundView.addSubview(nameLabel)
         profileBackgroundView.addSubview(subscriberCountLabel)
         profileBackgroundView.addSubview(subscribeButton)
         contentView.addSubview(profileBackgroundView)
+    }
+    
+    @objc func userSubscribed(sender: UIButton) {
+        sender.setTitle("Subscribed", for: .normal)
+        sender.setTitleColor(UIColor.gray, for: .normal)
+        sender.backgroundColor = UIColor.white
+        sender.layer.borderColor = UIColor.gray.cgColor
+        sender.layer.borderWidth = 1
     }
     
     func setupInfoBar() {
