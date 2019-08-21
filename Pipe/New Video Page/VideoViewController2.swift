@@ -47,6 +47,9 @@ class VideoViewController2: UIViewController {
     //// Info Bar
     let infoBar = UIView()
     
+    //// Profile View
+    let profileBackgroundView = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,8 +82,54 @@ class VideoViewController2: UIViewController {
         
         // Setup the infoBar
         setupInfoBar()
+        
+        // Setup the profileView
+        setupProfileView()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setupProfileView() {
+        let backViewY = infoBar.frame.maxY + CGFloat(20)
+        let backViewWidth = contentView.frame.width
+        let backViewHeight = CGFloat(60)
+        profileBackgroundView.frame = CGRect(x: 0, y: backViewY, width: backViewWidth, height: backViewHeight)
+        profileBackgroundView.layer.borderWidth = 1
+        
+        let proPic = UIImageView()
+        let proPicCenterX = CGFloat(36)
+        let proPicCenterY = CGFloat(30)
+        let proPicWH = 33
+        proPic.frame = CGRect(x: 0, y: 0, width: proPicWH, height: proPicWH)
+        proPic.center = CGPoint(x: proPicCenterX, y: proPicCenterY)
+        proPic.image = UIImage(named: "profileSample")
+        
+        let nameLabel = UILabel()
+        let nameX = proPic.frame.maxX + CGFloat(10)
+        let nameY = CGFloat(13)
+        let nameWidth = CGFloat(200)
+        let nameHeight = CGFloat(20)
+        nameLabel.frame = CGRect(x: nameX, y: nameY, width: nameWidth, height: nameHeight)
+        nameLabel.text = "Daniel Kim"
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        
+        let subscriberCountLabel = UILabel()
+        let countLabelX = proPic.frame.maxX + CGFloat(10)
+        let countLabelY = proPicCenterY
+        let countLabelWidth = CGFloat(200)
+        let countLabelHeight = CGFloat(20)
+        subscriberCountLabel.frame = CGRect(x: countLabelX, y: countLabelY, width: countLabelWidth, height: countLabelHeight)
+        subscriberCountLabel.text = "20 subscribers"
+        subscriberCountLabel.font = UIFont.systemFont(ofSize: 13)
+        subscriberCountLabel.textColor = UIColor.darkGray
+        
+        let subscribeButton = UIButton()
+        
+        
+        profileBackgroundView.addSubview(proPic)
+        profileBackgroundView.addSubview(nameLabel)
+        profileBackgroundView.addSubview(subscriberCountLabel)
+        contentView.addSubview(profileBackgroundView)
     }
     
     func setupInfoBar() {
