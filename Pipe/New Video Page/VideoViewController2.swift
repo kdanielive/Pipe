@@ -124,11 +124,22 @@ class VideoViewController2: UIViewController {
         subscriberCountLabel.textColor = UIColor.darkGray
         
         let subscribeButton = UIButton()
-        
-        
+        let buttonWidth = 90
+        let buttonHeight = 30
+        let buttonCenterX = profileBackgroundView.frame.width - CGFloat(65)
+        let buttonCenterY = profileBackgroundView.frame.height / 2
+        subscribeButton.frame = CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight)
+        subscribeButton.center = CGPoint(x: buttonCenterX, y: buttonCenterY)
+        subscribeButton.backgroundColor = UIColor.blue
+        subscribeButton.layer.cornerRadius = 6
+        subscribeButton.setTitle("Subscribe", for: .normal)
+        subscribeButton.setTitleColor(UIColor.white, for: .normal)
+        //buttonLabel.layer.borderWidth = 1
+    
         profileBackgroundView.addSubview(proPic)
         profileBackgroundView.addSubview(nameLabel)
         profileBackgroundView.addSubview(subscriberCountLabel)
+        profileBackgroundView.addSubview(subscribeButton)
         contentView.addSubview(profileBackgroundView)
     }
     
