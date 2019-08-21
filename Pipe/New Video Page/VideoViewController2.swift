@@ -58,8 +58,56 @@ class VideoViewController2: UIViewController {
         setupTimeSpentLabel()
         setupOptionsButton()
         setupOverlay()
+        
+        // Setup scrollView and contentView
+        setupScroll()
+        
+        // Setting the tagLabels
+        setupTagLabels()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setupTagLabels() {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .center // .leading .firstBaseline .center .trailing .lastBaseline
+        stackView.distribution = .fill // .fillEqually .fillProportionally .equalSpacing .equalCentering
+        
+        let label1 = CustomTagLabel()
+        label1.text = "  #travel  "
+        stackView.addArrangedSubview(label1)
+        
+        let label2 = CustomTagLabel()
+        label2.text = "  #newyork  "
+        stackView.addArrangedSubview(label2)
+        
+        let spacerView = UIView()
+        spacerView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        stackView.addArrangedSubview(spacerView)
+        
+        let stackViewX = CGFloat(20)
+        let stackViewY = CGFloat(20)
+        let stackViewWidth = contentView.frame.width - CGFloat(2 * stackViewX)
+        let stackViewHeight = CGFloat(20)
+        stackView.frame = CGRect(x: stackViewX, y: stackViewY, width: stackViewWidth, height: stackViewHeight
+        )
+        stackView.spacing = 10
+        
+        contentView.addSubview(stackView)
+    }
+    
+    func setupScroll() {
+        let scrollViewY = videoContainerView.frame.height
+        let scrollViewWidth = self.view.frame.width
+        let scrollViewHeight = self.view.frame.height - videoContainerView.frame.height
+        scrollView.frame = CGRect(x: 0, y: scrollViewY, width: scrollViewWidth, height: scrollViewHeight)
+        scrollView.contentSize = CGSize(width: scrollViewWidth, height: self.view.frame.height)
+        backgroundView.addSubview(scrollView)
+        
+        contentView.frame = CGRect(x: 0, y: 0, width: scrollView.frame.width, height: scrollView.frame.height)
+        scrollView.addSubview(contentView)
+    
     }
     
     func setupOverlay() {
@@ -318,5 +366,27 @@ class VideoViewController2: UIViewController {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "overlay"), object: nil)
         }
     }
-
+    
+    class CustomTagLabel: UILabel {
+        required init(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)!
+            //setupViews()
+        }
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            setupViews()
+        }
+        
+        
+        func setupViews() {
+            //this causes the label to disappear for some reason
+            //self.roundCorners(corners: UIRectCorner.allCorners, radius: 23)
+            self.textColor = UIColor.white
+            self.font = UIFont.boldSystemFont(ofSize: 12)
+            self.layer.cornerRadius = 6
+            self.layer.backgroundColor = UIColor(red: 0.78, green: 0.78, blue: 0.78, alpha: 1).cgColor
+            
+        }
+    }
 }
