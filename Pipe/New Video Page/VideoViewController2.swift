@@ -86,13 +86,39 @@ class VideoViewController2: UIViewController {
     func setupInfoBar() {
         let infoBarX = titleLabel.frame.minX
         let infoBarY = titleLabel.frame.maxY + CGFloat(10)
-        let infoBarWidth = contentView.frame.width * (200/375)
+        let infoBarWidth = contentView.frame.width * (260/375)
         let infoBarHeight = videoContainerView.frame.height * (20/211)
         infoBar.frame = CGRect(x: infoBarX, y: infoBarY, width: infoBarWidth, height: infoBarHeight)
-        infoBar.layer.borderWidth = 1
         
+        let starImage = UIImageView()
+        starImage.image = UIImage(named: "filledRatingIcon")
+        starImage.frame = CGRect(x: 0, y: 0, width: infoBarHeight, height: infoBarHeight)
         
+        let ratingLabel = UILabel()
+        let ratingX = infoBarHeight + CGFloat(5)
+        let ratingWidth = infoBarWidth * (40/260)
+        ratingLabel.font = UIFont.systemFont(ofSize: 14)
+        ratingLabel.numberOfLines = 1
+        ratingLabel.frame = CGRect(x: ratingX, y: 0, width: ratingWidth, height: infoBarHeight)
+        ratingLabel.text = "4.0"
         
+        let playImage = UIImageView()
+        let playImageX = ratingLabel.frame.maxX + CGFloat(10)
+        playImage.image = UIImage(named: "playedStatIcon")
+        playImage.frame = CGRect(x: playImageX, y: 0, width: infoBarHeight, height: infoBarHeight)
+        
+        let statLabel = UILabel()
+        let statX =  playImage.frame.maxX + CGFloat(5)
+        let statWidth = infoBarWidth - statX
+        statLabel.font = UIFont.systemFont(ofSize: 14)
+        statLabel.numberOfLines = 1
+        statLabel.text = "52K * 2 months ago"
+        statLabel.frame = CGRect(x: statX, y: 0, width: statWidth, height: infoBarHeight)
+        
+        infoBar.addSubview(starImage)
+        infoBar.addSubview(ratingLabel)
+        infoBar.addSubview(playImage)
+        infoBar.addSubview(statLabel)
         contentView.addSubview(infoBar)
     }
     
