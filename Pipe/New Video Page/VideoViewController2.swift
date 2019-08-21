@@ -54,6 +54,12 @@ class VideoViewController2: UIViewController {
     let script = UITextView()
     let expandView = UIView()
     
+    //// holderView
+    let holderView = UIView()
+    
+    //// Rating View
+    let ratingBlock = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -92,7 +98,51 @@ class VideoViewController2: UIViewController {
         
         // Setup the Script
         setupScript()
+        
+        // Setup holderView
+        setupHolderView()
+        
+        // Setup the ratingBlock
+        setupRatingBlock()
 
+    }
+    
+    func setupRatingBlock() {
+        let blockWidth = holderView.frame.width
+        let blockHeight = CGFloat(120)
+        ratingBlock.frame = CGRect(x: 0, y: 0, width: blockWidth, height: blockHeight)
+        ratingBlock.layer.borderWidth = 1
+        
+        let ratingLabel = UILabel()
+        ratingLabel.frame = CGRect(x: 0, y: 0, width: blockWidth, height: CGFloat(20))
+        ratingLabel.center = CGPoint(x: blockWidth/2, y: CGFloat(20))
+        ratingLabel.text = "Please rate this video!"
+        ratingLabel.font = UIFont.systemFont(ofSize: 14)
+        ratingLabel.textAlignment = .center
+        
+        let starY = CGFloat(60)
+        let starX = ratingLabel.center.x - CGFloat(48)*2
+        for idx in 0...4 {
+            let starImage = UIImageView()
+            starImage.frame = CGRect(x: 0, y: 0, width: CGFloat(35), height: CGFloat(35))
+            starImage.center = CGPoint(x: starX + CGFloat(idx*48) , y: starY)
+            starImage.image = UIImage(named: "unfilledRatingIcon")
+            starImage.tag = idx
+
+            ratingBlock.addSubview(starImage)
+        }
+        
+        ratingBlock.addSubview(ratingLabel)
+        holderView.addSubview(ratingBlock)
+    }
+    
+    func setupHolderView() {
+        let holderY = expandView.frame.maxY + CGFloat(30)
+        let holderWidth = contentView.frame.width
+        let holderHeight = contentView.frame.height - expandView.frame.maxY - CGFloat(30)
+        holderView.frame = CGRect(x: 0, y: holderY, width: holderWidth, height: holderHeight)
+        
+        contentView.addSubview(holderView)
     }
     
     func setupScript() {
