@@ -24,6 +24,8 @@ class VideoViewController2: UIViewController {
     var player = AVPlayer(url: Video.allVideos()[4].url)
     
     //// Video components
+    // Overlay
+    let overlay = UIView()
     // Slider
     var timeObserver: Any?
     let timeRemainingLabel = UILabel()
@@ -55,8 +57,37 @@ class VideoViewController2: UIViewController {
         setupTimeRemainingLabel()
         setupTimeSpentLabel()
         setupOptionsButton()
+        setupOverlay()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setupOverlay() {
+        overlay.frame = videoContainerView.frame
+        overlay.addSubview(progressSlider)
+        overlay.addSubview(playbackButton)
+        overlay.addSubview(fullScreenButton)
+        overlay.addSubview(timeRemainingLabel)
+        overlay.addSubview(timeSpentLabel)
+        overlay.addSubview(optionsButton)
+        backgroundView.addSubview(overlay)
+        
+        let hideGesture = UITapGestureRecognizer(target: self, action: #selector(hideOverlay))
+        overlay.addGestureRecognizer(hideGesture)
+        let showGesture = UITapGestureRecognizer(target: self, action: #selector(showOverlay))
+        playerViewController.view.addGestureRecognizer(showGesture)
+        
+        overlay.isHidden = true
+    }
+    
+    @objc func hideOverlay() {
+        overlay.isHidden = true
+        videoContainerView.alpha = 1
+    }
+    
+    @objc func showOverlay() {
+        overlay.isHidden = false
+        videoContainerView.alpha = 0.7
     }
     
     func setupOptionsButton() {
@@ -69,7 +100,7 @@ class VideoViewController2: UIViewController {
         optionsButton.center = CGPoint(x: buttonCenterX, y: buttonCenterY)
         optionsButton.setImage(UIImage(named: "moreIcon"), for: .normal)
         
-        videoContainerView.addSubview(optionsButton)
+        //videoContainerView.addSubview(optionsButton)
     }
     
     func setupTimeSpentLabel() {
@@ -80,7 +111,7 @@ class VideoViewController2: UIViewController {
         timeSpentLabel.font = UIFont.boldSystemFont(ofSize: 12)
         timeSpentLabel.textColor = UIColor.white
         
-        videoContainerView.addSubview(timeSpentLabel)
+        //videoContainerView.addSubview(timeSpentLabel)
     }
     
     func setupTimeRemainingLabel() {
@@ -93,7 +124,7 @@ class VideoViewController2: UIViewController {
         timeRemainingLabel.center = CGPoint(x: labelCenterX, y: labelCenterY)
         timeRemainingLabel.font = UIFont.boldSystemFont(ofSize: 12)
         
-        videoContainerView.addSubview(timeRemainingLabel)
+        //videoContainerView.addSubview(timeRemainingLabel)
     }
     
     func setupFullScreenButton() {
@@ -105,7 +136,7 @@ class VideoViewController2: UIViewController {
         fullScreenButton.setImage(UIImage(named: "fullscreen"), for: .normal)
         fullScreenButton.addTarget(self, action: #selector(goFullScreen), for: .touchUpInside)
         
-        videoContainerView.addSubview(fullScreenButton)
+        //videoContainerView.addSubview(fullScreenButton)
     }
     
     @objc func goFullScreen() {
