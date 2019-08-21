@@ -134,7 +134,7 @@ class VideoViewController2: UIViewController {
         subscribeButton.layer.cornerRadius = 6
         subscribeButton.setTitle("Subscribe", for: .normal)
         subscribeButton.setTitleColor(UIColor.white, for: .normal)
-        //buttonLabel.layer.borderWidth = 1
+        subscribeButton.titleLabel!.font = UIFont.boldSystemFont(ofSize: 14)
     
         profileBackgroundView.addSubview(proPic)
         profileBackgroundView.addSubview(nameLabel)
