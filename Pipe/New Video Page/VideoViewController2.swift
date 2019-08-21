@@ -66,6 +66,8 @@ class VideoViewController2: UIViewController {
     //// Comments
     // Comments Header View
     let commentsHeaderView = UIView()
+    // Comments Table View
+    let commentsContainerView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,12 +119,30 @@ class VideoViewController2: UIViewController {
         
         // Setup the Comments Header
         setupCommentsHeader()
+        
+        // Setup the actual comments tableview
+        setupComments()
+    }
+    
+    func setupComments() {
+        let commentContainerY = commentsHeaderView.frame.maxY
+        let commentContainerWidth = holderView.frame.width
+        let commentContainerHeight = holderView.frame.height - commentContainerY
+        commentsContainerView.frame = CGRect(x: 0, y: commentContainerY, width: commentContainerWidth, height: commentContainerHeight)
+        
+        let controller = storyboard!.instantiateViewController(withIdentifier: "commentsTableView") as! VideoCommentsTableViewController
+        addChildViewController(controller)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        controller.view.frame = commentsContainerView.bounds
+        commentsContainerView.addSubview(controller.view)
+        
+        holderView.addSubview(commentsContainerView)
     }
     
     func setupCommentsHeader() {
         let headerViewY = recommendedBlock.frame.maxY
         let headerViewWidth = holderView.frame.width
-        let headerViewHeight = CGFloat(110)
+        let headerViewHeight = CGFloat(120)
         commentsHeaderView.frame = CGRect(x: 0, y: headerViewY, width: headerViewWidth, height: headerViewHeight)
         
         let headerLabel = UILabel()

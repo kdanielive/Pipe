@@ -1477,7 +1477,7 @@
         <!--Video Comments Table View Controller-->
         <scene sceneID="kpL-NC-CrK">
             <objects>
-                <tableViewController id="7wW-Ww-7F8" customClass="VideoCommentsTableViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="commentsTableView" id="7wW-Ww-7F8" customClass="VideoCommentsTableViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y7f-RG-MeG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="232"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2520,7 +2520,6 @@
         <image name="warrantyLogo" width="243" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dpN-CM-UYt"/>
         <segue reference="EOx-e1-Hj8"/>
         <segue reference="vEJ-U0-1RA"/>
     </inferredMetricsTieBreakers>
