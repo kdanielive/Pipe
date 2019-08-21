@@ -30,6 +30,8 @@ class VideoViewController2: UIViewController {
     let progressSlider = UISlider()
     // Play Button
     let playbackButton = UIButton()
+    // Fullscreen Button
+    let fullScreenButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +48,30 @@ class VideoViewController2: UIViewController {
         //// Set up components in the containerView
         setupSlider()
         setupPlaybackButton()
+        setupFullScreenButton()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setupFullScreenButton() {
+        let fullScreenPadding = CGFloat(15)
+        let fullScreenWH = videoContainerView.frame.width * (15/375)
+        let fullScreenX = videoContainerView.frame.width - fullScreenPadding - fullScreenWH
+        let fullScreenY = videoContainerView.frame.height - fullScreenPadding - fullScreenWH
+        fullScreenButton.frame = CGRect(x: fullScreenX, y: fullScreenY, width: fullScreenWH, height: fullScreenWH)
+        fullScreenButton.setImage(UIImage(named: "fullscreen"), for: .normal)
+        fullScreenButton.addTarget(self, action: #selector(goFullScreen), for: .touchUpInside)
+        
+        videoContainerView.addSubview(fullScreenButton)
+    }
+    
+    @objc func goFullScreen() {
+        let newPlayerViewController = AVPlayerViewController()
+        let newPlayer = player
+        newPlayerViewController.player = newPlayer
+        present(newPlayerViewController, animated: true) {
+            newPlayer.play()
+        }
     }
     
     func setupPlaybackButton() {
