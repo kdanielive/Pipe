@@ -60,6 +60,9 @@ class VideoViewController2: UIViewController {
     //// Rating View
     let ratingBlock = UIView()
     
+    //// RecommendedView
+    let recommendedBlock = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -105,6 +108,25 @@ class VideoViewController2: UIViewController {
         // Setup the ratingBlock
         setupRatingBlock()
 
+        // Setup the recommendedBlock
+        setupRecommendedBlock()
+    }
+    
+    func setupRecommendedBlock() {
+        let blockY = ratingBlock.frame.height + CGFloat(30)
+        let blockHeight = CGFloat(300)
+        let blockWidth = holderView.frame.width
+        recommendedBlock.frame = CGRect(x: 0, y: blockY, width: blockWidth, height: blockHeight)
+        recommendedBlock.layer.borderWidth = 1
+        
+        let controller = storyboard!.instantiateViewController(withIdentifier: "recommendedVideos") as! RecommendedVideosTableViewController
+        addChildViewController(controller)
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        controller.view.frame = recommendedBlock.bounds
+        recommendedBlock.addSubview(controller.view)
+
+        
+        holderView.addSubview(recommendedBlock)
     }
     
     func setupRatingBlock() {
@@ -336,7 +358,7 @@ class VideoViewController2: UIViewController {
         let scrollViewWidth = self.view.frame.width
         let scrollViewHeight = self.view.frame.height - videoContainerView.frame.height
         scrollView.frame = CGRect(x: 0, y: scrollViewY, width: scrollViewWidth, height: scrollViewHeight)
-        scrollView.contentSize = CGSize(width: scrollViewWidth, height: self.view.frame.height)
+        scrollView.contentSize = CGSize(width: scrollViewWidth, height: self.view.frame.height*2)
         backgroundView.addSubview(scrollView)
         
         contentView.frame = CGRect(x: 0, y: 0, width: scrollView.frame.width, height: scrollView.contentSize.height)
