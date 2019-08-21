@@ -50,6 +50,19 @@ class RecommendedVideosTableViewController: UITableViewController {
         return 120
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "More Videos in Travel"
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    /*
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
+    */
 
     /*
     // Override to support conditional editing of the table view.

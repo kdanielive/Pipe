@@ -124,7 +124,6 @@ class VideoViewController2: UIViewController {
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         controller.view.frame = recommendedBlock.bounds
         recommendedBlock.addSubview(controller.view)
-
         
         holderView.addSubview(recommendedBlock)
     }
