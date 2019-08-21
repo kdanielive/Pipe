@@ -38,6 +38,15 @@ class VideoViewController2: UIViewController {
     // Options Button
     let optionsButton = UIButton()
     
+    //// Stack View
+    let stackView = UIStackView()
+    
+    //// Title Label
+    let titleLabel = UILabel()
+    
+    //// Info Bar
+    let infoBar = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,12 +73,44 @@ class VideoViewController2: UIViewController {
         
         // Setting the tagLabels
         setupTagLabels()
+        
+        // Setting the titleLabel
+        setupTitleLabel()
+        
+        // Setup the infoBar
+        setupInfoBar()
 
         // Do any additional setup after loading the view.
     }
     
+    func setupInfoBar() {
+        let infoBarX = titleLabel.frame.minX
+        let infoBarY = titleLabel.frame.maxY + CGFloat(10)
+        let infoBarWidth = contentView.frame.width * (200/375)
+        let infoBarHeight = videoContainerView.frame.height * (20/211)
+        infoBar.frame = CGRect(x: infoBarX, y: infoBarY, width: infoBarWidth, height: infoBarHeight)
+        infoBar.layer.borderWidth = 1
+        
+        
+        
+        contentView.addSubview(infoBar)
+    }
+    
+    func setupTitleLabel() {
+        let titleLabelX = stackView.frame.minX
+        let titleLabelY = stackView.frame.maxY + CGFloat(10)
+        let titleLabelWidth = contentView.frame.width * (325/375)
+        let titleLabelHeight = videoContainerView.frame.height * (50/211)
+        titleLabel.frame = CGRect(x: titleLabelX, y: titleLabelY, width: titleLabelWidth, height: titleLabelHeight)
+        titleLabel.font = UIFont.systemFont(ofSize: 16)
+        titleLabel.numberOfLines = 2
+        titleLabel.lineBreakMode  = .byWordWrapping
+        titleLabel.text = "“Secret Spots” : 3 bars you must visit in New York City"
+        
+        contentView.addSubview(titleLabel)
+    }
+    
     func setupTagLabels() {
-        let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.alignment = .center // .leading .firstBaseline .center .trailing .lastBaseline
         stackView.distribution = .fill // .fillEqually .fillProportionally .equalSpacing .equalCentering
@@ -86,8 +127,8 @@ class VideoViewController2: UIViewController {
         spacerView.setContentHuggingPriority(.defaultLow, for: .horizontal)
         stackView.addArrangedSubview(spacerView)
         
-        let stackViewX = CGFloat(20)
-        let stackViewY = CGFloat(20)
+        let stackViewX = contentView.frame.width * (20/375)
+        let stackViewY = stackViewX
         let stackViewWidth = contentView.frame.width - CGFloat(2 * stackViewX)
         let stackViewHeight = CGFloat(20)
         stackView.frame = CGRect(x: stackViewX, y: stackViewY, width: stackViewWidth, height: stackViewHeight
