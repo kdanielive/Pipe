@@ -208,10 +208,11 @@ class VideoViewController2: UIViewController {
         let starY = CGFloat(60)
         let starX = ratingLabel.center.x - CGFloat(48)*2
         for idx in 0...4 {
-            let starImage = UIImageView()
+            let starImage = UIButton()
             starImage.frame = CGRect(x: 0, y: 0, width: CGFloat(35), height: CGFloat(35))
             starImage.center = CGPoint(x: starX + CGFloat(idx*48) , y: starY)
-            starImage.image = UIImage(named: "unfilledRatingIcon")
+            starImage.setImage(UIImage(named: "unfilledRatingIcon"), for: .normal)
+            starImage.addTarget(self, action: #selector(fillStars), for: .touchUpInside)
             starImage.tag = idx
 
             ratingBlock.addSubview(starImage)
@@ -219,6 +220,10 @@ class VideoViewController2: UIViewController {
         
         ratingBlock.addSubview(ratingLabel)
         holderView.addSubview(ratingBlock)
+    }
+    
+    @objc func fillStars() {
+        
     }
     
     func setupHolderView() {
