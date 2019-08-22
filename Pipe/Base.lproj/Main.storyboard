@@ -650,25 +650,25 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryHorizontalCell2" id="3Po-RW-1Jl" customClass="HorizontalCategoryCollectionViewCell2" customModule="Pipe" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="2.5" width="290" height="224"/>
+                                                    <rect key="frame" x="20" y="2.5" width="251" height="224"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="224"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="251" height="224"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBc-v7-ZZb" customClass="VideoView" customModule="Pipe" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="290" height="224"/>
+                                                                <rect key="frame" x="10" y="10" width="231" height="204"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
                                                     </view>
                                                     <constraints>
-                                                        <constraint firstItem="pBc-v7-ZZb" firstAttribute="top" secondItem="3Po-RW-1Jl" secondAttribute="top" id="2st-87-tim"/>
-                                                        <constraint firstAttribute="bottom" secondItem="pBc-v7-ZZb" secondAttribute="bottom" id="ObG-PP-iCv"/>
-                                                        <constraint firstAttribute="trailing" secondItem="pBc-v7-ZZb" secondAttribute="trailing" id="t5l-vm-3gI"/>
-                                                        <constraint firstItem="pBc-v7-ZZb" firstAttribute="leading" secondItem="3Po-RW-1Jl" secondAttribute="leading" id="vm9-60-UnK"/>
+                                                        <constraint firstItem="pBc-v7-ZZb" firstAttribute="top" secondItem="3Po-RW-1Jl" secondAttribute="top" constant="10" id="2st-87-tim"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pBc-v7-ZZb" secondAttribute="bottom" constant="10" id="ObG-PP-iCv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="pBc-v7-ZZb" secondAttribute="trailing" constant="10" id="t5l-vm-3gI"/>
+                                                        <constraint firstItem="pBc-v7-ZZb" firstAttribute="leading" secondItem="3Po-RW-1Jl" secondAttribute="leading" constant="10" id="vm9-60-UnK"/>
                                                     </constraints>
-                                                    <size key="customSize" width="290" height="224"/>
+                                                    <size key="customSize" width="251" height="224"/>
                                                     <connections>
                                                         <outlet property="videoCardView" destination="pBc-v7-ZZb" id="lUK-Td-3kq"/>
                                                         <segue destination="kpt-8Z-4tt" kind="show" id="kU9-GN-wKI"/>
@@ -680,7 +680,7 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </collectionReusableView>
                                             <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="ebk-PJ-DHP">
-                                                <rect key="frame" x="310" y="0.0" width="20" height="228.5"/>
+                                                <rect key="frame" x="271" y="0.0" width="20" height="228.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </collectionReusableView>
                                         </collectionView>
