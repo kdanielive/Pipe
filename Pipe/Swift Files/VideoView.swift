@@ -26,12 +26,16 @@ class VideoView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
+        // setupView()
     }
     
     //initWithCode to init view from xib or storyboard
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        // setupView()
+    }
+    
+    override func layoutSubviews() {
         setupView()
     }
     
@@ -39,6 +43,8 @@ class VideoView: UIView {
     private func setupView() {
         let parentWidth = self.frame.width
         let parentHeight = self.frame.height
+        
+        print("Debug: ", parentWidth)
         
         let padding = 20.0
         let accessoryPadding = 10.0

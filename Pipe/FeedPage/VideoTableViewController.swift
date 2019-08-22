@@ -223,7 +223,6 @@ class VideoTableViewController: UITableViewController, UISearchBarDelegate {
             } else {
                 let viewWidth = self.view.frame.width
                 let requiredHeight = (viewWidth-40)*(298/335)+40
-                print("printing", requiredHeight)
                 return requiredHeight
             }
         }
