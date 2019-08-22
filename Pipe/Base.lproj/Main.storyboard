@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ixz-qa-WCl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ixz-qa-WCl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1223,34 +1223,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FirstPageLIFELogo" translatesAutoresizingMaskIntoConstraints="NO" id="VCa-iK-P5q">
-                                <rect key="frame" x="133" y="270" width="110" height="21.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FirstPageLIFELogo" translatesAutoresizingMaskIntoConstraints="NO" id="VCa-iK-P5q">
+                                <rect key="frame" x="132.5" y="270" width="110" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21.5" id="mTg-XN-ioZ"/>
+                                    <constraint firstAttribute="width" constant="110" id="rOd-MH-p60"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtO-Qd-Gxf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtO-Qd-Gxf">
                                 <rect key="frame" x="20" y="510" width="335" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Iy9-yM-LqE"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="EmailSignUp"/>
                                 <connections>
                                     <segue destination="Qp3-lH-PG7" kind="show" id="PW0-4Q-ItT"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="warrantyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Xad-bg-lpD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warrantyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Xad-bg-lpD">
                                 <rect key="frame" x="65" y="698" width="245" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="u8K-ck-Csh"/>
+                                    <constraint firstAttribute="height" constant="54" id="w4N-Sa-uVq"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FacebookSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-PA-pgy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FacebookSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="ifg-PA-pgy">
                                 <rect key="frame" x="20" y="570" width="162" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3WV-Yq-gXS"/>
+                                </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i2g-YM-rRM" customClass="GIDSignInButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2g-YM-rRM" customClass="GIDSignInButton">
                                 <rect key="frame" x="193" y="570" width="162" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dxP-bJ-L2k"/>
+                                </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="t4y-hy-ACV">
-                                <rect key="frame" x="64" y="660" width="249" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="t4y-hy-ACV">
+                                <rect key="frame" x="63" y="660" width="249" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXT-42-brV">
                                         <rect key="frame" x="0.0" y="0.0" width="196" height="30"/>
@@ -1269,6 +1280,23 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VCa-iK-P5q" firstAttribute="top" secondItem="aQ4-3D-qJI" secondAttribute="top" constant="250" id="0At-2u-bVJ"/>
+                            <constraint firstItem="t4y-hy-ACV" firstAttribute="centerX" secondItem="Xad-bg-lpD" secondAttribute="centerX" id="1gK-TI-kJJ"/>
+                            <constraint firstItem="i2g-YM-rRM" firstAttribute="trailing" secondItem="vtO-Qd-Gxf" secondAttribute="trailing" id="3py-92-0xh"/>
+                            <constraint firstItem="i2g-YM-rRM" firstAttribute="width" secondItem="ifg-PA-pgy" secondAttribute="width" id="4Vi-hs-4MU"/>
+                            <constraint firstItem="ifg-PA-pgy" firstAttribute="top" secondItem="vtO-Qd-Gxf" secondAttribute="bottom" constant="10" id="Alm-nD-ksL"/>
+                            <constraint firstItem="i2g-YM-rRM" firstAttribute="top" secondItem="vtO-Qd-Gxf" secondAttribute="bottom" constant="10" id="HBa-Bt-qXM"/>
+                            <constraint firstItem="aQ4-3D-qJI" firstAttribute="trailing" secondItem="vtO-Qd-Gxf" secondAttribute="trailing" constant="20" id="Tvn-of-1NW"/>
+                            <constraint firstItem="ifg-PA-pgy" firstAttribute="leading" secondItem="vtO-Qd-Gxf" secondAttribute="leading" id="WCz-TU-HE5"/>
+                            <constraint firstItem="vtO-Qd-Gxf" firstAttribute="leading" secondItem="aQ4-3D-qJI" secondAttribute="leading" constant="20" id="evZ-Yy-GLt"/>
+                            <constraint firstItem="Xad-bg-lpD" firstAttribute="top" secondItem="t4y-hy-ACV" secondAttribute="bottom" constant="8" id="f26-hP-fN6"/>
+                            <constraint firstItem="i2g-YM-rRM" firstAttribute="leading" secondItem="ifg-PA-pgy" secondAttribute="trailing" constant="11" id="j9F-NC-taF"/>
+                            <constraint firstItem="Xad-bg-lpD" firstAttribute="centerX" secondItem="aQ4-3D-qJI" secondAttribute="centerX" id="jIn-Yg-JuH"/>
+                            <constraint firstItem="VCa-iK-P5q" firstAttribute="centerX" secondItem="aQ4-3D-qJI" secondAttribute="centerX" id="ksF-f7-Fcg"/>
+                            <constraint firstItem="yXT-42-brV" firstAttribute="top" secondItem="vtO-Qd-Gxf" secondAttribute="bottom" constant="100" id="uGv-ew-hE0"/>
+                            <constraint firstItem="aQ4-3D-qJI" firstAttribute="bottom" secondItem="Xad-bg-lpD" secondAttribute="bottom" constant="60" id="vsf-ok-1T0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aQ4-3D-qJI"/>
                     </view>
                     <size key="freeformSize" width="375" height="812"/>
@@ -2491,11 +2519,11 @@
     </scenes>
     <resources>
         <image name="Category" width="24" height="24"/>
-        <image name="EmailSignUp" width="335" height="50"/>
-        <image name="FacebookSignUp" width="162" height="50"/>
+        <image name="EmailSignUp" width="670" height="100"/>
+        <image name="FacebookSignUp" width="324" height="100"/>
         <image name="Feed" width="24" height="24"/>
-        <image name="FirstPageLIFELogo" width="110" height="21.5"/>
-        <image name="GoogleSignUp" width="162" height="50"/>
+        <image name="FirstPageLIFELogo" width="220" height="43"/>
+        <image name="GoogleSignUp" width="324" height="100"/>
         <image name="LipeLogo" width="45" height="27"/>
         <image name="Profile" width="24" height="24"/>
         <image name="backArrow" width="11" height="18"/>
@@ -2506,7 +2534,7 @@
         <image name="fullscreen" width="16" height="16"/>
         <image name="moreIcon" width="4" height="15"/>
         <image name="mychannelIcon" width="24" height="24"/>
-        <image name="newYorkFlip.png" width="2560" height="1438"/>
+        <image name="newYorkFlip.png" width="1280" height="719"/>
         <image name="notificationIcon" width="24" height="24"/>
         <image name="pause" width="37" height="37"/>
         <image name="playbackSpeedIcon" width="22" height="22"/>
@@ -2516,8 +2544,8 @@
         <image name="reportIcon" width="18" height="22"/>
         <image name="settingsIcon" width="24" height="24"/>
         <image name="shareIcon" width="20" height="20"/>
-        <image name="user" width="102.40000152587891" height="102.40000152587891"/>
-        <image name="warrantyLogo" width="243" height="46"/>
+        <image name="user" width="128" height="128"/>
+        <image name="warrantyLogo" width="486" height="92"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vEJ-U0-1RA"/>
