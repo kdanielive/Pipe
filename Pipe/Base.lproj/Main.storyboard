@@ -1774,11 +1774,11 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="gIv-M9-wD9" customClass="ChannelViewController" customModule="Pipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qPB-1b-fPZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1334"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FxM-SM-Fx3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1265"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1177"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OK-ek-8lY" userLabel="contentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1270"/>
@@ -2038,6 +2038,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="backarrow" id="wj1-fW-We4">
                             <connections>
                                 <action selector="goBackToProfile:" destination="gIv-M9-wD9" id="Cj1-bG-8vo"/>
+                                <segue destination="BFn-i7-nRc" kind="unwind" unwindAction="unwindFromChannelWithSegue:" id="wto-fX-8OD"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="moreIcon" id="0EB-ZM-MIA"/>
@@ -2086,6 +2087,7 @@
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="backgroundView" destination="LJ7-dL-vFS" id="2XA-1o-qLe"/>
+                        <segue destination="gIv-M9-wD9" kind="show" identifier="showChannel" id="Uxa-uc-qGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2G-5U-rpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2549,6 +2551,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="vEJ-U0-1RA"/>
         <segue reference="kU9-GN-wKI"/>
+        <segue reference="Uxa-uc-qGx"/>
         <segue reference="EOx-e1-Hj8"/>
     </inferredMetricsTieBreakers>
 </document>

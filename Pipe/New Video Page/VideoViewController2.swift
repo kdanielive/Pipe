@@ -320,13 +320,14 @@ class VideoViewController2: UIViewController {
         profileBackgroundView.frame = CGRect(x: 0, y: backViewY, width: backViewWidth, height: backViewHeight)
         profileBackgroundView.layer.borderWidth = 1
         
-        let proPic = UIImageView()
+        let proPic = UIButton()
         let proPicCenterX = CGFloat(36)
         let proPicCenterY = CGFloat(30)
         let proPicWH = 33
         proPic.frame = CGRect(x: 0, y: 0, width: proPicWH, height: proPicWH)
         proPic.center = CGPoint(x: proPicCenterX, y: proPicCenterY)
-        proPic.image = UIImage(named: "profileSample")
+        proPic.setImage(UIImage(named: "profileSample"), for: .normal)
+        proPic.addTarget(self, action: #selector(goToChannel), for: .touchUpInside)
         
         let nameLabel = UILabel()
         let nameX = proPic.frame.maxX + CGFloat(10)
@@ -366,6 +367,10 @@ class VideoViewController2: UIViewController {
         profileBackgroundView.addSubview(subscriberCountLabel)
         profileBackgroundView.addSubview(subscribeButton)
         contentView.addSubview(profileBackgroundView)
+    }
+    
+    @objc func goToChannel() {
+        performSegue(withIdentifier: "showChannel", sender: self)
     }
     
     @objc func userSubscribed(sender: UIButton) {
@@ -683,7 +688,8 @@ class VideoViewController2: UIViewController {
         backgroundView.addSubview(videoContainerView)
     }
     
-
+    @IBAction func unwindFromChannel(segue: UIStoryboardSegue) {
+    }
     
     override func viewDidLayoutSubviews() {
         
