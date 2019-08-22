@@ -643,21 +643,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="228.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RdS-rk-dci">
-                                                <size key="itemSize" width="371" height="227"/>
+                                                <size key="itemSize" width="251" height="227"/>
                                                 <size key="headerReferenceSize" width="20" height="50"/>
                                                 <size key="footerReferenceSize" width="20" height="50"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryHorizontalCell2" id="3Po-RW-1Jl" customClass="HorizontalCategoryCollectionViewCell2" customModule="Pipe" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="2.5" width="251" height="224"/>
+                                                    <rect key="frame" x="20" y="1" width="251" height="227"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="251" height="224"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="251" height="227"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBc-v7-ZZb" customClass="VideoView" customModule="Pipe" customModuleProvider="target">
-                                                                <rect key="frame" x="10" y="10" width="231" height="204"/>
+                                                                <rect key="frame" x="10" y="10" width="231" height="207"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
@@ -668,7 +668,6 @@
                                                         <constraint firstAttribute="trailing" secondItem="pBc-v7-ZZb" secondAttribute="trailing" constant="10" id="t5l-vm-3gI"/>
                                                         <constraint firstItem="pBc-v7-ZZb" firstAttribute="leading" secondItem="3Po-RW-1Jl" secondAttribute="leading" constant="10" id="vm9-60-UnK"/>
                                                     </constraints>
-                                                    <size key="customSize" width="251" height="224"/>
                                                     <connections>
                                                         <outlet property="videoCardView" destination="pBc-v7-ZZb" id="lUK-Td-3kq"/>
                                                         <segue destination="kpt-8Z-4tt" kind="show" id="kU9-GN-wKI"/>

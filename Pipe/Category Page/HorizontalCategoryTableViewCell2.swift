@@ -39,18 +39,18 @@ class HorizontalCategoryTableViewCell2: UITableViewCell, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             
-        return CGSize(width: 251, height: 224)
-
+        return CGSize(width: 251, height: 227)
     }
- 
     
     override func layoutSubviews() {
         collectionView.dataSource = self
         
+        /*
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.minimumInteritemSpacing = 20
         layout.minimumLineSpacing = 20
         collectionView.collectionViewLayout = layout
+        */
     }
     
     
