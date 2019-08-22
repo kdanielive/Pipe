@@ -59,6 +59,7 @@ class VideoViewController2: UIViewController {
     
     //// Rating View
     let ratingBlock = UIView()
+    var stars : [UIButton] = []
     
     //// RecommendedView
     let recommendedBlock = UIView()
@@ -214,6 +215,7 @@ class VideoViewController2: UIViewController {
             starImage.setImage(UIImage(named: "unfilledRatingIcon"), for: .normal)
             starImage.addTarget(self, action: #selector(fillStars), for: .touchUpInside)
             starImage.tag = idx
+            stars.append(starImage)
 
             ratingBlock.addSubview(starImage)
         }
@@ -222,8 +224,17 @@ class VideoViewController2: UIViewController {
         holderView.addSubview(ratingBlock)
     }
     
-    @objc func fillStars() {
-        
+    @objc func fillStars(sender: UIButton) {
+        let rating = sender.tag
+        let subviews = ratingBlock.subviews
+        print(rating)
+        for star in stars {
+            if(star.tag <= rating) {
+                star.setImage(UIImage(named: "largerFilledRatingIcon"), for: .normal)
+            } else {
+                star.setImage(UIImage(named: "unfilledRatingIcon"), for: .normal)
+            }
+        }
     }
     
     func setupHolderView() {
