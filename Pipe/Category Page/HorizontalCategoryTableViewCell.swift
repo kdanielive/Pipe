@@ -25,7 +25,8 @@ class HorizontalCategoryTableViewCell: UITableViewCell, UICollectionViewDataSour
     }
     
     /*
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout
+     , sizeForItemAt indexPath: IndexPath) -> CGSize {
         if(indexPath.section != 0) {
             return CGSize(width: 152, height: 86)
         } else {
